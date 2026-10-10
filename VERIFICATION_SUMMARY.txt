@@ -1,0 +1,93 @@
+END-TO-END EXACT AND BORDER BOUNDS: CONORMAL/GAUSS SPECIALIZATION
+2026-10-10
+
+Integrated Lake build: PASS (exit 0).
+Release axiom audit: PASS, 349/349 principal declarations; only
+  propext, Classical.choice, Quot.sound. See AXIOM_CHECK.txt and AXIOM_AUDIT.txt.
+Source/import audit: PASS, 225 modules, 440 local import edges.
+The complete local Lean source dependency graph is delivered.
+Toolchain: Lean 4.19.0, Mathlib v4.19.0.
+The exact endpoint-inspection snippet printed in the paper also compiled
+successfully; its output is ENDPOINT_INSPECTION_AUDIT.txt.
+The revised paper compiles to 49 pages; paper/PAPER_LAYOUT_QA.txt records
+the successful rendering and layout checks.
+
+FINAL RESULT
+
+ConormalBorderMultiplicity.ordinary_border_quadratic and
+symmetric_border_quadratic prove, respectively,
+  (n-1)^2/(4 exp 1) <= m,   (n-1)^2/(2 exp 1) <= m,
+from n>=3 and literal ordinary/symmetric finite-support Euclidean border
+membership. The corresponding borderAtSize endpoints use the canonical
+coefficient space containing every size-m determinant and the target.
+No geometric degree, finiteness, persistence, count, transversality, Bezout,
+closure-equivalence, GaussDegreeTheory or FamilyCertificate premise remains.
+
+The stronger coefficient-count endpoints are
+  fermatCount n <= ordinaryBezout m n,
+  fermatCount n <= symmetricBezout m n.
+They are also proved for canonical Zariski border membership. Exact bounds
+remain available from literal complex matrix representations through
+ConormalExactMultiplicity, including smooth homogeneous degree bounds.
+The direct ordinary_zariski_quadratic and symmetric_zariski_quadratic wrappers
+give the same quadratic constants directly from literal Zariski membership.
+
+ACTUAL CONSTRUCTIONS USED BY THE BORDER PROOF
+
+1. The special finite Gauss-polar section is constructed from the Fermat
+form. Its sum of full local-ring lengths is n*(n-1)^(n-2).
+2. Literal border membership supplies a constructed curve, normalized DVR,
+actual fraction field, residue map and coherent generic determinant pencil.
+The coefficient polynomial specializes exactly to Fermat.
+3. The actual family polynomial is homogenized with an added coordinate.
+Associated-prime avoidance chooses regular generic Gauss flags over the DVR,
+retaining all specified special coefficients. Successive Hilbert-degree
+cuts and saturation prove the resulting generic section finite.
+4. The resulting affine ideal is the derivative saturation of the literal
+generic polar equations. A constructed derivative combination is a unit
+on its full quotient; its entire geometric support is therefore smooth.
+5. DVR local complete-intersection persistence proves that generic
+contraction preserves each full special local algebra. Saturation cancels
+only derivatives proved units at those points. No radicalization occurs.
+6. Simultaneous local interpolation and the proved flat DVR fibre-dimension
+inequality give special local length <= actual finite generic dimension.
+Finite generation of the entire horizontal algebra is not assumed.
+7. Scalar extension to an algebraic closure preserves generic quotient
+dimension. Actual local-ring equivalences identify its lengths with the
+ordinary/symmetric determinant incidence. Proved singular isolated-zero
+Bezout allows arbitrary excess components elsewhere. Proved numerical
+estimates yield both constants.
+
+SCOPE AND METHOD
+
+The result is an end-to-end verification of the exact and border lower-bound
+endpoints through local Gauss-section specialization of the actual family.
+It uses the conormal/Gauss incidence route. It does not claim a verbatim
+formalization of every manuscript sentence or an independently complete
+global Chow-cycle/intersection library. Those broader interfaces are not
+hypotheses of the final endpoints.
+
+No alternate fixed Fermat polar counting slice is imported or used. The
+chart x0=1 refers to the newly adjoined homogenizing coordinate; it does not
+set one original Fermat variable to one. The generic flags are constructed
+by associated-prime avoidance. Source analysis is not a claim about
+historical idea originality or priority.
+
+Legacy GaussDegreeTheory, FamilyCertificate and closure-equivalence helpers
+remain conditional interfaces for compatibility. They are not assumed by
+the new endpoints. Older audits are retained as historical snapshots.
+
+AUDIT AND REPRODUCTION
+
+END_TO_END_HYPOTHESES_AUDIT.txt records a separate automated semantic review of
+actual definitions and constructor applicability conditions. It is not an
+independent human peer-review report. GENERIC_GAUSS_SECTION_AUDIT.txt,
+DVR_LOCAL_PERSISTENCE_AUDIT.txt and REMAINDER_HYPOTHESES_AUDIT.txt explain the
+new proof links. PROJECTIVE_CHART_STATUS.txt separates local-section results
+from broader unclaimed global cycle statements.
+
+BUILD_LOG.txt, AXIOM_AUDIT.txt and IMPORT_AUDIT.txt are actual successful
+transcripts. AXIOM_AUDIT includes exposed final theorem signatures and literal
+border definitions. Source checks exclude custom axioms, sorry, admit,
+unsafe, native_decide and the alternate explicit-slice import route.
+SOURCE_SHA256SUMS.txt covers every delivered file except itself.

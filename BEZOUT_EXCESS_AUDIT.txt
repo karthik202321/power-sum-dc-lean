@@ -1,0 +1,178 @@
+SKEPTICAL AUDIT: BEZOUT WITH EXCESS COMPONENTS
+Source snapshot: 2026-10-10, after the successful complete dependency build of
+BezoutWithExcess.universal_simple_bezout and universal_bi_simple_bezout.
+
+This is the retained review of the preceding simple-zero release. The later
+singular local-multiplicity theorem is reviewed in SINGULAR_BEZOUT_AUDIT.txt.
+
+ASSESSMENT
+
+The revised deformation route now PROVES exactly the stated UniversalSimpleBezout:
+a finite family of distinct simple multiprojective zeroes, allowing arbitrary
+additional components. Plain contraction of the generic equation ideal suffices.
+No reduction, generic complete-intersection assertion, projective Hilbert/
+intersection theorem, or selected-point count certificate is an input.
+
+The latest algebraic split-system route uses a Hilbert-function inequality for
+products, not a regular-sequence equality or a chart-localization shortcut.
+That change removes an important source of hidden hypotheses. The final proof
+now instantiates the actual split factors, their branch bounds, finite degree
+shifts, and numerical coefficient count. The completed source-level audit
+found no extra geometric premises. ConormalExact and ConormalBorder now provide
+the universal proof internally, with no external Bezout argument. They remain
+conditional on the separate GaussDegreeTheory and border-family obligations.
+
+1. DEFORMATION AND PLAIN CONTRACTION
+
+Let R=C[t], K=C(t), A=R[all homogeneous variables], and I=(F_e), where
+F_e=(1-t)f_e+t*g_e and f_e,g_e have the SAME displayed multidegree. Set
+J=comap(A -> K[variables])(I extended to K). This is the actual ideal used by
+BezoutHorizontalFamily, without a radical.
+
+The quotient A/J embeds in the actual generic quotient. Therefore it is
+R-torsion-free even if the generic quotient is nonreduced, and flat over the
+PID R. Homogeneous projection commutes with coefficient extension; homogeneous
+generators, ideal extension and contraction give genuine multihomogeneity.
+An actual graded piece is finite over R, and its inclusion in A/J has a
+homogeneous projection as a retraction. Thus its base change still embeds even
+for the nonflat map R -> C at a special parameter. FlatMultiGradedHilbert uses
+the genuine scalar-compatible tensor-quotient equivalence, not just abstract
+equal-dimensional vector spaces. This justifies dimension constancy in every
+fixed tridegree.
+
+Important inequality direction: I is contained in J, so at t=1 the split
+equation ideal (g) is contained in J_1. Hence A_1/(g) SURJECTS onto A_1/J_1;
+the degree-piece dimension of J_1 is at most that of (g), not the reverse.
+No equality between the special fibre and the original split scheme is needed.
+BezoutHorizontalFamily.originalIdeal_le_contraction establishes the required
+unspecialized inclusion. Distinct evaluation maps at 0 and 1 must retain their
+different R-algebra structures even though both target fields are C; the
+current specialized_dimensions_equal theorem does this by passing through K.
+
+2. WHY ONLY THE SELECTED SIMPLE ROOTS LIE IN J_0
+
+Membership p in J gives a NONZERO denominator q(t) with q(t)*p in I. Simple
+chart roots persist by the complex implicit-function theorem, keeping their
+three selected nonzero chart coordinates fixed. Along the resulting branch,
+q(t)*p(t,branch(t)) vanishes. The complement of the finitely many roots of q is
+dense, so continuity proves p(0,root)=0 even when q(0)=0. BezoutRootPersistence
+has this denominator argument, including the more general power version;
+plain contraction can use exponent one.
+
+One must not assert that every original special zero survives contraction.
+For the elementary family t*x=0, the original t=0 equation is identically
+zero, whereas generic contraction imposes x=0. The other special points do
+not persist and are not simple. The selected-root/IFT premise is essential,
+not a cosmetic strengthening of an automatic ideal inclusion.
+
+The analytic theorem fixes ONE valid chart for EACH root. It does not require
+all roots to use one common chart or every coordinate of every root to be
+nonzero. Simplicity plus equation count makes the augmented derivative square
+and invertible. Finite projective distinctness is proved through cross-products
+if simultaneous branches are needed; the argument must not silently identify
+affine distinctness with projective distinctness.
+
+3. LOWER BOUND BY ACTUAL PROJECTIVE INTERPOLATION
+
+ProjectivePointInterpolation.card_le_three_factor_piece_finrank applies to
+the actual ideal J_0 once every selected point annihilates it. It uses genuine
+nonzero blocks and pairwise projective nonequivalence. Products of linear
+separators, padded to a common tridegree, give independent quotient classes.
+Thus #P <= dim(A_0/J_0)_(k,k,k) for every k >= #P-1. Extra components and
+nonreduced structure do not invalidate this lower bound.
+
+Finiteness of the homogeneous piece is proved from finitely many monomials.
+This matters: Lean's natural-valued finrank can be zero for an infinite-rank
+module. The relevant proofs must use these actual finite-piece instances;
+the entire multihomogeneous coordinate quotient is usually infinite-dimensional.
+
+4. UPPER BOUND: PRODUCTS AND BRANCHES, WITHOUT REGULARITY
+
+The safe elementary comparison is the following graded dimension inequality:
+  H_(I+(a*b))(d+k) <= H_(I+(a))(d+k) + H_(I+(b))(k),
+where a has degree d and all ideals/maps have the stated homogeneous meanings.
+Multiplication by a maps the right shifted quotient to the middle quotient;
+its image is the kernel of the projection to I+(a). The multiplication map
+need not be injective. This gives an inequality, not a regular-sequence
+equality. Iterating the inequality over finite products bounds the split
+system by shifted pieces of all branch ideals.
+
+ProjectiveChartHilbertBound.piece_finrank_mul_le now implements this comparison
+and has directly compiled. Independent source review checks its explicit maps,
+surjectivity of the projection, exact kernel=image identity, and finite-piece
+dimension calculation. AddCancelCommMonoid supplies the needed degree
+cancellation. Homogeneity of I is used exactly when extracting the component
+of its error term. No regularity or reducedness hypothesis is concealed.
+
+Each branch chooses one labeled factor from every equation. Use globally
+distinct Vandermonde parameters within each projective block. If a branch
+chooses more hyperplanes in a block than its projective dimension, enough
+independent selected forms span ALL homogeneous coordinates of that block.
+That branch's piece is zero whenever its degree in the block is positive.
+This is a scheme-level ideal consequence, not merely a claim that it has no
+projective points. If every block has exactly its dimension's quota, the
+linear branch quotient has one surviving variable per block, so each fixed
+tridegree piece has dimension at most one. The equation-count equality ensures
+that every nonquota branch overloads at least one block.
+
+Every iteration shifts a degree by a finite sum of factor degrees. Choose the
+final diagonal k larger than ALL componentwise shifts and all branch thresholds,
+as well as #P-1. A statement about sufficiently large TOTAL degree would not
+suffice. The branch set is finite, so one uniform componentwise bound exists.
+
+BezoutSplitBudget.coefficientBudget_eq_card expands the actual class product
+and identifies the budget with the number of quota choices. Empty factor rows
+(degree zero), zero-dimensional projective factors, and an empty chosen-point
+set must remain included; the counting API already treats empty rows correctly
+as product 1, with no possible branch choice.
+
+5. TWO TEMPTING BUT INVALID SHORTCUTS
+
+Full Cox-ring regularity is false even for a square split start system. The
+new kernel-checked BezoutExcessRegressions module gives an explicit example
+on three projective lines:
+  g1=x0*y0*z0, g2=x1*y1*z1,
+  g3=(x0+x1)*(y0+y1)*(z0+z1).
+All have actual weight (1,1,1). Modulo (g1,g2), h=y0*z0*y1*z1 is nonzero but
+g3*h=0. The theorem thirdEquation_not_regular_mod_first_two proves the
+nonregularity. The irrelevant locus x0=x1=0 explains the obstruction. This
+rules out substituting a full-ring regular-sequence Hilbert formula without
+checking its hypotheses. It does not contradict chart regularity or Bezout.
+
+The earlier CRT/chart alternative also requires care. BezoutExcessProducts
+proves an exact product-ideal/intersection equality and actual CRT quotient
+under explicit pairwise comaximality of branch ideals. This is appropriate
+AFTER affine normalization, where quota branch quotients are copies of C and
+impossible branches are the unit ideal. Homogeneous branch ideals are generally
+not comaximal: they share the cone origin. Likewise, no projective points
+outside a chosen chart does not alone make the original graded quotient map
+injective in every degree; irrelevant torsion may remain. The latest product-
+inequality route avoids needing that chart-injectivity theorem altogether.
+
+FINAL PROOF BOUNDARY
+
+The compiled concrete chain is
+  #P <= H(J_0,k) = H(J_1,k) <= H((g),k) <= #quotaChoices = budget.
+Every H denotes the actual trigraded quotient-piece construction, with scalar
+structures and degree shifts explicitly transported. None of the
+steps requires the original or total projective zero locus to be finite.
+
+BezoutDeformationBound.simple_roots_le_comparison_piece constructs the entire
+deformation comparison for ANY same-degree comparison system. It has no
+generic-smoothness or fibre-equality hypothesis. BezoutSplitHilbert proves the
+actual canonical split-system eventual bound. BezoutVariableTransport supplies
+a weight-preserving variable equivalence for arbitrary finite nonempty blocks
+and a scalar-compatible equivalence of their quotient pieces. BezoutWithExcess
+then chooses k=max(split threshold,#P-1) and closes the inequality. The full
+locked dependency build passed, and these theorem statements have been
+independently reviewed, including the componentwise threshold induction.
+Independent #print axioms checks of the comparison, universal three-factor
+theorem and universal two-factor theorem return only propext, Classical.choice
+and Quot.sound.
+
+Scope of this reviewed simple-zero theorem: singular local lengths are covered
+by the subsequent SingularBezoutWithExcess theorem, not by this earlier proof.
+The project's generic conormal-section/degree theory remains unconstructed.
+The explicit split comparison is a general Bezout upper-bound
+device, not the alternate fixed-coordinate Fermat lower-count slice. A formal
+dependency audit does not establish historical originality or provenance.

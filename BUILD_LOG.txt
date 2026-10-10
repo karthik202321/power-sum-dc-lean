@@ -1,0 +1,855 @@
+⚠ [2446/2754] Replayed Sheshadri.SaturatedFlatFamily
+warning: ././././Sheshadri/SaturatedFlatFamily.lean:145:0: automatically included section variable(s) unused in theorem 'Sheshadri.SaturatedFlatFamily.horizontalIdeal_saturated':
+  [IsDomain R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsDomain R] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2450/2754] Replayed Sheshadri.FlatGradedHilbert
+warning: ././././Sheshadri/FlatGradedHilbert.lean:118:0: automatically included section variable(s) unused in theorem 'Sheshadri.FlatGradedHilbert.degree_eq_sum_twoBlockWeight':
+  [Finite σ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Finite σ] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/FlatGradedHilbert.lean:179:0: automatically included section variable(s) unused in theorem 'Sheshadri.FlatGradedHilbert.bicoordinateProjection_retract':
+  [Finite σ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Finite σ] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2617/2754] Replayed Sheshadri.BezoutDeformationBound
+warning: ././././Sheshadri/BezoutDeformationBound.lean:34:0: automatically included section variable(s) unused in theorem 'Sheshadri.BezoutDeformationBound.map_coefficient_interpolation':
+  [Fintype X]
+  [Fintype U]
+  [Fintype V]
+  [Nonempty X]
+  [Nonempty U]
+  [Nonempty V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype X] [Fintype U] [Fintype V] [Nonempty X] [Nonempty U] [Nonempty V] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2623/2754] Replayed Sheshadri.BezoutExcessProducts
+warning: ././././Sheshadri/BezoutExcessProducts.lean:43:0: automatically included section variable(s) unused in theorem 'Sheshadri.BezoutExcessProducts.factor_mem':
+  [(e : E) → Fintype (D e)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [(e : E) → Fintype (D e)] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/BezoutExcessProducts.lean:46:0: automatically included section variable(s) unused in theorem 'Sheshadri.BezoutExcessProducts.branchIdeal_le_iff':
+  [(e : E) → Fintype (D e)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [(e : E) → Fintype (D e)] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/BezoutExcessProducts.lean:71:0: automatically included section variable(s) unused in theorem 'Sheshadri.BezoutExcessProducts.branch_unique':
+  [(e : E) → Fintype (D e)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [(e : E) → Fintype (D e)] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2630/2754] Replayed Sheshadri.BezoutSplitSystem
+warning: ././././Sheshadri/BezoutSplitSystem.lean:67:0: automatically included section variable(s) unused in theorem 'Sheshadri.BezoutSplitSystem.homogeneousFactor_homogeneous':
+  [Fintype E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/BezoutSplitSystem.lean:97:0: automatically included section variable(s) unused in theorem 'Sheshadri.BezoutSplitSystem.selectedIndex_injective':
+  [Fintype E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/BezoutSplitSystem.lean:118:0: automatically included section variable(s) unused in theorem 'Sheshadri.BezoutSplitSystem.selected_form_mem':
+  [Fintype E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/BezoutSplitSystem.lean:176:0: automatically included section variable(s) unused in theorem 'Sheshadri.BezoutSplitSystem.branchIdeal_le_eval_kernel':
+  [Fintype E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2658/2754] Replayed Sheshadri.ActualGaussFamily
+warning: ././././Sheshadri/ActualGaussFamily.lean:59:0: automatically included section variable(s) unused in theorem 'Sheshadri.ActualGaussFamily.totalFamily_algebraic_isClosed':
+  [Fintype A]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype A] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/ActualGaussFamily.lean:65:0: automatically included section variable(s) unused in theorem 'Sheshadri.ActualGaussFamily.smooth_graph_mem_totalFamily':
+  [Fintype A]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype A] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/ActualGaussFamily.lean:77:8: automatically included section variable(s) unused in theorem 'Sheshadri.ActualGaussFamily.eval_specialize':
+  [Fintype A]
+  [Fintype Z]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype A] [Fintype Z] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/ActualGaussFamily.lean:113:0: automatically included section variable(s) unused in theorem 'Sheshadri.ActualGaussFamily.continuous_join':
+  [Fintype A]
+  [Fintype Z]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype A] [Fintype Z] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/ActualGaussFamily.lean:147:0: automatically included section variable(s) unused in theorem 'Sheshadri.ActualGaussFamily.totalFamily_mono':
+  [Fintype A]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype A] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/ActualGaussFamily.lean:178:0: automatically included section variable(s) unused in theorem 'Sheshadri.ActualGaussFamily.rescaleTotal_gaussPoint':
+  [Fintype A]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype A] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/ActualGaussFamily.lean:203:0: automatically included section variable(s) unused in theorem 'Sheshadri.ActualGaussFamily.parameter_mem_zariskiClosure':
+  [Fintype A]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype A] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/ActualGaussFamily.lean:241:0: automatically included section variable(s) unused in theorem 'Sheshadri.ActualGaussFamily.totalIdeal_isRadical':
+  [Fintype A]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype A] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/ActualGaussFamily.lean:252:0: automatically included section variable(s) unused in theorem 'Sheshadri.ActualGaussFamily.mem_totalFamily_iff_vanishes_totalIdeal':
+  [Fintype A]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype A] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3047/3122] Replayed Sheshadri.FermatIrreducible
+warning: ././././Sheshadri/FermatIrreducible.lean:30:0: automatically included section variable(s) unused in theorem 'Sheshadri.FermatIrreducible.eval_powerSum_basis':
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/FermatIrreducible.lean:46:2: try 'simp at he' instead of 'simpa using he'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ././././Sheshadri/FermatIrreducible.lean:42:0: automatically included section variable(s) unused in theorem 'Sheshadri.FermatIrreducible.powerSum_not_unit':
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/FermatIrreducible.lean:48:0: automatically included section variable(s) unused in theorem 'Sheshadri.FermatIrreducible.pderiv_powerSum':
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/FermatIrreducible.lean:54:0: automatically included section variable(s) unused in theorem 'Sheshadri.FermatIrreducible.irreducible_X_zero':
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/FermatIrreducible.lean:150:0: automatically included section variable(s) unused in theorem 'Sheshadri.FermatIrreducible.prime_rename_some':
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3049/3122] Replayed Sheshadri.ProjectiveConormal
+warning: ././././Sheshadri/ProjectiveConormal.lean:186:0: automatically included section variable(s) unused in theorem 'Sheshadri.ProjectiveConormal.smoothGaussRepresentatives_nonzero':
+  [Fintype A]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype A] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/ProjectiveConormal.lean:199:0: automatically included section variable(s) unused in theorem 'Sheshadri.ProjectiveConormal.smoothGaussRepresentatives_scaleInvariant':
+  [Fintype A]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype A] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3050/3122] Replayed Sheshadri.FermatConormalIrreducible
+warning: ././././Sheshadri/FermatConormalIrreducible.lean:31:8: automatically included section variable(s) unused in theorem 'Sheshadri.FermatConormalIrreducible.eval_extend':
+  [Fintype Z]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Z] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/FermatConormalIrreducible.lean:35:0: automatically included section variable(s) unused in theorem 'Sheshadri.FermatConormalIrreducible.extend_prime':
+  [Fintype Z]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Z] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/FermatConormalIrreducible.lean:42:0: automatically included section variable(s) unused in theorem 'Sheshadri.FermatConormalIrreducible.sourceOpen_isOpen':
+  [Fintype Z]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Z] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/FermatConormalIrreducible.lean:104:0: automatically included section variable(s) unused in theorem 'Sheshadri.FermatConormalIrreducible.gaussMap_eq':
+  [Fintype A]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype A] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3101/3122] Replayed Sheshadri.AffineFundamentalCycle
+warning: ././././Sheshadri/AffineFundamentalCycle.lean:80:0: automatically included section variable(s) unused in theorem 'Sheshadri.AffineFundamentalCycle.componentSet_closed':
+  [IsNoetherianRing R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsNoetherianRing R] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/AffineFundamentalCycle.lean:83:0: automatically included section variable(s) unused in theorem 'Sheshadri.AffineFundamentalCycle.componentSet_is_component':
+  [IsNoetherianRing R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsNoetherianRing R] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/AffineFundamentalCycle.lean:101:0: automatically included section variable(s) unused in theorem 'Sheshadri.AffineFundamentalCycle.multiplicity_eq_one':
+  [IsNoetherianRing R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsNoetherianRing R] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3102/3122] Replayed Sheshadri.ActualGaussCycles
+warning: ././././Sheshadri/ActualGaussCycles.lean:46:0: automatically included section variable(s) unused in theorem 'Sheshadri.ActualGaussCycles.fibreCoordinateRing_finiteType':
+  [Fintype A]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype A] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/ActualGaussCycles.lean:53:0: automatically included section variable(s) unused in theorem 'Sheshadri.ActualGaussCycles.fibreCoordinateRing_noetherian':
+  [Fintype A]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype A] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/ActualGaussCycles.lean:68:0: automatically included section variable(s) unused in theorem 'Sheshadri.ActualGaussCycles.fibreCycle_coefficient_pos':
+  [Fintype A]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype A] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/ActualGaussCycles.lean:74:0: automatically included section variable(s) unused in theorem 'Sheshadri.ActualGaussCycles.fibreCycle_support_eq_univ':
+  [Fintype A]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype A] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3103/3122] Replayed Sheshadri.ActualGaussFlatness
+warning: ././././Sheshadri/ActualGaussFlatness.lean:43:8: automatically included section variable(s) unused in theorem 'Sheshadri.ActualGaussFlatness.eval_baseMap':
+  [Fintype Z]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Z] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3105/3122] Replayed Sheshadri.ActualGaussCoefficientRing
+warning: ././././Sheshadri/ActualGaussCoefficientRing.lean:42:8: automatically included section variable(s) unused in theorem 'Sheshadri.ActualGaussCoefficientRing.coefficientEquiv_C':
+  [Fintype Z]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Z] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/ActualGaussCoefficientRing.lean:46:8: automatically included section variable(s) unused in theorem 'Sheshadri.ActualGaussCoefficientRing.coefficientEquiv_parameter':
+  [Fintype Z]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Z] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/ActualGaussCoefficientRing.lean:50:8: automatically included section variable(s) unused in theorem 'Sheshadri.ActualGaussCoefficientRing.coefficientEquiv_spatial':
+  [Fintype Z]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Z] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3109/3122] Replayed Sheshadri.ActualGaussHomogeneous
+warning: ././././Sheshadri/ActualGaussHomogeneous.lean:32:0: automatically included section variable(s) unused in theorem 'Sheshadri.ActualGaussHomogeneous.weighted_rescale_eq':
+  [Fintype A]
+  [Fintype Z]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype A] [Fintype Z] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3110/3122] Replayed Sheshadri.ActualGaussBaseChange
+warning: ././././Sheshadri/ActualGaussBaseChange.lean:42:0: automatically included section variable(s) unused in theorem 'Sheshadri.ActualGaussBaseChange.specialize_surjective':
+  [Fintype Z]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Z] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/ActualGaussBaseChange.lean:56:0: automatically included section variable(s) unused in theorem 'Sheshadri.ActualGaussBaseChange.ker_specialize':
+  [Fintype Z]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Z] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/ActualGaussBaseChange.lean:85:0: automatically included section variable(s) unused in theorem 'Sheshadri.ActualGaussBaseChange.basePointIdeal_map':
+  [Fintype Z]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Z] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3111/3122] Replayed Sheshadri.GradedGaussBaseChange
+warning: ././././Sheshadri/GradedGaussBaseChange.lean:50:0: automatically included section variable(s) unused in theorem 'Sheshadri.GradedGaussBaseChange.specialize_baseMap':
+  [Fintype Z]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Z] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/GradedGaussBaseChange.lean:124:0: automatically included section variable(s) unused in theorem 'Sheshadri.GradedGaussBaseChange.map_eval_map_C':
+  [Fintype Z]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Z] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3116/3122] Replayed Sheshadri.HilbertStandardMonomials
+warning: ././././Sheshadri/HilbertStandardMonomials.lean:77:0: automatically included section variable(s) unused in theorem 'Sheshadri.HilbertStandardMonomials.weightedStandardSubmodule_le_standard':
+  [DecidableEq Γ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq Γ] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/HilbertStandardMonomials.lean:82:0: automatically included section variable(s) unused in theorem 'Sheshadri.HilbertStandardMonomials.weightedStandardSubmodule_le_homogeneous':
+  [DecidableEq Γ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq Γ] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3134/3391] Replayed Sheshadri.HilbertPolynomialExistence
+warning: ././././Sheshadri/HilbertPolynomialExistence.lean:70:0: automatically included section variable(s) unused in theorem 'Sheshadri.HilbertPolynomialExistence.exponentEquiv_le':
+  [Finite σ]
+  [Finite τ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Finite σ] [Finite τ] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/HilbertPolynomialExistence.lean:80:0: automatically included section variable(s) unused in theorem 'Sheshadri.HilbertPolynomialExistence.weight_eq_exponent_degrees':
+  [Finite σ]
+  [Finite τ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Finite σ] [Finite τ] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3171/3391] Replayed Sheshadri.GeneralConormalFlatFamily
+warning: ././././Sheshadri/GeneralConormalFlatFamily.lean:171:0: automatically included section variable(s) unused in theorem 'Sheshadri.GeneralConormalFlatFamily.horizontalRatioChart_reduced':
+  [IsDomain R]
+  [IsFractionRing R K]
+  [IsPrincipalIdealRing R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsDomain R] [IsFractionRing R K] [IsPrincipalIdealRing R] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/GeneralConormalFlatFamily.lean:193:0: automatically included section variable(s) unused in theorem 'Sheshadri.GeneralConormalFlatFamily.horizontalRatioGenericMap_injective':
+  [IsDomain R]
+  [IsFractionRing R K]
+  [IsPrincipalIdealRing R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsDomain R] [IsFractionRing R K] [IsPrincipalIdealRing R] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3184/3391] Replayed Sheshadri.SmoothGradientIdeal
+warning: ././././Sheshadri/SmoothGradientIdeal.lean:28:0: automatically included section variable(s) unused in theorem 'Sheshadri.SmoothGradientIdeal.pderiv_mem_gradientIdeal':
+  [Fintype Z]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Z] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3185/3391] Replayed Sheshadri.HomogeneousQuotientExact
+warning: ././././Sheshadri/HomogeneousQuotientExact.lean:24:0: automatically included section variable(s) unused in theorem 'Sheshadri.HomogeneousQuotientExact.homogeneousComponent_mul_left':
+  [Finite Z]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Finite Z] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/HomogeneousQuotientExact.lean:45:0: automatically included section variable(s) unused in theorem 'Sheshadri.HomogeneousQuotientExact.homogeneousComponent_mul_left_eq_zero':
+  [Finite Z]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Finite Z] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/HomogeneousQuotientExact.lean:92:8: automatically included section variable(s) unused in theorem 'Sheshadri.HomogeneousQuotientExact.quotientProjection_mk':
+  [Finite Z]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Finite Z] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/HomogeneousQuotientExact.lean:153:0: automatically included section variable(s) unused in theorem 'Sheshadri.HomogeneousQuotientExact.pieceMultiplication_injective':
+  [Finite Z]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Finite Z] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/HomogeneousQuotientExact.lean:220:8: automatically included section variable(s) unused in theorem 'Sheshadri.HomogeneousQuotientExact.coeff_coordinateHilbertSeries':
+  [Finite Z]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Finite Z] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3187/3391] Replayed Sheshadri.ConormalProjectiveCharts
+warning: ././././Sheshadri/ConormalProjectiveCharts.lean:138:0: automatically included section variable(s) unused in theorem 'Sheshadri.ConormalProjectiveCharts.ratioVariables_eq_biScale':
+  [Finite X]
+  [Finite Y]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Finite X] [Finite Y] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/ConormalProjectiveCharts.lean:148:0: automatically included section variable(s) unused in theorem 'Sheshadri.ConormalProjectiveCharts.originalEvaluation':
+  [Finite X]
+  [Finite Y]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Finite X] [Finite Y] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/ConormalProjectiveCharts.lean:194:8: automatically included section variable(s) unused in theorem 'Sheshadri.ConormalProjectiveCharts.normalized_left_coordinate':
+  [Finite X]
+  [Finite Y]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Finite X] [Finite Y] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/ConormalProjectiveCharts.lean:203:8: automatically included section variable(s) unused in theorem 'Sheshadri.ConormalProjectiveCharts.normalized_right_coordinate':
+  [Finite X]
+  [Finite Y]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Finite X] [Finite Y] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/ConormalProjectiveCharts.lean:215:9: unused variable `p`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+warning: ././././Sheshadri/ConormalProjectiveCharts.lean:218:8: automatically included section variable(s) unused in theorem 'Sheshadri.ConormalProjectiveCharts.coneToNormalizedChart_mk':
+  [Finite X]
+  [Finite Y]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Finite X] [Finite Y] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3189/3391] Replayed Sheshadri.ConormalChartTorus
+warning: ././././Sheshadri/ConormalChartTorus.lean:46:8: automatically included section variable(s) unused in theorem 'Sheshadri.ConormalChartTorus.scaledVariables_left':
+  [Finite X]
+  [Finite Y]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Finite X] [Finite Y] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/ConormalChartTorus.lean:50:8: automatically included section variable(s) unused in theorem 'Sheshadri.ConormalChartTorus.scaledVariables_right':
+  [Finite X]
+  [Finite Y]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Finite X] [Finite Y] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/ConormalChartTorus.lean:60:0: automatically included section variable(s) unused in theorem 'Sheshadri.ConormalChartTorus.chartEvaluation':
+  [Finite X]
+  [Finite Y]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Finite X] [Finite Y] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/ConormalChartTorus.lean:154:0: automatically included section variable(s) unused in theorem 'Sheshadri.ConormalChartTorus.selected_left_mul_ratio':
+  [Finite X]
+  [Finite Y]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Finite X] [Finite Y] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/ConormalChartTorus.lean:167:0: automatically included section variable(s) unused in theorem 'Sheshadri.ConormalChartTorus.selected_right_mul_ratio':
+  [Finite X]
+  [Finite Y]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Finite X] [Finite Y] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3191/3391] Replayed Sheshadri.GeneralFlatHilbertPolynomial
+warning: ././././Sheshadri/GeneralFlatHilbertPolynomial.lean:71:0: automatically included section variable(s) unused in theorem 'Sheshadri.GeneralFlatHilbertPolynomial.extended_ideal_hilbert_values_equal':
+  [Nonempty σ]
+  [Nonempty τ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nonempty σ] [Nonempty τ] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3192/3391] Replayed Sheshadri.SaturatedFlatHilbert
+warning: ././././Sheshadri/SaturatedFlatHilbert.lean:33:0: automatically included section variable(s) unused in theorem 'Sheshadri.SaturatedFlatHilbert.horizontalIdeal_bihomogeneous':
+  [Finite σ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Finite σ] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/SaturatedFlatHilbert.lean:47:0: automatically included section variable(s) unused in theorem 'Sheshadri.SaturatedFlatHilbert.extended_horizontalIdeal_eq_radical':
+  [Finite σ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Finite σ] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3193/3391] Replayed Sheshadri.BezoutExcessRegressions
+warning: ././././Sheshadri/BezoutExcessRegressions.lean:65:2: try 'simp at hv' instead of 'simpa using hv'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3204/3391] Replayed Sheshadri.LocalCompleteIntersection
+warning: ././././Sheshadri/LocalCompleteIntersection.lean:86:0: automatically included section variable(s) unused in theorem 'Sheshadri.LocalCompleteIntersection.regular_mem_maximal':
+  [IsNoetherian R M]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsNoetherian R M] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/LocalCompleteIntersection.lean:95:0: automatically included section variable(s) unused in theorem 'Sheshadri.LocalCompleteIntersection.containment_after_quotient':
+  [IsLocalRing R]
+  [IsNoetherian R M]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsLocalRing R] [IsNoetherian R M] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/LocalCompleteIntersection.lean:193:0: automatically included section variable(s) unused in theorem 'Sheshadri.LocalCompleteIntersection.exists_maximalIdeal_pow_le_of_artinian_quotient':
+  [IsNoetherianRing R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsNoetherianRing R] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3209/3391] Replayed Sheshadri.LocalLengthDimension
+warning: ././././Sheshadri/LocalLengthDimension.lean:28:0: automatically included section variable(s) unused in theorem 'Sheshadri.LocalLengthDimension.residue_surjective':
+  [IsLocalRing A]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsLocalRing A] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3214/3391] Replayed Sheshadri.CommonProjectiveChart
+warning: ././././Sheshadri/CommonProjectiveChart.lean:34:0: automatically included section variable(s) unused in theorem 'Sheshadri.CommonProjectiveChart.coefficient_coordinatePolynomial':
+  [Infinite K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Infinite K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/CommonProjectiveChart.lean:82:0: automatically included section variable(s) unused in theorem 'Sheshadri.CommonProjectiveChart.firstForm_homogeneous':
+  [Fintype U]
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype U] [Fintype V] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/CommonProjectiveChart.lean:89:0: automatically included section variable(s) unused in theorem 'Sheshadri.CommonProjectiveChart.secondForm_homogeneous':
+  [Fintype X]
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype X] [Fintype V] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/CommonProjectiveChart.lean:96:0: automatically included section variable(s) unused in theorem 'Sheshadri.CommonProjectiveChart.thirdForm_homogeneous':
+  [Fintype X]
+  [Fintype U]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype X] [Fintype U] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/CommonProjectiveChart.lean:130:0: automatically included section variable(s) unused in theorem 'Sheshadri.CommonProjectiveChart.projectivelyEquivalent_of_normalized_eq':
+  [Fintype X]
+  [Fintype U]
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype X] [Fintype U] [Fintype V] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/CommonProjectiveChart.lean:160:0: automatically included section variable(s) unused in theorem 'Sheshadri.CommonProjectiveChart.normalizedPoints_injective':
+  [Fintype P]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype P] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3215/3391] Replayed Sheshadri.FatPointInterpolation
+warning: ././././Sheshadri/FatPointInterpolation.lean:498:0: automatically included section variable(s) unused in theorem 'Sheshadri.FatPointInterpolation.pairwise_coprime_fatIdeals':
+  [Fintype P]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype P] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3225/3391] Replayed Sheshadri.IrrelevantSaturation
+warning: ././././Sheshadri/IrrelevantSaturation.lean:27:0: automatically included section variable(s) unused in theorem 'Sheshadri.IrrelevantSaturation.pow_mul_mem_mono':
+  [Finite σ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Finite σ] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3229/3391] Replayed Sheshadri.SmoothGaussDegree
+warning: ././././Sheshadri/SmoothGaussDegree.lean:43:0: automatically included section variable(s) unused in theorem 'Sheshadri.SmoothGaussDegree.augmentedPolars_idealSequence':
+  [CharZero K]
+  [IsAlgClosed K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] [IsAlgClosed K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3233/3391] Replayed Sheshadri.OrdinaryProjectiveHilbert
+warning: ././././Sheshadri/OrdinaryProjectiveHilbert.lean:82:0: automatically included section variable(s) unused in theorem 'Sheshadri.OrdinaryProjectiveHilbert.scaledMap_kills':
+  [Finite Z]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Finite Z] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/OrdinaryProjectiveHilbert.lean:154:0: automatically included section variable(s) unused in theorem 'Sheshadri.OrdinaryProjectiveHilbert.lower_homogeneous_degree':
+  [Finite Z]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Finite Z] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3234/3391] Replayed Sheshadri.SmoothGaussSectionLength
+warning: ././././Sheshadri/SmoothGaussSectionLength.lean:58:0: automatically included section variable(s) unused in theorem 'Sheshadri.SmoothGaussSectionLength.chart_zero_ne_zero':
+  [IsAlgClosed K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsAlgClosed K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3236/3391] Replayed Sheshadri.SmoothGaussPointFamily
+warning: ././././Sheshadri/SmoothGaussPointFamily.lean:31:0: automatically included section variable(s) unused in theorem 'Sheshadri.SmoothGaussPointFamily.chart_zero_hypersurface':
+  [CharZero K]
+  [IsAlgClosed K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] [IsAlgClosed K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/SmoothGaussPointFamily.lean:37:0: automatically included section variable(s) unused in theorem 'Sheshadri.SmoothGaussPointFamily.chart_zero_polar':
+  [CharZero K]
+  [IsAlgClosed K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] [IsAlgClosed K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/SmoothGaussPointFamily.lean:43:0: automatically included section variable(s) unused in theorem 'Sheshadri.SmoothGaussPointFamily.chart_zero_primal':
+  [CharZero K]
+  [IsAlgClosed K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] [IsAlgClosed K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3254/3391] Replayed Sheshadri.SymmetricIncidenceAffineEquations
+warning: ././././Sheshadri/SymmetricIncidenceAffineEquations.lean:66:12: try 'simp' instead of 'simpa'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ././././Sheshadri/SymmetricIncidenceAffineEquations.lean:66:48: try 'simp' instead of 'simpa'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3258/3391] Replayed Sheshadri.TorusGenericLocalRings
+warning: ././././Sheshadri/TorusGenericLocalRings.lean:136:4: try 'simp at h' instead of 'simpa using h'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3260/3391] Replayed Sheshadri.FiniteProjectiveHilbert
+warning: ././././Sheshadri/FiniteProjectiveHilbert.lean:55:0: automatically included section variable(s) unused in theorem 'Sheshadri.FiniteProjectiveHilbert.segre_power_dvd_monomial':
+  [Fintype X]
+  [Fintype U]
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype X] [Fintype U] [Fintype V] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3262/3391] Replayed Sheshadri.GenericPolynomialLift
+warning: ././././Sheshadri/GenericPolynomialLift.lean:43:4: try 'simp at h' instead of 'simpa using h'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3274/3391] Replayed Sheshadri.CurveNormalization
+warning: ././././Sheshadri/CurveNormalization.lean:114:37: unused variable `hP`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3275/3391] Replayed Sheshadri.FiniteCurveExtension
+warning: ././././Sheshadri/FiniteCurveExtension.lean:113:8: automatically included section variable(s) unused in theorem 'Sheshadri.FiniteCurveExtension.fractionEmbedding_coefficient':
+  [CharZero k]
+  [Algebra k[X] T]
+  [FaithfulSMul k[X] T]
+  [Module.Finite k[X] T]
+  [Algebra k[X] L]
+  [IsScalarTower k[X] T L]
+  [IsAlgClosed k]
+  [IsScalarTower k k[X] T]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero
+  k] [Algebra k[X]
+  T] [FaithfulSMul k[X]
+  T] [Module.Finite k[X]
+  T] [Algebra k[X] L] [IsScalarTower k[X] T L] [IsAlgClosed k] [IsScalarTower k k[X] T] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/FiniteCurveExtension.lean:122:0: automatically included section variable(s) unused in theorem 'Sheshadri.FiniteCurveExtension.fractionEmbedding_injective':
+  [CharZero k]
+  [Algebra k[X] T]
+  [FaithfulSMul k[X] T]
+  [Module.Finite k[X] T]
+  [Algebra k[X] L]
+  [IsScalarTower k[X] T L]
+  [IsAlgClosed k]
+  [IsScalarTower k k[X] T]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero
+  k] [Algebra k[X]
+  T] [FaithfulSMul k[X]
+  T] [Module.Finite k[X]
+  T] [Algebra k[X] L] [IsScalarTower k[X] T L] [IsAlgClosed k] [IsScalarTower k k[X] T] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/FiniteCurveExtension.lean:137:0: automatically included section variable(s) unused in theorem 'Sheshadri.FiniteCurveExtension.fractionEmbedding_div_surjective':
+  [CharZero k]
+  [Algebra k[X] T]
+  [FaithfulSMul k[X] T]
+  [Module.Finite k[X] T]
+  [Algebra k[X] L]
+  [IsScalarTower k[X] T L]
+  [IsAlgClosed k]
+  [IsScalarTower k k[X] T]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero
+  k] [Algebra k[X]
+  T] [FaithfulSMul k[X]
+  T] [Module.Finite k[X]
+  T] [Algebra k[X] L] [IsScalarTower k[X] T L] [IsAlgClosed k] [IsScalarTower k k[X] T] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/FiniteCurveExtension.lean:153:48: unused variable `hP`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3279/3391] Replayed Sheshadri.DVRGaussContainment
+warning: ././././Sheshadri/DVRGaussContainment.lean:36:0: automatically included section variable(s) unused in theorem 'Sheshadri.DVRGaussContainment.residue_zero_iff_dvd':
+  [IsDomain R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsDomain R] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/DVRGaussContainment.lean:161:8: automatically included section variable(s) unused in theorem 'Sheshadri.DVRGaussContainment.genericCoefficientMap_base':
+  [IsDomain R]
+  [IsDiscreteValuationRing R]
+  [Fintype Z]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsDomain R] [IsDiscreteValuationRing R] [Fintype Z] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/DVRGaussContainment.lean:189:0: automatically included section variable(s) unused in theorem 'Sheshadri.DVRGaussContainment.genericGaussIdeal_isRadical':
+  [IsDomain R]
+  [IsDiscreteValuationRing R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsDomain R] [IsDiscreteValuationRing R] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/DVRGaussContainment.lean:191:30: unused variable `j`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+warning: ././././Sheshadri/DVRGaussContainment.lean:195:0: automatically included section variable(s) unused in theorem 'Sheshadri.DVRGaussContainment.genericGauss_zeroLocus_eq_closure':
+  [IsDomain R]
+  [IsDiscreteValuationRing R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsDomain R] [IsDiscreteValuationRing R] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/DVRGaussContainment.lean:239:0: automatically included section variable(s) unused in theorem 'Sheshadri.DVRGaussContainment.sourceEquation_special_ne_zero':
+  [IsDomain R]
+  [IsDiscreteValuationRing R]
+  [Fintype Z]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsDomain R] [IsDiscreteValuationRing R] [Fintype Z] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/DVRGaussContainment.lean:280:0: automatically included section variable(s) unused in theorem 'Sheshadri.DVRGaussContainment.sourceEquation_eval':
+  [IsDomain R]
+  [IsDiscreteValuationRing R]
+  [Fintype Z]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsDomain R] [IsDiscreteValuationRing R] [Fintype Z] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/DVRGaussContainment.lean:411:0: automatically included section variable(s) unused in theorem 'Sheshadri.DVRGaussContainment.specialGaussPoint_eq_original':
+  [IsDomain R]
+  [IsDiscreteValuationRing R]
+  [Fintype A]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsDomain R] [IsDiscreteValuationRing R] [Fintype A] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3284/3391] Replayed Sheshadri.RegularFlagsWithResidue
+warning: ././././Sheshadri/RegularFlagsWithResidue.lean:158:0: automatically included section variable(s) unused in theorem 'Sheshadri.RegularFlagsWithResidue.linearCombination_homogeneous':
+  [Finite σ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Finite σ] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/RegularFlagsWithResidue.lean:165:0: automatically included section variable(s) unused in theorem 'Sheshadri.RegularFlagsWithResidue.combination_mem_span':
+  [Finite σ]
+  [Infinite C]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Finite σ] [Infinite C] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3285/3391] Replayed Sheshadri.MonomialOrthantDecomposition
+warning: ././././Sheshadri/MonomialOrthantDecomposition.lean:50:8: automatically included section variable(s) unused in theorem 'Sheshadri.MonomialOrthantDecomposition.cell_apply':
+  [Fintype σ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype σ] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/MonomialOrthantDecomposition.lean:252:31: unused variable `e`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3287/3391] Replayed Sheshadri.SaturatedSectionHilbert
+warning: ././././Sheshadri/SaturatedSectionHilbert.lean:62:0: automatically included section variable(s) unused in theorem 'Sheshadri.SaturatedSectionHilbert.eventually_constant_of_natDegree_eq_zero':
+  [Fintype Z]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Z] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3288/3391] Replayed Sheshadri.HomogeneousSystemSaturation
+warning: ././././Sheshadri/HomogeneousSystemSaturation.lean:158:0: automatically included section variable(s) unused in theorem 'Sheshadri.HomogeneousSystemSaturation.associatedPrime_omits_member':
+  [Finite σ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Finite σ] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3289/3391] Replayed Sheshadri.SaturatedRegularSequence
+warning: ././././Sheshadri/SaturatedRegularSequence.lean:72:0: automatically included section variable(s) unused in theorem 'Sheshadri.SaturatedRegularSequence.sequence_eq_saturation_idealSequence':
+  [Fintype Z]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Z] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3290/3391] Replayed Sheshadri.PrescribedResidueGaussSequence
+warning: ././././Sheshadri/PrescribedResidueGaussSequence.lean:94:0: automatically included section variable(s) unused in theorem 'Sheshadri.PrescribedResidueGaussSequence.primalPolynomial_eq':
+  [IsLocalRing R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsLocalRing R] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/PrescribedResidueGaussSequence.lean:103:0: automatically included section variable(s) unused in theorem 'Sheshadri.PrescribedResidueGaussSequence.exists_normalized_primal':
+  [IsLocalRing R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsLocalRing R] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3291/3391] Replayed Sheshadri.SaturatedChartSmoothness
+warning: ././././Sheshadri/SaturatedChartSmoothness.lean:30:0: automatically included section variable(s) unused in theorem 'Sheshadri.SaturatedChartSmoothness.exists_homogeneous_representative':
+  [Fintype Z]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Z] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3292/3391] Replayed Sheshadri.FinitePrescribedGaussSection
+warning: ././././Sheshadri/FinitePrescribedGaussSection.lean:52:0: automatically included section variable(s) unused in theorem 'Sheshadri.FinitePrescribedGaussSection.rawIdeal_homogeneous':
+  [Infinite C]
+  [IsLocalRing R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Infinite C] [IsLocalRing R] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3297/3391] Replayed Sheshadri.DVRRootPersistence
+warning: ././././Sheshadri/DVRRootPersistence.lean:89:0: automatically included section variable(s) unused in theorem 'Sheshadri.DVRRootPersistence.mapped_scalar_regular':
+  [IsLocalRing A]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsLocalRing A] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/DVRRootPersistence.lean:129:0: automatically included section variable(s) unused in theorem 'Sheshadri.DVRRootPersistence.localization_parameter_regular':
+  [IsDiscreteValuationRing D]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsDiscreteValuationRing D] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/DVRRootPersistence.lean:172:0: automatically included section variable(s) unused in theorem 'Sheshadri.DVRRootPersistence.specialIdeal_le_pointIdeal':
+  [IsDomain D]
+  [IsDiscreteValuationRing D]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsDomain D] [IsDiscreteValuationRing D] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3298/3391] Replayed Sheshadri.DVRGaussSection
+warning: ././././Sheshadri/DVRGaussSection.lean:149:0: automatically included section variable(s) unused in theorem 'Sheshadri.DVRGaussSection.equations_specialIdeal':
+  [IsDomain D]
+  [IsDiscreteValuationRing D]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsDomain D] [IsDiscreteValuationRing D] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3316/3391] Replayed Sheshadri.FieldIncidenceMultiplicity
+warning: ././././Sheshadri/FieldIncidenceMultiplicity.lean:36:0: automatically included section variable(s) unused in theorem 'Sheshadri.FieldBezoutArity.extendPoint_comp_embed':
+  [CharZero k₀]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero k₀] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/FieldIncidenceMultiplicity.lean:53:0: automatically included section variable(s) unused in theorem 'Sheshadri.FieldBezoutArity.homogeneous_embed':
+  [CharZero k₀]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero k₀] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/FieldIncidenceMultiplicity.lean:90:0: automatically included section variable(s) unused in theorem 'Sheshadri.FieldBiProjectiveLocalMultiplicity.chartIdeal_le_pointIdeal':
+  [CharZero k₀]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero k₀] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/FieldIncidenceMultiplicity.lean:114:8: automatically included section variable(s) unused in theorem 'Sheshadri.FieldBiProjectiveLocalMultiplicity.retract_rename':
+  [CharZero k₀]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero k₀] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/FieldIncidenceMultiplicity.lean:198:0: automatically included section variable(s) unused in theorem 'Sheshadri.FieldBiProjectiveLocalMultiplicity.eval_retract':
+  [CharZero k₀]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero k₀] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3320/3391] Replayed Sheshadri.FieldSymmetricIncidenceAffineEquations
+warning: ././././Sheshadri/FieldSymmetricIncidenceAffineEquations.lean:68:12: try 'simp' instead of 'simpa'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: ././././Sheshadri/FieldSymmetricIncidenceAffineEquations.lean:68:48: try 'simp' instead of 'simpa'
+note: this linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3322/3391] Replayed Sheshadri.FieldConormalPolarIdeal
+warning: ././././Sheshadri/FieldConormalPolarIdeal.lean:29:0: automatically included section variable(s) unused in theorem 'Sheshadri.FieldConormalPolarIdeal.trace_flagMatrix_polar':
+  [CharZero k₀]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero k₀] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/FieldConormalPolarIdeal.lean:51:8: automatically included section variable(s) unused in theorem 'Sheshadri.FieldConormalPolarIdeal.primalPolynomial_primalFlag':
+  [CharZero k₀]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero k₀] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3323/3391] Replayed Sheshadri.FieldPolarMultiplicityBound
+warning: ././././Sheshadri/FieldPolarMultiplicityBound.lean:34:8: automatically included section variable(s) unused in theorem '_private.Sheshadri.FieldPolarMultiplicityBound.0.Sheshadri.FieldPolarMultiplicityBound.chart_root':
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/FieldPolarMultiplicityBound.lean:40:8: automatically included section variable(s) unused in theorem '_private.Sheshadri.FieldPolarMultiplicityBound.0.Sheshadri.FieldPolarMultiplicityBound.chart_polar':
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/FieldPolarMultiplicityBound.lean:46:8: automatically included section variable(s) unused in theorem '_private.Sheshadri.FieldPolarMultiplicityBound.0.Sheshadri.FieldPolarMultiplicityBound.chart_primal':
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/FieldPolarMultiplicityBound.lean:62:8: automatically included section variable(s) unused in theorem '_private.Sheshadri.FieldPolarMultiplicityBound.0.Sheshadri.FieldPolarMultiplicityBound.primal_equation':
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3324/3391] Replayed Sheshadri.FieldFinitePolarBound
+warning: ././././Sheshadri/FieldFinitePolarBound.lean:32:8: automatically included section variable(s) unused in theorem '_private.Sheshadri.FieldFinitePolarBound.0.Sheshadri.FieldFinitePolarBound.finrank_le_of_local_bound':
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3326/3391] Replayed Sheshadri.ArbitraryFieldFinitePolarBound
+warning: ././././Sheshadri/ArbitraryFieldFinitePolarBound.lean:38:0: automatically included section variable(s) unused in theorem 'Sheshadri.ArbitraryFieldFinitePolarBound.map_polarChartIdeal':
+  [CharZero K]
+  [CharZero L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] [CharZero L] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/ArbitraryFieldFinitePolarBound.lean:46:0: automatically included section variable(s) unused in theorem 'Sheshadri.ArbitraryFieldFinitePolarBound.quotient_finite_baseChange':
+  [CharZero K]
+  [CharZero L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] [CharZero L] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/ArbitraryFieldFinitePolarBound.lean:51:0: automatically included section variable(s) unused in theorem 'Sheshadri.ArbitraryFieldFinitePolarBound.quotient_finrank_baseChange':
+  [CharZero K]
+  [CharZero L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] [CharZero L] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/ArbitraryFieldFinitePolarBound.lean:57:0: automatically included section variable(s) unused in theorem 'Sheshadri.ArbitraryFieldFinitePolarBound.unit_combination_baseChange':
+  [CharZero K]
+  [CharZero L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] [CharZero L] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/ArbitraryFieldFinitePolarBound.lean:72:0: automatically included section variable(s) unused in theorem 'Sheshadri.ArbitraryFieldFinitePolarBound.smooth_of_quotient_unit':
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: ././././Sheshadri/ArbitraryFieldFinitePolarBound.lean:80:0: automatically included section variable(s) unused in theorem 'Sheshadri.ArbitraryFieldFinitePolarBound.local_eq_of_saturation_sandwich':
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3389/3391] Replayed Sheshadri.DVRCompletionDomain
+warning: ././././Sheshadri/DVRCompletionDomain.lean:48:8: automatically included section variable(s) unused in theorem '_private.Sheshadri.DVRCompletionDomain.0.Sheshadri.DVRCompletionDomain.exists_nonzero_component':
+  [IsDomain D]
+  [IsDiscreteValuationRing D]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [IsDomain D] [IsDiscreteValuationRing D] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+Build completed successfully.

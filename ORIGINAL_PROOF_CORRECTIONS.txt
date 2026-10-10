@@ -1,0 +1,101 @@
+HISTORICAL SNAPSHOT — SUPERSEDED COMPLETION STATUS
+
+The text below records an earlier review. Its statements that the PDF was
+unchanged and that Bezout or degree obligations remained unproved describe
+that earlier stage, not this release. The revised manuscript in paper/main.tex
+and paper/main.pdf incorporates the conservation and away-from-vertex repairs.
+The current exact and border endpoints prove their required singular Bezout,
+degree and specialization inputs through the local Gauss-section route.
+See the paper's verification appendix, ORIGINAL_CONORMAL_SCOPE.txt,
+END_TO_END_HYPOTHESES_AUDIT.txt and RELEASE_NOTES.txt for the current scope.
+The historical text is retained without silently rewriting its old claims.
+
+THREE LOCAL REPAIRS PRESERVING THE ORIGINAL PROOF ROUTE
+
+These are mathematical corrections/clarifications to the supplied revised
+manuscript. The PDF itself is unchanged. The formal development follows the
+corrected statements; it does not use the explicit Fermat polar-slice route.
+
+1. SECTION 4.3: REDUCED RIGHT EQUATIONS
+
+Replace the standalone assertion that full and reduced right-kernel ideals
+agree by the assertion that they agree after adjoining the full left-kernel
+ideal. In a Schur chart set
+  a = u'^T + r B^(-1),   z = v' + B^(-1)c,
+  g = s - r B^(-1)c.
+The left ideal is (a,g). Reduced right equations have form M_v*z + lambda*g
+with M_v invertible. Consequently
+  I_left + I_reduced_right = (a,g,z) = I_left + I_full_right.
+The combined local ideal equality actually used for isolatedness survives.
+ConormalIncidence also proves the corresponding full tangent implication.
+
+2. LEMMA 7.4: MULTIDEGREE CONSERVATION
+
+A family over an arbitrary smooth curve yields algebraic equivalence, not
+general rational equivalence of fibre cycles. The fixed biprojective ambient
+allows the desired Chow-class conclusion, but it needs a justification.
+Use the following direct conservation argument instead.
+
+Let d=n-1. For each pair of integers a,b, O_W(a,b) is flat over C. Properness
+and flatness make chi(W_c,O_W_c(a,b)) independent of c on the connected base.
+The degree-d homogeneous part of its two-variable numerical polynomial is
+  sum_(k=0)^d delta_k([W_c]) * a^(d-k)*b^k / ((d-k)!*k!).
+Therefore all delta_k are independent of c. These coefficients incorporate
+the generic-length multiplicities of the scheme-theoretic fibre. Lemma 7.3
+then identifies the generic cycle with Gamma_c.
+
+One single Segre Hilbert polynomial would not determine every multidegree.
+The two-variable polynomial, or enough distinct polarizations, does. The
+formal numerical bridge uses chi(W_c,O(q,q*t)), first identifies the full
+polynomial on the natural q,t grid, then extracts its coefficient of q^d.
+
+If rational equivalence in the ambient is desired afterward, use the Chow
+ring of P^n x (P^n)^dual: its cycle classes are determined by these multidegrees.
+The inequality only needs numerical conservation.
+
+Primary references:
+  Stacks Lemma 36.32.2, Euler characteristic constancy:
+  https://stacks.math.columbia.edu/tag/0B9T
+  Stacks Section 33.45, numerical polynomials and multiplicity-weighted
+  intersection coefficients:
+  https://stacks.math.columbia.edu/tag/0BEL
+  Stacks Section 42.36, projective bundle formula:
+  https://stacks.math.columbia.edu/tag/02TV
+
+3. PROPOSITION 9.1: CONE SHIFT AWAY FROM THE VERTEX
+
+Do not assert a global P^1-bundle morphism Con(X_Z) -> Con(Z).
+Distinct tangencies sharing a tangent hyperplane can meet in the same
+vertex-covector pair, preventing a global projection of that form.
+
+Restrict radial projection to primal points away from the cone vertex q_0.
+Choose the generic primal hyperplane M with q_0 not in M. Each ruling meets
+M once, and X_Z intersect M -> Z is an isomorphism. On this section, the
+conormal graph is identified with Con(Z), preserving the dual coordinate.
+Thus the required intersection gives
+  delta_(n-2)(Con(X_Z)) = degree(Z^dual).
+For a smooth degree-e hypersurface Z in P^(n-1), in characteristic zero,
+the conormal projection onto its hypersurface dual is birational, and
+  degree(Z^dual) = e*(e-1)^(n-2).
+
+The Lean file ConormalCone proves the representative-section identities
+and scaling compatibility. The projective conormal/intersection-degree
+bridge and dual-degree theorem remain external geometric inputs.
+
+Primary reference:
+  E. Tevelev, Projectively Dual Varieties, Theorem 1.10(b), printed p.6;
+  Example 7.4, printed pp.106-107:
+  https://arxiv.org/pdf/math/0112028
+
+CHECK ON BEZOUT
+
+The remaining UniversalSimpleBezout assumption concerns specified distinct
+simple isolated zeros of a square multiprojective system. It does not require
+all zeros to be isolated, so excess positive-dimensional components are
+allowed. This is a restricted consequence of the isolated-zero theorem:
+  J.-P. Dedieu, G. Malajovich, M. Shub, On the Curvature of the Central Path
+  of Linear Programming Theory, Section 5, Theorem 5.1:
+  https://arxiv.org/pdf/math/0312083
+Its truth was source-audited earlier; the theorem itself remains unproved
+in Lean. The new original route does not use the polynomial-image
+Euclidean/Zariski closure assumption from the earlier alternative proof.

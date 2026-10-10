@@ -1,0 +1,82 @@
+DVR LOCAL PERSISTENCE — SCOPE AND HYPOTHESIS AUDIT
+
+Module: Sheshadri.DVRRootPersistence
+
+Theorem family_contraction_annihilates_local:
+- D is a discrete valuation ring; L is its actual fraction field.
+- epsilon : D -> k is a surjective ring map to an infinite field.
+- pi is irreducible and ker epsilon is the principal ideal (pi).
+- fs is a literal list of polynomials in D[x_1,...,x_N], with N entries.
+- p is an actual common zero of the coefficient-specialized equations.
+- The localization of k[x]/(special fs) at the actual point p is Artinian.
+
+Conclusion: every equation in the contraction of the generic equation ideal
+specializes to zero in the ENTIRE original local intersection algebra at p.
+This is stronger than vanishing at the residue-field point.
+
+Theorem specialized_contractedIdeal_localization_eq:
+The coefficient-specialized generic contraction and the original special
+ideal become EQUAL ideals in k[x] localized at p. Nilpotent structure, hence
+every local multiplicity encoded by this quotient, is retained exactly.
+
+Constructed proof ingredients:
+1. The localized special fibre is explicitly isomorphic to k[x] localized at p.
+2. Isolated square systems are regular sequences, via the already proved
+   isolated complete-intersection theorem (no Jacobian assumption).
+3. Local regular-sequence permutation makes the actual uniformizer regular
+   after imposing the deformed equations.
+4. Every nonzero DVR scalar is a unit times a power of the uniformizer.
+   Therefore every generic denominator is cancellable in this quotient.
+5. Localization/quotient maps identify the specialized original local algebra
+   and prove equality of localized ideals.
+
+No flatness, conservation-of-multiplicity, finite-neighborhood, generic-section,
+transversality, count-budget, or projective-cycle premise occurs.
+
+LIMITATION: this theorem alone does not prove a numerical comparison with the
+generic fibre's total length. Such a comparison still requires a finite
+neighborhood, finite-dimensional generic quotient, or a proved interpolation/
+Hilbert-piece comparison. The theorem does not claim that arbitrary affine
+families preserve total lengths: points can escape to infinity.
+
+No fixed Fermat coordinate slice appears. The statement is general algebra
+for actual square systems over arbitrary DVRs.
+
+ADDITIONAL SATURATION INTERFACE
+Module: Sheshadri.DVRSaturatedPersistence
+The generic ideal J may be any ideal between the extended literal square
+system and its saturation by a displayed family g_i. It suffices that one
+specialized g_i is nonzero at the selected point. The localized specialized
+contraction of J is then exactly the original local ideal. This allows
+removing generic components on the gradient/boundary locus without deleting
+any part of the chosen special local intersection algebra.
+
+COMPLETION INFRASTRUCTURE (independent auxiliary route)
+Modules: Sheshadri.AdicScalarCompatibility,
+         Sheshadri.CompletionFiniteGeneration,
+         Sheshadri.DVRCompletionDomain.
+- Module and algebra presentations of principal-adic completion are explicitly
+  linearly equivalent over the base and agree on canonical images.
+- Injectivity of multiplication by the actual parameter survives Noetherian
+  completion, in either presentation.
+- Generation modulo an ideal implies generation after completion; a basis
+  modulo a regular parameter yields a genuine completed linear equivalence.
+- The actual inverse-limit completion of a DVR is proved to be a domain by
+  finite-quotient valuation estimates, so its fraction field is legitimate.
+These lemmas alone do NOT finish the border proof through completion. In
+particular relative flatness over the tensor product with the completed base
+is not asserted or inferred merely from flatness over the original ring.
+
+APPLIED ACTUAL-FAMILY BRIDGE
+Module: Sheshadri.DVRSaturatedGaussPersistence
+family_saturated_contraction_preserves accepts the actual constructed
+DeterminantDvrFamily.Family, an actual constructed Section, flags with their
+specified residues, and a generic ideal J lying between the actual generic
+polar equations and their actual derivative saturation. It derives the DVR
+and fraction-field instances from Family. It proves:
+(1) the original special Gauss ideal is contained in the special contraction;
+(2) every contracted equation annihilates every selected full local algebra.
+The nonvanishing denominator is obtained from Section.smooth at each point.
+section_saturated_contraction_local_eq proves the actual local ideal equality.
+The generic ideal sandwich remains an intermediate construction condition;
+this module does not itself assert the existence/finiteness of such a J.

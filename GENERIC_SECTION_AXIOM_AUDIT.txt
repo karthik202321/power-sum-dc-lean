@@ -1,0 +1,52 @@
+'Sheshadri.GaussSectionSmoothLocalization.exists_unit_polar' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.GaussSectionSmoothLocalization.exists_lifted_unit_combination' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.GaussSectionSmoothLocalization.localizedPoint_smooth' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.HomogeneousSystemSaturation.map_saturation_eq_of_unit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.HomogeneousSystemSaturation.eq_saturation_of_unit_span' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.HomogeneousSystemSaturation.common_factor_regular' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.RegularFlagsWithResidue.exists_regular_perturbation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.RegularFlagsWithResidue.exists_regular_coefficients' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.PrescribedResidueGaussSequence.exists_regular_sequence' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.PrescribedResidueGaussSequence.exists_normalized_primal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.FinitePrescribedGaussSection.exists_finite_section' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ActualGenericGaussSection.exists_actual_section' depends on axioms: [propext, Classical.choice, Quot.sound]
+Sheshadri.ActualGenericGaussSection.exists_actual_section.{u_1, u_2} {n m : ℕ} {D : Type u_1} {L : Type u_2}
+  [CommRing D] [IsDomain D] [Algebra ℂ D] [Field L] [Algebra ℂ L]
+  (family : Sheshadri.DeterminantDvrFamily.Family n m D L) (hn : 2 ≤ n)
+  (s : Sheshadri.ConormalGaussSection.Section (Sheshadri.PolynomialModel.fermat n) n) :
+  ∃ ell a J c,
+    (∀ (j : ℕ) (i : Fin n), family.residue (ell j i) = s.ell j i) ∧
+      (∀ (i : Fin n), family.residue (a i) = s.a i) ∧
+        Module.Finite L (MvPolynomial (Fin n) L ⧸ J) ∧
+          Sheshadri.ActualGenericGaussSection.polarEquationIdeal family ell a ≤ J ∧
+            (J ≤
+                Sheshadri.HomogeneousSystemSaturation.saturation
+                  (Sheshadri.ActualGenericGaussSection.polarEquationIdeal family ell a) fun i =>
+                  (MvPolynomial.pderiv i) (Sheshadri.PolynomialModel.determinant family.pencil)) ∧
+              IsUnit
+                  ((Ideal.Quotient.mk J)
+                    (∑ i,
+                      MvPolynomial.C (c i) *
+                        (MvPolynomial.pderiv i) (Sheshadri.PolynomialModel.determinant family.pencil))) ∧
+                J =
+                  Sheshadri.HomogeneousSystemSaturation.saturation
+                    (Sheshadri.ActualGenericGaussSection.polarEquationIdeal family ell a) fun i =>
+                    (MvPolynomial.pderiv i) (Sheshadri.PolynomialModel.determinant family.pencil)

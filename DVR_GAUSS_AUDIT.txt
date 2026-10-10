@@ -1,0 +1,122 @@
+DVR GAUSS FAMILY AUDIT
+
+Scope: original conormal specialization, with actual algebraic DVR families.
+This audit describes proved statements, not a claim that the final border
+numerical inequality has already been assembled.
+
+1. Actual generic and horizontal Gauss ideals
+
+DVRGaussContainment constructs the source equation F(z)=0 with independent
+nonzero scalars mu, nu. On each derivative-open chart, the literal ambient
+coordinates are
+  primal = mu * (1,z)
+  dual   = nu * (-sum_j z_j partial_j F, partial_j F).
+The chart denominator is mu*nu*partial_j F. The generic chart also inverts
+every nonzero scalar of the DVR. genericGaussIdeal is the intersection of
+the radicals of the actual fraction-field graph-map kernels.
+
+The generic support is proved equal to the Zariski closure of the union of
+these genuine chart images on prime spectra. horizontalGaussIdeal is proved
+to be the contraction of that generic ideal, and its prime-spectrum support
+is the closure of the generic support. The horizontal quotient is flat over
+the DVR. No arbitrary closure, flatness, graph-realization, or curve-family
+certificate occurs in these conclusions.
+
+2. Actual special conormal containment
+
+If the special polynomial is nonzero, multiplication by a uniformizer is
+proved injective on the hypersurface quotient. The proof uses the literal
+residue polynomial and cancellation; DVR factorization then gives scalar
+torsion-freeness. This survives localization to every derivative-open graph
+chart, so each such chart injects into its generic base localization.
+
+Consequently every smooth special Gauss point annihilates the horizontal
+ideal. Taking the original ConormalZariski.conormalClosure proves containment
+in the actual special fibre. specialFibreIdeal is coefficient extension of
+the horizontal ideal, WITHOUT a radical after specialization. Thus this is
+support containment in a scheme-theoretic fibre that may be nonreduced.
+It does not assert equality of that fibre with the target conormal.
+
+3. Bihomogeneity is proved
+
+DVRGaussHomogeneous classifies every field-valued point of each generic chart
+as a literal smooth scaled Gauss point. Conversely, every such smooth point
+over a fraction-field extension evaluates the actual generic chart.
+Independent rescaling of mu and nu preserves this description.
+
+HomogeneousVanishing extracts each two-block homogeneous component from
+vanishing under all nonzero rescalings. RadicalKernelFieldPoints tests in
+ALL fraction fields of prime quotients of the generic chart. This use of all
+prime quotients detects radical-kernel membership even if the chart algebra
+is not reduced. It is not a test only at complex closed points and does not
+assume any fraction-field embedding into the residue field.
+
+The resulting theorems prove actual genericGaussIdeal_bihomogeneous,
+horizontalGaussIdeal_bihomogeneous, and specialFibreIdeal_bihomogeneous.
+An infinite generic field is used for polynomial coefficient extraction;
+the constructed determinant families have a complex field algebra, which
+supplies this hypothesis.
+
+4. Actual Hilbert conservation
+
+specialFibre_bicoordinate_dimensions proves equality of the vector-space
+dimensions of the literal special and generic quotient pieces at EVERY
+bidegree. This follows from the proved bihomogeneity, horizontal contraction,
+and scalar torsion-freeness over the DVR. Special-fibre nilpotents remain
+part of those quotient dimensions.
+
+exists_common_gaussHilbertPolynomial constructs a common eventual bivariate
+Hilbert polynomial and proves both evaluation laws. No proposed Hilbert
+polynomial, mixed-degree formula, or coefficient comparison is assumed.
+
+5. Bare border predicates discharge the family inputs
+
+DeterminantDvrGaussContainment uses the actual Family produced by
+DeterminantDvrFamily. This record includes a normalized DVR with a complex
+residue map, uniformizer, genuine fraction field containing the generic
+matrix-pencil parameters, and literal residue/generic polynomial identities.
+The nonzero special-polynomial input is proved from the Fermat polynomial.
+
+family_fermatConormal_subset and family_horizontalGauss_flat require only
+that actual algebraic Family (and n>0 for the nonzero Fermat polynomial).
+family_specialFibre_bicoordinate_dimensions applies Hilbert conservation to
+the actual residue field C and actual generic representation field L.
+
+ordinary_border_exact_or_conormalFamily and its symmetric counterpart start
+from canonical Zariski border membership. The finiteSupportBorder versions
+start from the paper-facing literal Euclidean finite-support border predicate:
+BorderDvrFamily proves its inclusion in canonical Zariski closure, without
+assuming equality of Euclidean and Zariski closures. The result is either an
+exact complex representation or a constructed DVR family with the proved
+special-conormal containment. The symmetric endpoint retains the literal
+symmetry of every generic matrix-pencil coefficient.
+
+6. Exact remaining scope restrictions
+
+These results do not identify all positive-dimensional projective cycle
+classes or prove effective comparison of the required mixed top-degree
+coefficient between the target conormal and the special fibre. Such a step
+still needs actual dimension/purity and effective-cycle or equivalent
+sectional arguments, as appropriate to the final theorem.
+
+Pointwise inequalities between bivariate Hilbert functions alone do NOT
+imply inequalities of individual mixed coefficients. For example,
+a^2-a*b+b^2 is positive for positive a,b but has a negative mixed coefficient.
+No such inference is made by the new modules.
+
+The generic determinant family may live over a representation fraction field
+L larger than C. A final numerical border argument must apply the incidence
+budget over the appropriate field or prove a justified scalar-extension or
+closed-fibre reduction. These modules do not silently substitute C for L.
+
+This construction follows the original Gauss/conormal specialization route.
+The two scalars only change projective representatives. It does not impose a
+fixed Fermat-coordinate slice or invoke a Kumar--Volk explicit-slice argument.
+
+Validation: the general containment and bihomogeneity modules pass guarded
+Lake builds. The principal containment, homogeneity, actual graded-dimension,
+and common-Hilbert-polynomial endpoints have kernel axiom audits containing
+only propext, Classical.choice, and Quot.sound. No custom axiom or sorry is
+introduced by these modules. The family wrapper also passes its guarded Lake build (3165/3165). Its five
+family/finite-support-border endpoints were separately axiom-audited and
+also use exactly the same three standard logical axioms.

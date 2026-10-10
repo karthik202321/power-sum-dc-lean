@@ -1,0 +1,1392 @@
+'Sheshadri.ordinary_kernel_ideal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.symmetric_kernel_ideal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ordinary_isolated_reduced_mod_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.n_independent_cotangent_equations_isField' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.schurBlockMatrix_det' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ConormalFlatness.component_quotient_map_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ConormalFlatness.flat_of_torsionfree_pid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ConormalFlatness.flat_of_reduced_componentwise_dominant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.MultiplicityOne.unique_vanishing_factor_of_factorization' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ConormalPersistence.smooth_zero_gauss_persistence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ConormalPersistence.coefficient_smooth_zero_persistence' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ConormalPersistence.limiting_gauss_point_mem_closed_family' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ConormalPersistence.homogeneous_differential_eq_gaussCovector' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ConormalZariski.conormalClosure_subset_special_fibre' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ConormalTopology.closure_algebraicTopology_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ConormalCycles.target_le_multidegree_of_support_containment' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ConormalEulerHilbert.polynomial_eq_of_nat_grid_eval_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ConormalEulerHilbert.multidegrees_constant_of_euler_characteristics_constant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ConormalSpecialization.target_degree_le_generic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ConormalCone.powerSum_smooth_away_from_vertex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ConormalCone.hyperplaneSectionEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ConormalIncidence.gaussCovector_eq_homogeneous_gradient' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ConormalIncidence.ordinary_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ConormalIncidence.symmetric_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ConormalExact.fermat_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ConormalExact.ordinary_exact_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ConormalExact.symmetric_exact_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ConormalExact.ordinary_exact_quadratic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ConormalExact.symmetric_exact_quadratic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ConormalBorder.FamilyCertificate.degree_specializes' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ConormalBorder.ordinary_count_from_family' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ConormalBorder.symmetric_count_from_family' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ConormalBorder.ordinary_quadratic_from_family' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ConormalBorder.symmetric_quadratic_from_family' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.FermatIrreducible.fermat_irreducible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.FermatIrreducible.fermat_zeroLocus_isIrreducible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.FermatConormalIrreducible.fermat_conormalClosure_isIrreducible' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ActualGaussFamily.conormalClosure_subset_fibre' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ActualGaussFamily.mem_fibre_iff_vanishes_fibreIdeal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ActualGaussFamily.totalFamily_eq_of_pointwise_closure' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ActualGaussFlatness.totalIdeal_saturated' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ActualGaussFlatScheme.structureMorphism_flat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.SaturatedFlatFamily.horizontal_zeroLocus_eq_closure' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.SaturatedFlatFamily.horizontal_spec_flat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ProjectiveConormal.conormal_eq_projectivized_affineClosure' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ProjectiveConormal.conormal_eq_homogeneousGaussClosure' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ProjectiveConormal.projectiveHyperplaneSectionEquiv' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ConormalOffVertex.conormal_hyperplaneSection_eq_gauss' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.AffineFundamentalCycle.multiplicity_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.AffineFundamentalCycle.componentSet_is_component' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.AffineFundamentalCycle.supportSet_eq_univ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.AffineFundamentalCycle.multiplicity_eq_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ActualGaussCycles.targetPoint_mem_fibreCycle_support' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.FlatGradedHilbert.fibre_bicoordinate_dimensions_equal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ActualGaussHilbert.actual_gauss_specialHilbertValue_constant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ActualGaussHilbert.actual_gauss_multidegrees_equal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.AlgebraicCurveSelection.imageRing_noether_normalization' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.AlgebraicCurveSelection.polynomial_image_constructible' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ActualGaussCoefficientRing.coefficientIdeal_bihomogeneous' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ActualGaussHomogeneous.totalIdeal_bihomogeneous' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ActualGaussBaseChange.fibreTensorEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ActualGaussBaseChange.residueEquivComplex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ActualGaussHilbert.actual_gauss_fibre_dimensions_constant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.HilbertStandardMonomials.exists_standard_remainder' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.HilbertStandardMonomials.exists_finite_hilbert_function' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.HilbertStandardMonomials.exists_finite_weighted_hilbert_function' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.MonomialHilbert.standardHilbertPolynomial_eval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.BiMonomialHilbert.biStandardHilbertPolynomial_eval' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.HilbertPolynomialExistence.exists_coordinate_hilbert_polynomial' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.HilbertPolynomialExistence.exists_bicoordinate_hilbert_polynomial' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.GradedGaussBaseChange.tensorFibreAlgEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.GradedGaussBaseChange.map_gaussFibrePiece' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.GradedGaussBaseChange.specializedPiece_dimensions_constant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ActualGaussHilbertPolynomial.fibreIdeal_bihomogeneous' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ActualGaussHilbertPolynomial.exists_actual_gauss_hilbert_polynomial' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ActualGaussHilbertPolynomial.actualHilbertPolynomial_constant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ActualGaussHilbertPolynomial.actualHilbertPolynomial_coefficients_constant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.GeneralConormalFlatFamily.localization_torsionfree' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.GeneralConormalFlatFamily.horizontalRatioChart_flat' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.GeneralConormalFlatFamily.horizontalRatioGenericMap_dense' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.GeneralConormalFlatFamily.horizontalRatioChart_component_lifts' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.GeneralConormalFlatFamily.horizontalRatioChart_spec_flat' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.GeneralConormalFlatFamily.horizontalRatioChart_componentwiseDominant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ProjectiveFlatFamily.homogeneousBaseMap_flat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ProjectiveFlatFamily.structureToBase_flat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.GeneralConormalFlatFamily.ratioChartPresentation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ProjectiveCycleLengths.local_length_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ProjectiveCycleLengths.multiplicity_coordinateOpen' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.SmoothGradientIdeal.exists_coordinate_power_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.SmoothGradientIdeal.gradient_quotient_finite' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.HomogeneousQuotientExact.piece_kernel_eq_range' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.HomogeneousQuotientExact.coordinate_finrank_difference' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.HomogeneousQuotientExact.coordinateHilbertSeries_regular_sequence' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.HomogeneousQuotientExact.hilbert_polynomial_difference' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.CompleteIntersectionHilbert.regular_sequence_series' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.CompleteIntersectionHilbert.completeIntersectionPolynomial_eval' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.CompleteIntersectionHilbert.completeIntersectionPolynomial_degree_product' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.CompleteIntersectionHilbert.eventual_coordinate_finrank_eq_product' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ConormalProjectiveCharts.normalizedChartEquivRatioChart' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ConormalProjectiveCharts.ker_ratioEvaluation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ActualGaussProjectiveFlatCharts.totalChart_flat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ActualGaussProjectiveFlatCharts.totalChart_spec_flat' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ConormalChartTorus.coneOpenEquivTorus' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ActualProjectiveFibreCharts.chartEquivRatios' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ActualProjectiveFibreCharts.chartCycle_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ActualProjectiveFibreCharts.chartCycle_support' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ActualProjectiveFibreCharts.chart_generic_multiplicity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ActualProjectiveFibreCharts.fibreConeOpenEquivTorus' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ActualProjectiveFibreCharts.fibreConeOpen_torus_multiplicity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.GeneralGradedBaseChange.tensorQuotientEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.GeneralGradedBaseChange.map_fibreBicoordinatePiece' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.GeneralHomogeneousBaseChange.bihomogeneous_map' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.GeneralFlatHilbertPolynomial.exists_field_hilbert_polynomial' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.GeneralFlatHilbertPolynomial.fieldHilbertPolynomial_constant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.GeneralFlatHilbertPolynomial.generic_polynomial_evaluates_every_fibre' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.SaturatedFlatHilbert.extended_horizontalIdeal_eq_radical' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.SaturatedFlatHilbert.horizontalHilbertPolynomial_constant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.SaturatedFlatHilbert.horizontal_fibre_dimensions_eq_generic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.CurveThroughBoundary.exists_nonzero_basicOpen_subset_image' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.CurveThroughBoundary.exists_dimension_one_prime_through_point' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.CurveThroughBoundary.exists_image_open_vanishing_at_boundary' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.NormalGoingDown.finite_of_integrallyClosed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.CurveThroughBoundary.exists_curve_through_point' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.CurveThroughBoundary.exists_curve_in_imageClosure_through_boundary' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.CurveThroughBoundary.closurePoint_mem_image_of_nonzero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ProjectivePointInterpolation.exists_three_factor_interpolation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ProjectivePointInterpolation.three_factor_pieceEvaluation_surjective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ProjectivePointInterpolation.card_le_three_factor_piece_finrank' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.FlatMultiGradedHilbert.coordinate_piece_baseChange_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.FlatMultiGradedHilbert.map_fibreCoordinatePiece' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.FlatMultiGradedHilbert.three_factor_fibre_dimensions_equal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.BezoutHorizontalFamily.genericEmbedding_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.BezoutHorizontalFamily.contractedQuotient_flat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.BezoutHorizontalFamily.mem_contracted_extension_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.BezoutHorizontalFamily.specialized_dimensions_equal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.BezoutRootPersistence.finite_projective_roots_persist' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.BezoutRootPersistence.simple_root_vanishes_of_clear_denominator' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.BezoutRootPersistence.simple_root_annihilates_horizontal_ideal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.BezoutRootPersistence.original_simple_root_annihilates_interpolation_contraction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.BezoutRootPersistence.coefficient_interpolation_homogeneous' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.BezoutPieceComparison.piece_finrank_antitone' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.BezoutDeformationBound.simple_roots_le_comparison_piece' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ProjectiveChartHilbertBound.piece_finrank_mul_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.BezoutProductIteration.eventualBound_productSystem' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.BezoutExcessProducts.productIdeal_eq_iInf_branchIdeal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.BezoutExcessProducts.finrank_productQuotient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.BezoutSplitBudget.coefficientBudget_eq_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.SplitHyperplanes.projectiveCoordinate_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.SplitHyperplanes.homogeneousCoordinateDifference_mem' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.BezoutSplitSystem.complexParameters_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.BezoutSplitSystem.splitEquation_homogeneous' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.BezoutSplitSystem.excess_variables_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.BezoutSplitSystem.quota_coordinateDifference_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.SplitBranchHilbert.branch_piece_finrank_le_quotaIndicator' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.BezoutSplitHilbert.canonicalSplitSystem_eventualBound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.BezoutVariableTransport.transportedSplitEquation_piece_finrank' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.BezoutWithExcess.universal_simple_bezout' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.BezoutWithExcess.universal_bi_simple_bezout' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.BezoutExcessRegressions.thirdEquation_not_regular_mod_first_two' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+theorem Sheshadri.BezoutWithExcess.universal_simple_bezout : Sheshadri.MultiProjective.UniversalSimpleBezout :=
+fun X U V E P [Fintype X] [Fintype U] [Fintype V] [Fintype E] [Fintype P] [Nonempty X] [Nonempty U] [Nonempty V] f
+    degree points hcard hf hzero hsimple hdist =>
+  let_fun hdim :=
+    Eq.mpr (id (congrArg (fun _a => Fintype.card E = _a) (Sheshadri.BezoutVariableTransport.sum_dimensions X U V)))
+      hcard;
+  Exists.casesOn
+    (Sheshadri.BezoutSplitHilbert.canonicalSplitSystem_eventualBound
+      (Sheshadri.BezoutVariableTransport.dimensions X U V) degree hdim)
+    fun N hN =>
+    let k := max N (Fintype.card P - 1);
+    let_fun hbound :=
+      Sheshadri.BezoutDeformationBound.simple_roots_le_comparison_piece f
+        (Sheshadri.BezoutVariableTransport.transportedSplitEquation X U V degree) degree points hcard hf
+        (Sheshadri.BezoutVariableTransport.transportedSplitEquation_homogeneous X U V degree) hzero hsimple hdist k
+        (le_max_right N (Fintype.card P - 1));
+    LE.le.trans
+      (Eq.mp
+        (congrArg (fun _a => Fintype.card P ≤ _a)
+          (Sheshadri.BezoutVariableTransport.transportedSplitEquation_piece_finrank X U V degree (k, k, k)))
+        hbound)
+      (hN k k k (le_max_left N (Fintype.card P - 1)) (le_max_left N (Fintype.card P - 1))
+        (le_max_left N (Fintype.card P - 1)))
+'Sheshadri.LocalLengthDimension.length_eq_finrank' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.IsolatedLocalMultiplicity.localEquivFatPointOfPow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.IsolatedLocalMultiplicity.exists_localEquivFatPoint' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.IsolatedLocalMultiplicity.multiplicity_eq_finrank' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.IsolatedLocalMultiplicity.localPolynomialMap_surjective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.IsolatedLocalMultiplicity.piAlgHom_surjective_of_distinctResidues' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.IsolatedLocalMultiplicity.localIntersection_artinian_of_isOpen' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.RegularPrimeAvoidance.finite_associatedPrimes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.RegularPrimeAvoidance.exists_regular_head_mod_tail_of_regular_mem' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.LocalCompleteIntersection.regular_of_contains_regular_sequence' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.CoordinatePowerRegular.coordinate_powers_at_point' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.IsolatedCompleteIntersection.isolated_square_regular' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.SingularDeformation.parameter_regular_on_equation_quotient' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.SingularLocalContraction.localization_contractedIdeal_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.SingularSpecialFiber.localEquationQuotientEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.SingularSpecialFiber.specialFiberEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.SingularRootPersistence.original_isolated_root_annihilates_interpolation_contraction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.CommonProjectiveChart.exists_three_common_forms' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.CommonProjectiveChart.normalizedPoints_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.FatPointInterpolation.eventually_finrank_le_coordinatePiece_forms' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.FatPointInterpolation.normalizedMap_surjective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.FatPointInterpolation.normalizedMap_kills_homogeneous_ideal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ProjectiveMultiplicityInterpolation.eventual_sum_finrank_le_piece' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.SingularBezoutDeformationBound.isolated_multiplicities_le_comparison_piece' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.SingularBezoutWithExcess.universal_multiplicity_bezout' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.SingularBezoutWithExcess.isolated_multiplicity_bound_of_isOpen' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.SingularMultiplicityExamples.power_multiplicity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.SingularMultiplicityExamples.double_zero_multiplicity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.SingularContractionRegressions.contracted_ne_original' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+def Sheshadri.SingularBezoutWithExcess.UniversalMultiplicityBezout : Prop :=
+∀ (X U V E P : Type) [inst : Fintype X] [inst_1 : Fintype U] [inst_2 : Fintype V] [inst_3 : Fintype E]
+  [inst_4 : Fintype P] [inst_5 : Nonempty X] [inst_6 : Nonempty U] [inst_7 : Nonempty V]
+  (f : E → MvPolynomial (Sheshadri.MultiProjective.Variables X U V) ℂ) (degree : E → Sheshadri.MultiProjective.Degree)
+  (points : P → Sheshadri.MultiProjective.Variables X U V → ℂ)
+  (charts : (p : P) → Sheshadri.ProjectiveLocalMultiplicity.Chart (points p)),
+  Fintype.card E = Fintype.card X - 1 + (Fintype.card U - 1) + (Fintype.card V - 1) →
+    (∀ (e : E), MvPolynomial.IsWeightedHomogeneous (Sheshadri.MultiProjective.weight X U V) (f e) (degree e)) →
+      ∀ (hzero : ∀ (p : P) (e : E), (MvPolynomial.eval (points p)) (f e) = 0),
+        (∀ (p : P), IsArtinianRing (Sheshadri.ProjectiveLocalMultiplicity.LocalRing f (points p) (charts p) ⋯)) →
+          (∀ (p q : P), Sheshadri.MultiProjective.ProjectivelyEquivalent (points p) (points q) → p = q) →
+            ∑ p, Sheshadri.ProjectiveLocalMultiplicity.multiplicity f (points p) (charts p) ⋯ ≤
+              ↑(Sheshadri.MultiProjective.coefficientBudget degree (Fintype.card X - 1) (Fintype.card U - 1)
+                  (Fintype.card V - 1))
+theorem Sheshadri.SingularBezoutWithExcess.universal_multiplicity_bezout : Sheshadri.SingularBezoutWithExcess.UniversalMultiplicityBezout :=
+fun X U V E P [Fintype X] [Fintype U] [Fintype V] [Fintype E] [Fintype P] [Nonempty X] [Nonempty U] [Nonempty V] f
+    degree points charts hcard hf hzero hArt hdist =>
+  Sheshadri.SingularBezoutWithExcess.isolated_multiplicity_bound f degree points charts hcard hf hzero hdist
+@Sheshadri.SingularBezoutDeformationBound.isolated_multiplicities_le_comparison_piece : ∀ {X : Type u_1} {U : Type u_2}
+  {V : Type u_3} {E : Type u_4} {P : Type u_5} [inst : Fintype X] [inst_1 : Fintype U] [inst_2 : Fintype V]
+  [inst_3 : Fintype E] [inst_4 : Fintype P] [inst_5 : Nonempty X] [inst_6 : Nonempty U] [inst_7 : Nonempty V]
+  {K : Type u_6} [inst_8 : Field K] [inst_9 : Algebra (Polynomial ℂ) K] [inst_10 : IsFractionRing (Polynomial ℂ) K]
+  (f g : E → MvPolynomial (Sheshadri.MultiProjective.Variables X U V) ℂ) (degree : E → Sheshadri.MultiProjective.Degree)
+  (points : P → Sheshadri.MultiProjective.Variables X U V → ℂ)
+  (charts : (p : P) → Sheshadri.ProjectiveLocalMultiplicity.Chart (points p)),
+  Fintype.card E = Fintype.card X - 1 + (Fintype.card U - 1) + (Fintype.card V - 1) →
+    (∀ (e : E), MvPolynomial.IsWeightedHomogeneous (Sheshadri.MultiProjective.weight X U V) (f e) (degree e)) →
+      (∀ (e : E), MvPolynomial.IsWeightedHomogeneous (Sheshadri.MultiProjective.weight X U V) (g e) (degree e)) →
+        ∀ (hzero : ∀ (p : P) (e : E), (MvPolynomial.eval (points p)) (f e) = 0)
+          [inst :
+            ∀ (p : P), IsArtinianRing (Sheshadri.ProjectiveLocalMultiplicity.LocalRing f (points p) (charts p) ⋯)],
+          (∀ (p q : P), Sheshadri.MultiProjective.ProjectivelyEquivalent (points p) (points q) → p = q) →
+            ∃ N,
+              ∀ (k : ℕ),
+                N ≤ k →
+                  ∑ p, Module.finrank ℂ (Sheshadri.ProjectiveLocalMultiplicity.LocalRing f (points p) (charts p) ⋯) ≤
+                    Module.finrank ℂ
+                      ↥(Sheshadri.ProjectivePointInterpolation.coordinatePiece (Sheshadri.MultiProjective.weight X U V)
+                          (Ideal.span (Set.range g)) (k, k, k))
+def Sheshadri.MultiProjective.UniversalSimpleBezout : Prop :=
+∀ (X U V E P : Type) [inst : Fintype X] [inst_1 : Fintype U] [inst_2 : Fintype V] [inst_3 : Fintype E]
+  [inst_4 : Fintype P] [inst_5 : Nonempty X] [inst_6 : Nonempty U] [inst_7 : Nonempty V]
+  (f : E → MvPolynomial (Sheshadri.MultiProjective.Variables X U V) ℂ) (degree : E → Sheshadri.MultiProjective.Degree)
+  (points : P → Sheshadri.MultiProjective.Variables X U V → ℂ),
+  Fintype.card E = Fintype.card X - 1 + (Fintype.card U - 1) + (Fintype.card V - 1) →
+    (∀ (e : E), MvPolynomial.IsWeightedHomogeneous (Sheshadri.MultiProjective.weight X U V) (f e) (degree e)) →
+      (∀ (p : P) (e : E), (MvPolynomial.eval (points p)) (f e) = 0) →
+        (∀ (p : P), Sheshadri.MultiProjective.SimpleInCharts f (points p)) →
+          (∀ (p q : P), Sheshadri.MultiProjective.ProjectivelyEquivalent (points p) (points q) → p = q) →
+            Fintype.card P ≤
+              Sheshadri.MultiProjective.coefficientBudget degree (Fintype.card X - 1) (Fintype.card U - 1)
+                (Fintype.card V - 1)
+@Sheshadri.BezoutDeformationBound.simple_roots_le_comparison_piece : ∀ {X : Type u_1} {U : Type u_2} {V : Type u_3}
+  {E : Type u_4} {P : Type u_5} [inst : Fintype X] [inst_1 : Fintype U] [inst_2 : Fintype V] [inst_3 : Fintype E]
+  [inst_4 : Fintype P] [inst_5 : Nonempty X] [inst_6 : Nonempty U] [inst_7 : Nonempty V] {K : Type u_6}
+  [inst_8 : Field K] [inst_9 : Algebra (Polynomial ℂ) K] [inst_10 : IsFractionRing (Polynomial ℂ) K]
+  (f g : E → MvPolynomial (Sheshadri.MultiProjective.Variables X U V) ℂ) (degree : E → Sheshadri.MultiProjective.Degree)
+  (points : P → Sheshadri.MultiProjective.Variables X U V → ℂ),
+  Fintype.card E = Fintype.card X - 1 + (Fintype.card U - 1) + (Fintype.card V - 1) →
+    (∀ (e : E), MvPolynomial.IsWeightedHomogeneous (Sheshadri.MultiProjective.weight X U V) (f e) (degree e)) →
+      (∀ (e : E), MvPolynomial.IsWeightedHomogeneous (Sheshadri.MultiProjective.weight X U V) (g e) (degree e)) →
+        (∀ (p : P) (e : E), (MvPolynomial.eval (points p)) (f e) = 0) →
+          (∀ (p : P), Sheshadri.MultiProjective.SimpleInCharts f (points p)) →
+            (∀ (p q : P), Sheshadri.MultiProjective.ProjectivelyEquivalent (points p) (points q) → p = q) →
+              ∀ (k : ℕ),
+                Fintype.card P - 1 ≤ k →
+                  Fintype.card P ≤
+                    Module.finrank ℂ
+                      ↥(Sheshadri.ProjectivePointInterpolation.coordinatePiece (Sheshadri.MultiProjective.weight X U V)
+                          (Ideal.span (Set.range g)) (k, k, k))
+structure Sheshadri.ConormalExact.GaussDegreeTheory (n : ℕ) : Type
+number of parameters: 1
+fields:
+  Sheshadri.ConormalExact.GaussDegreeTheory.degree : MvPolynomial (Fin n) ℂ → ℕ
+  Sheshadri.ConormalExact.GaussDegreeTheory.generic_sections : ∀ (f : MvPolynomial (Fin n) ℂ),
+      Nonempty (Sheshadri.ConormalExact.GenericGaussSection f (self.degree f))
+  Sheshadri.ConormalExact.GaussDegreeTheory.smooth_homogeneous_degree : ∀ (d : ℕ) (f : MvPolynomial (Fin n) ℂ),
+      3 ≤ n →
+        2 ≤ d →
+          f.IsHomogeneous d →
+            f ≠ 0 →
+              (∀ (x : Fin n → ℂ),
+                  x ≠ 0 → (MvPolynomial.eval x) f = 0 → ∃ i, (MvPolynomial.eval x) ((MvPolynomial.pderiv i) f) ≠ 0) →
+                self.degree f = d * (d - 1) ^ (n - 2)
+constructor:
+  Sheshadri.ConormalExact.GaussDegreeTheory.mk {n : ℕ} (degree : MvPolynomial (Fin n) ℂ → ℕ)
+    (generic_sections :
+      ∀ (f : MvPolynomial (Fin n) ℂ), Nonempty (Sheshadri.ConormalExact.GenericGaussSection f (degree f)))
+    (smooth_homogeneous_degree :
+      ∀ (d : ℕ) (f : MvPolynomial (Fin n) ℂ),
+        3 ≤ n →
+          2 ≤ d →
+            f.IsHomogeneous d →
+              f ≠ 0 →
+                (∀ (x : Fin n → ℂ),
+                    x ≠ 0 → (MvPolynomial.eval x) f = 0 → ∃ i, (MvPolynomial.eval x) ((MvPolynomial.pderiv i) f) ≠ 0) →
+                  degree f = d * (d - 1) ^ (n - 2)) :
+    Sheshadri.ConormalExact.GaussDegreeTheory n
+structure Sheshadri.ConormalEulerHilbert.EulerHilbertData.{u_1} (Parameter : Type u_1) (d : ℕ)
+  (delta : Parameter → Fin (d + 1) → ℚ) : Type u_1
+number of parameters: 3
+fields:
+  Sheshadri.ConormalEulerHilbert.EulerHilbertData.eulerCharacteristic : Parameter → ℕ → ℕ → ℤ
+  Sheshadri.ConormalEulerHilbert.EulerHilbertData.hilbertPolynomial : Parameter → Polynomial (Polynomial ℚ)
+  Sheshadri.ConormalEulerHilbert.EulerHilbertData.evaluates : ∀ (c : Parameter) (q t : ℕ),
+      Sheshadri.ConormalEulerHilbert.gridEval (self.hilbertPolynomial c) q t = ↑(self.eulerCharacteristic c q t)
+  Sheshadri.ConormalEulerHilbert.EulerHilbertData.topCoefficient : ∀ (c : Parameter),
+      (self.hilbertPolynomial c).coeff d = Sheshadri.ConormalHilbert.topHilbertPolynomial d (delta c)
+constructor:
+  Sheshadri.ConormalEulerHilbert.EulerHilbertData.mk.{u_1} {Parameter : Type u_1} {d : ℕ}
+    {delta : Parameter → Fin (d + 1) → ℚ} (eulerCharacteristic : Parameter → ℕ → ℕ → ℤ)
+    (hilbertPolynomial : Parameter → Polynomial (Polynomial ℚ))
+    (evaluates :
+      ∀ (c : Parameter) (q t : ℕ),
+        Sheshadri.ConormalEulerHilbert.gridEval (hilbertPolynomial c) q t = ↑(eulerCharacteristic c q t))
+    (topCoefficient :
+      ∀ (c : Parameter), (hilbertPolynomial c).coeff d = Sheshadri.ConormalHilbert.topHilbertPolynomial d (delta c)) :
+    Sheshadri.ConormalEulerHilbert.EulerHilbertData Parameter d delta
+structure Sheshadri.ConormalSpecialization.FamilyCycleData (Parameter Z : Type) (d : ℕ) : Type 1
+number of parameters: 3
+fields:
+  Sheshadri.ConormalSpecialization.FamilyCycleData.Component : Type
+  Sheshadri.ConormalSpecialization.FamilyCycleData.componentSet : self.Component →
+      Set (Sheshadri.ConormalZariski.Ambient Z)
+  Sheshadri.ConormalSpecialization.FamilyCycleData.cycle : Parameter →
+      Sheshadri.ConormalCycles.EffectiveCycle self.Component
+  Sheshadri.ConormalSpecialization.FamilyCycleData.degree : Fin (d + 1) → Set (Sheshadri.ConormalZariski.Ambient Z) → ℕ
+  Sheshadri.ConormalSpecialization.FamilyCycleData.dimension : Set (Sheshadri.ConormalZariski.Ambient Z) → ℕ
+  Sheshadri.ConormalSpecialization.FamilyCycleData.hilbert : Sheshadri.ConormalEulerHilbert.EulerHilbertData Parameter d
+      fun c k => ↑(Sheshadri.ConormalCycles.multidegree (fun i => self.degree k (self.componentSet i)) (self.cycle c))
+constructor:
+  Sheshadri.ConormalSpecialization.FamilyCycleData.mk {Parameter Z : Type} {d : ℕ} (Component : Type)
+    (componentSet : Component → Set (Sheshadri.ConormalZariski.Ambient Z))
+    (cycle : Parameter → Sheshadri.ConormalCycles.EffectiveCycle Component)
+    (degree : Fin (d + 1) → Set (Sheshadri.ConormalZariski.Ambient Z) → ℕ)
+    (dimension : Set (Sheshadri.ConormalZariski.Ambient Z) → ℕ)
+    (hilbert :
+      Sheshadri.ConormalEulerHilbert.EulerHilbertData Parameter d fun c k =>
+        ↑(Sheshadri.ConormalCycles.multidegree (fun i => degree k (componentSet i)) (cycle c))) :
+    Sheshadri.ConormalSpecialization.FamilyCycleData Parameter Z d
+structure Sheshadri.ConormalBorder.FamilyCertificate (A C : Type) [Fintype A] [TopologicalSpace C] (n : ℕ)
+  (geometry : Sheshadri.ConormalExact.GaussDegreeTheory n) : Type 1
+number of parameters: 6
+fields:
+  Sheshadri.ConormalBorder.FamilyCertificate.family : MvPolynomial (A ⊕ Fin n) ℂ
+  Sheshadri.ConormalBorder.FamilyCertificate.parameter : C → A → ℂ
+  Sheshadri.ConormalBorder.FamilyCertificate.base : C
+  Sheshadri.ConormalBorder.FamilyCertificate.continuous_parameter : ContinuousAt self.parameter self.base
+  Sheshadri.ConormalBorder.FamilyCertificate.target_polynomial : (Sheshadri.ConormalPersistence.specialize
+          (self.parameter self.base))
+        self.family =
+      Sheshadri.PolynomialModel.fermat n
+  Sheshadri.ConormalBorder.FamilyCertificate.good : Set C
+  Sheshadri.ConormalBorder.FamilyCertificate.base_in_closure : self.base ∈ closure self.good
+  Sheshadri.ConormalBorder.FamilyCertificate.cycles : Sheshadri.ConormalSpecialization.FamilyCycleData C (Fin n) (n - 1)
+  Sheshadri.ConormalBorder.FamilyCertificate.special_support : Sheshadri.ConormalCycles.supportSet
+        self.cycles.componentSet (self.cycles.cycle self.base) =
+      Sheshadri.ActualGaussFamily.fibre self.family (self.parameter '' self.good) (self.parameter self.base)
+  Sheshadri.ConormalBorder.FamilyCertificate.components_closed : ∀ i ∈ (self.cycles.cycle self.base).support,
+      IsClosed (self.cycles.componentSet i)
+  Sheshadri.ConormalBorder.FamilyCertificate.pure_dimension : ∀ i ∈ (self.cycles.cycle self.base).support,
+      self.cycles.dimension (Sheshadri.ConormalZariski.conormalClosure self.family (self.parameter self.base)) =
+        self.cycles.dimension (self.cycles.componentSet i)
+  Sheshadri.ConormalBorder.FamilyCertificate.dimension_drop : ∀ i ∈ (self.cycles.cycle self.base).support,
+      Sheshadri.ConormalZariski.conormalClosure self.family (self.parameter self.base) ⊂ self.cycles.componentSet i →
+        self.cycles.dimension (Sheshadri.ConormalZariski.conormalClosure self.family (self.parameter self.base)) <
+          self.cycles.dimension (self.cycles.componentSet i)
+  Sheshadri.ConormalBorder.FamilyCertificate.euler_characteristics_constant : ∀ (c : C) (q t : ℕ),
+      self.cycles.hilbert.eulerCharacteristic c q t = self.cycles.hilbert.eulerCharacteristic self.base q t
+  Sheshadri.ConormalBorder.FamilyCertificate.target_degree_identification : self.cycles.degree
+        (Sheshadri.ConormalBorder.polarIndex n)
+        (Sheshadri.ConormalZariski.conormalClosure self.family (self.parameter self.base)) =
+      geometry.degree ((Sheshadri.ConormalPersistence.specialize (self.parameter self.base)) self.family)
+  Sheshadri.ConormalBorder.FamilyCertificate.generic_degree_identification : ∀ c ∈ self.good,
+      self.cycles.totalDegree c (Sheshadri.ConormalBorder.polarIndex n) =
+        geometry.degree ((Sheshadri.ConormalPersistence.specialize (self.parameter c)) self.family)
+constructor:
+  Sheshadri.ConormalBorder.FamilyCertificate.mk {A C : Type} [Fintype A] [TopologicalSpace C] {n : ℕ}
+    {geometry : Sheshadri.ConormalExact.GaussDegreeTheory n} (family : MvPolynomial (A ⊕ Fin n) ℂ)
+    (parameter : C → A → ℂ) (base : C) (continuous_parameter : ContinuousAt parameter base)
+    (target_polynomial :
+      (Sheshadri.ConormalPersistence.specialize (parameter base)) family = Sheshadri.PolynomialModel.fermat n)
+    (good : Set C) (base_in_closure : base ∈ closure good)
+    (cycles : Sheshadri.ConormalSpecialization.FamilyCycleData C (Fin n) (n - 1))
+    (special_support :
+      Sheshadri.ConormalCycles.supportSet cycles.componentSet (cycles.cycle base) =
+        Sheshadri.ActualGaussFamily.fibre family (parameter '' good) (parameter base))
+    (components_closed : ∀ i ∈ (cycles.cycle base).support, IsClosed (cycles.componentSet i))
+    (pure_dimension :
+      ∀ i ∈ (cycles.cycle base).support,
+        cycles.dimension (Sheshadri.ConormalZariski.conormalClosure family (parameter base)) =
+          cycles.dimension (cycles.componentSet i))
+    (dimension_drop :
+      ∀ i ∈ (cycles.cycle base).support,
+        Sheshadri.ConormalZariski.conormalClosure family (parameter base) ⊂ cycles.componentSet i →
+          cycles.dimension (Sheshadri.ConormalZariski.conormalClosure family (parameter base)) <
+            cycles.dimension (cycles.componentSet i))
+    (euler_characteristics_constant :
+      ∀ (c : C) (q t : ℕ), cycles.hilbert.eulerCharacteristic c q t = cycles.hilbert.eulerCharacteristic base q t)
+    (target_degree_identification :
+      cycles.degree (Sheshadri.ConormalBorder.polarIndex n)
+          (Sheshadri.ConormalZariski.conormalClosure family (parameter base)) =
+        geometry.degree ((Sheshadri.ConormalPersistence.specialize (parameter base)) family))
+    (generic_degree_identification :
+      ∀ c ∈ good,
+        cycles.totalDegree c (Sheshadri.ConormalBorder.polarIndex n) =
+          geometry.degree ((Sheshadri.ConormalPersistence.specialize (parameter c)) family)) :
+    Sheshadri.ConormalBorder.FamilyCertificate A C n geometry
+@Sheshadri.ConormalExact.ordinary_exact_count : ∀ {n m : ℕ},
+  Sheshadri.ConormalExact.GaussDegreeTheory n →
+    3 ≤ n → Sheshadri.PolynomialModel.ExactRepresentation n m ℂ → Sheshadri.fermatCount n ≤ Sheshadri.ordinaryBezout m n
+@Sheshadri.ConormalExact.symmetric_exact_count : ∀ {n m : ℕ},
+  Sheshadri.ConormalExact.GaussDegreeTheory n →
+    3 ≤ n →
+      Sheshadri.PolynomialModel.SymmetricExactRepresentation n m ℂ →
+        Sheshadri.fermatCount n ≤ Sheshadri.symmetricBezout m n
+@Sheshadri.ConormalExact.ordinary_exact_quadratic : ∀ {n m : ℕ},
+  Sheshadri.ConormalExact.GaussDegreeTheory n →
+    3 ≤ n → Sheshadri.PolynomialModel.ExactRepresentation n m ℂ → (↑n - 1) ^ 2 / (4 * Real.exp 1) ≤ ↑m
+@Sheshadri.ConormalExact.symmetric_exact_quadratic : ∀ {n m : ℕ},
+  Sheshadri.ConormalExact.GaussDegreeTheory n →
+    3 ≤ n → Sheshadri.PolynomialModel.SymmetricExactRepresentation n m ℂ → (↑n - 1) ^ 2 / (2 * Real.exp 1) ≤ ↑m
+@Sheshadri.ConormalSpecialization.target_degree_le_generic : ∀ {A Z C : Type} [inst : Fintype A] [inst : Fintype Z]
+  [inst_1 : TopologicalSpace C] (F : MvPolynomial (A ⊕ Z) ℂ) (a : C → A → ℂ) (c₀ : C),
+  ContinuousAt a c₀ →
+    ∀ (U : Set C),
+      c₀ ∈ closure U →
+        ∀ (W : Set (C × Sheshadri.ConormalZariski.Ambient Z)),
+          IsClosed W →
+            (∀ c ∈ U, ∀ p ∈ Sheshadri.ConormalZariski.smoothGaussRepresentatives F (a c), (c, p) ∈ W) →
+              Sheshadri.ZariskiBridge.zariskiClosure {p | (c₀, p) ∈ W} ⊆ {p | (c₀, p) ∈ W} →
+                ∀ {d : ℕ} (D : Sheshadri.ConormalSpecialization.FamilyCycleData C Z d),
+                  Sheshadri.ConormalCycles.supportSet D.componentSet (D.cycle c₀) = {p | (c₀, p) ∈ W} →
+                    IsIrreducible (Sheshadri.ConormalZariski.conormalClosure F (a c₀)) →
+                      (∀ i ∈ (D.cycle c₀).support, IsClosed (D.componentSet i)) →
+                        (∀ i ∈ (D.cycle c₀).support,
+                            D.dimension (Sheshadri.ConormalZariski.conormalClosure F (a c₀)) =
+                              D.dimension (D.componentSet i)) →
+                          (∀ i ∈ (D.cycle c₀).support,
+                              Sheshadri.ConormalZariski.conormalClosure F (a c₀) ⊂ D.componentSet i →
+                                D.dimension (Sheshadri.ConormalZariski.conormalClosure F (a c₀)) <
+                                  D.dimension (D.componentSet i)) →
+                            (∀ (c : C) (q t : ℕ),
+                                D.hilbert.eulerCharacteristic c q t = D.hilbert.eulerCharacteristic c₀ q t) →
+                              ∀ (c : C) (k : Fin (d + 1)),
+                                D.degree k (Sheshadri.ConormalZariski.conormalClosure F (a c₀)) ≤ D.totalDegree c k
+@Sheshadri.ConormalBorder.ordinary_count_from_family : ∀ {A C : Type} [inst : Fintype A] [inst_1 : TopologicalSpace C]
+  {n m : ℕ} (geometry : Sheshadri.ConormalExact.GaussDegreeTheory n),
+  3 ≤ n →
+    0 < m →
+      ∀ (D : Sheshadri.ConormalBorder.FamilyCertificate A C n geometry),
+        (∀ c ∈ D.good,
+            ∃ M,
+              Sheshadri.PolynomialModel.determinant M =
+                (Sheshadri.ConormalPersistence.specialize (D.parameter c)) D.family) →
+          Sheshadri.fermatCount n ≤ Sheshadri.ordinaryBezout m n
+@Sheshadri.ConormalBorder.symmetric_count_from_family : ∀ {A C : Type} [inst : Fintype A] [inst_1 : TopologicalSpace C]
+  {n m : ℕ} (geometry : Sheshadri.ConormalExact.GaussDegreeTheory n),
+  3 ≤ n →
+    0 < m →
+      ∀ (D : Sheshadri.ConormalBorder.FamilyCertificate A C n geometry),
+        (∀ c ∈ D.good,
+            ∃ M,
+              (∀ (i : Fin (n + 1)), (M i).transpose = M i) ∧
+                Sheshadri.PolynomialModel.determinant M =
+                  (Sheshadri.ConormalPersistence.specialize (D.parameter c)) D.family) →
+          Sheshadri.fermatCount n ≤ Sheshadri.symmetricBezout m n
+@Sheshadri.ConormalBorder.ordinary_quadratic_from_family : ∀ {A C : Type} [inst : Fintype A]
+  [inst_1 : TopologicalSpace C] {n m : ℕ} (geometry : Sheshadri.ConormalExact.GaussDegreeTheory n),
+  3 ≤ n →
+    0 < m →
+      ∀ (D : Sheshadri.ConormalBorder.FamilyCertificate A C n geometry),
+        (∀ c ∈ D.good,
+            ∃ M,
+              Sheshadri.PolynomialModel.determinant M =
+                (Sheshadri.ConormalPersistence.specialize (D.parameter c)) D.family) →
+          (↑n - 1) ^ 2 / (4 * Real.exp 1) ≤ ↑m
+@Sheshadri.ConormalBorder.symmetric_quadratic_from_family : ∀ {A C : Type} [inst : Fintype A]
+  [inst_1 : TopologicalSpace C] {n m : ℕ} (geometry : Sheshadri.ConormalExact.GaussDegreeTheory n),
+  3 ≤ n →
+    0 < m →
+      ∀ (D : Sheshadri.ConormalBorder.FamilyCertificate A C n geometry),
+        (∀ c ∈ D.good,
+            ∃ M,
+              (∀ (i : Fin (n + 1)), (M i).transpose = M i) ∧
+                Sheshadri.PolynomialModel.determinant M =
+                  (Sheshadri.ConormalPersistence.specialize (D.parameter c)) D.family) →
+          (↑n - 1) ^ 2 / (2 * Real.exp 1) ≤ ↑m
+'Sheshadri.ConormalExactMultiplicity.homogeneous_representation_size_pos' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ConormalExactMultiplicity.ordinary_section_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ConormalExactMultiplicity.symmetric_section_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ConormalExactMultiplicity.ordinary_smooth_degree_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ConormalExactMultiplicity.symmetric_smooth_degree_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ConormalExactMultiplicity.ordinary_exact_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ConormalExactMultiplicity.symmetric_exact_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ConormalExactMultiplicity.ordinary_exact_quadratic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ConormalExactMultiplicity.symmetric_exact_quadratic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.SmoothGaussPolars.coordinate_mem_radical_gradient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.SmoothGaussPolars.gaussFlag_ideal_eq_polar_ideal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.GenericGaussPolars.exists_regular_polar' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.GenericGaussPolarSequence.exists_filterRegular_polar_sequence' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.FilterRegularCompleteIntersection.eventual_coordinate_finrank_eq_product_filterRegular' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.SmoothGaussDegree.exists_polar_hilbert_constant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.SmoothGaussDegree.smooth_hypersurface_polar_degree' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.SmoothGaussSection.exists_filterRegular_linearPolynomial' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.SmoothGaussSection.exists_polar_section_and_chart' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.SmoothGaussSectionLength.exists_polar_section_length' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.FiniteQuotientPointFamily.finrank_eq_sum_point_multiplicity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.SmoothGaussPointFamily.exists_smooth_gauss_root_family' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ConormalGaussSection.exists_section' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ConormalGaussSection.Section.ordinaryLiftFamily' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ConormalGaussSection.Section.symmetricLiftFamily' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.KernelIncidenceAlgebra.incidenceEquivDeterminant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.KernelIncidenceAlgebra.cutIncidenceEquivDeterminant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.KernelIncidenceAlgebra.polar_span_map' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.KernelReducedIncidenceAlgebra.mapped_incidenceIdeal_eq_reduced' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.KernelReducedIncidenceAlgebra.atPrime_cutIdeals_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.LocalResidueLocalization.atKernelEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.NestedPolynomialLocalPoint.atPointEquivBaseLocalization' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.NestedPolynomialLocalPoint.localEquationQuotientEquiv' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.AffineIncidenceCharts.quotientEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.AffineIncidenceLocalCharts.localEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.AffineIncidenceLocalCharts.normalizedLocalEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.AffineIncidenceLocalCharts.multiplicity_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ConormalPolarIdeal.polarIntersectionIdeal_eq_polarChartIdeal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.KernelIncidenceLocalMultiplicity.pointIncidenceLocalEquiv' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.KernelIncidenceLocalMultiplicity.pointReducedIncidenceLocalEquiv' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.KernelIncidenceLocalMultiplicity.pointReducedIncidenceLocal_length' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.KernelIncidenceLocalMultiplicity.pointReducedIncidenceLocal_artinian' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.SymmetricKernelIncidenceAlgebra.incidenceEquivDeterminant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.SymmetricKernelIncidenceAlgebra.cutIncidenceEquivDeterminant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.SymmetricKernelIncidenceLocalMultiplicity.pointIncidenceLocalEquiv' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.SymmetricKernelIncidenceLocalMultiplicity.pointIncidenceLocal_length' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.OrdinaryIncidenceLocalMultiplicity.ordinaryGaussChartLocalEquiv' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.SymmetricIncidenceLocalMultiplicity.localEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.SymmetricIncidenceLocalMultiplicity.multiplicity_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.SingularBezoutWithExcess.isolated_multiplicity_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.SingularBezoutWithExcess.universal_multiplicity_bezout' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.Incidence.ordinary_incidence_multiplicity_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.Incidence.symmetric_incidence_multiplicity_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.FlatLocalLength.tensor_length_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.FlatLocalLength.ring_length_eq_of_artinian' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.TorusGenericLocalRings.torusComponentEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.TorusGenericLocalRings.polynomial_generic_length' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.TorusGenericLocalRings.torus_generic_length' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ConormalChartTorus.coneOpenEquivTorus' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ActualProjectiveCycleMultiplicities.chartConeComponentEquiv' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ActualProjectiveCycleMultiplicities.chart_coneOpen_multiplicity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ActualProjectiveCycleMultiplicities.coneOpen_chart_multiplicity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ActualProjectiveCycleMultiplicities.chartCycle_eq_coneOpenCycle' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ActualProjectiveCycleMultiplicities.fibreCone_chart_multiplicity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ProjectiveHilbertLocalLengths.eventually_hilbert_eq_sum_local_lengths' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ProjectiveHilbertLocalLengths.chartCycleDegree_eq_of_boundary' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.CurveNormalization.normalization_finite' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.CurveNormalization.normalization_dedekind' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.CurveNormalization.exists_normalized_dvr' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.CurveNormalization.exists_boundary_dvr' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.GenericPolynomialLift.finite_field_solution' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.GenericPolynomialLift.finite_representation_of_spectrum_preimage' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.FiniteCurveExtension.extensionNormalization_finite_dedekind' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.FiniteCurveExtension.exists_extension_dvr' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.DvrRationalEntries.common_pole_order' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.AlgebraicBorderFamily.exists_algebraic_boundary_family_with_pole_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.DeterminantDvrFamily.generic_determinant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.DeterminantDvrFamily.special_polynomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.DeterminantDvrFamily.clear_symmetric_poles' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.DeterminantDvrFamily.ordinary_family_of_border' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.DeterminantDvrFamily.symmetric_family_of_border' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.DeterminantDvrFamily.ordinary_border_exact_or_family' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.DeterminantDvrFamily.symmetric_border_exact_or_family' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.BorderDvrFamily.ordinary_finiteSupportBorder_exact_or_family' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.BorderDvrFamily.symmetric_finiteSupportBorder_exact_or_family' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.DVRGaussContainment.horizontalGauss_zeroLocus_eq_closure' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.DVRGaussContainment.horizontalGaussRing_flat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.DVRGaussContainment.original_conormalClosure_subset_specialFibre' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.DVRGaussHomogeneous.genericGaussIdeal_bihomogeneous' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.DVRGaussHomogeneous.horizontalGaussIdeal_bihomogeneous' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.DeterminantDvrGaussContainment.family_fermatConormal_subset' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.DeterminantDvrGaussContainment.family_horizontalGauss_flat' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.DeterminantDvrGaussContainment.ordinary_border_exact_or_conormalFamily' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.DeterminantDvrGaussContainment.symmetric_border_exact_or_conormalFamily' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.BorderDvrFamily.ordinary_finiteSupportBorder_zariski' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.BorderDvrFamily.symmetric_finiteSupportBorder_zariski' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@Sheshadri.ConormalExactMultiplicity.ordinary_smooth_degree_bound : ∀ {n m d : ℕ},
+  2 ≤ n →
+    ∀ (A : Sheshadri.Incidence.PencilCoefficients n m ℂ) (f : MvPolynomial (Fin n) ℂ),
+      Sheshadri.PolynomialModel.determinant A = f →
+        f.IsHomogeneous d →
+          f ≠ 0 →
+            0 < d →
+              (∀ (x : Fin n → ℂ),
+                  x ≠ 0 → (MvPolynomial.eval x) f = 0 → ∃ i, (MvPolynomial.eval x) ((MvPolynomial.pderiv i) f) ≠ 0) →
+                d * (d - 1) ^ (n - 2) ≤ Sheshadri.ordinaryBezout m n
+@Sheshadri.ConormalExactMultiplicity.symmetric_smooth_degree_bound : ∀ {n m d : ℕ},
+  2 ≤ n →
+    ∀ (A : Sheshadri.Incidence.PencilCoefficients n m ℂ),
+      (∀ (i : Fin (n + 1)), (A i).transpose = A i) →
+        ∀ (f : MvPolynomial (Fin n) ℂ),
+          Sheshadri.PolynomialModel.determinant A = f →
+            f.IsHomogeneous d →
+              f ≠ 0 →
+                0 < d →
+                  (∀ (x : Fin n → ℂ),
+                      x ≠ 0 →
+                        (MvPolynomial.eval x) f = 0 → ∃ i, (MvPolynomial.eval x) ((MvPolynomial.pderiv i) f) ≠ 0) →
+                    d * (d - 1) ^ (n - 2) ≤ Sheshadri.symmetricBezout m n
+@Sheshadri.ConormalExactMultiplicity.ordinary_exact_count : ∀ {n m : ℕ},
+  3 ≤ n → Sheshadri.PolynomialModel.ExactRepresentation n m ℂ → Sheshadri.fermatCount n ≤ Sheshadri.ordinaryBezout m n
+@Sheshadri.ConormalExactMultiplicity.symmetric_exact_count : ∀ {n m : ℕ},
+  3 ≤ n →
+    Sheshadri.PolynomialModel.SymmetricExactRepresentation n m ℂ →
+      Sheshadri.fermatCount n ≤ Sheshadri.symmetricBezout m n
+@Sheshadri.ConormalExactMultiplicity.ordinary_exact_quadratic : ∀ {n m : ℕ},
+  3 ≤ n → Sheshadri.PolynomialModel.ExactRepresentation n m ℂ → (↑n - 1) ^ 2 / (4 * Real.exp 1) ≤ ↑m
+@Sheshadri.ConormalExactMultiplicity.symmetric_exact_quadratic : ∀ {n m : ℕ},
+  3 ≤ n → Sheshadri.PolynomialModel.SymmetricExactRepresentation n m ℂ → (↑n - 1) ^ 2 / (2 * Real.exp 1) ≤ ↑m
+@Sheshadri.AlgebraicBorderFamily.exists_algebraic_boundary_family_with_pole_bound : ∀ {X : Type u_1} {Y : Type u_2}
+  (F : Y → MvPolynomial X ℂ) [inst : Finite X] [inst : Finite Y],
+  ∀ y ∈ Sheshadri.ZariskiBridge.zariskiClosure (Set.range (Sheshadri.ZariskiBridge.polynomialMap F)),
+    y ∉ Set.range (Sheshadri.ZariskiBridge.polynomialMap F) →
+      ∃ Q M P,
+        ringKrullDim (Sheshadri.AlgebraicBorderFamily.CurveRing F Q) = 1 ∧
+          IsDiscreteValuationRing (Sheshadri.AlgebraicBorderFamily.BranchRing F Q M P) ∧
+            ∃ ρ ι,
+              Function.Injective ⇑ι ∧
+                (∀ (i : Y), ρ (Sheshadri.AlgebraicBorderFamily.coefficient F Q M P i) = y i) ∧
+                  (∀ (i : Y),
+                      MvPolynomial.eval₂ (algebraMap ℂ (Sheshadri.AlgebraicBorderFamily.ParameterField F Q M))
+                          (Sheshadri.AlgebraicBorderFamily.parameter F Q M) (F i) =
+                        ι (Sheshadri.AlgebraicBorderFamily.coefficient F Q M P i)) ∧
+                    (∀ (j : X), ∃ a b, b ≠ 0 ∧ Sheshadri.AlgebraicBorderFamily.parameter F Q M j = ι a / ι b) ∧
+                      (∀ (z : Sheshadri.AlgebraicBorderFamily.ParameterField F Q M), ∃ a b, b ≠ 0 ∧ z = ι a / ι b) ∧
+                        RingHom.ker ρ = IsLocalRing.maximalIdeal (Sheshadri.AlgebraicBorderFamily.BranchRing F Q M P) ∧
+                          Nonempty
+                              (IsLocalRing.ResidueField (Sheshadri.AlgebraicBorderFamily.BranchRing F Q M P) ≃ₐ[ℂ] ℂ) ∧
+                            ∃ π,
+                              Irreducible π ∧
+                                IsLocalRing.maximalIdeal (Sheshadri.AlgebraicBorderFamily.BranchRing F Q M P) =
+                                    Ideal.span {π} ∧
+                                  ∃ n a,
+                                    ∀ (j : X), ι (a j) = ι π ^ n * Sheshadri.AlgebraicBorderFamily.parameter F Q M j
+Sheshadri.DeterminantDvrFamily.ordinary_border_exact_or_family : ∀ (n m : ℕ),
+  Sheshadri.ZariskiBridge.OrdinaryZariskiBorder n m →
+    Sheshadri.PolynomialModel.ExactRepresentation n m ℂ ∨ Sheshadri.DeterminantDvrFamily.HasOrdinaryFamily n m
+Sheshadri.DeterminantDvrFamily.symmetric_border_exact_or_family : ∀ (n m : ℕ),
+  Sheshadri.ZariskiBridge.SymmetricZariskiBorder n m →
+    Sheshadri.PolynomialModel.SymmetricExactRepresentation n m ℂ ∨ Sheshadri.DeterminantDvrFamily.HasSymmetricFamily n m
+@Sheshadri.BorderDvrFamily.ordinary_finiteSupportBorder_exact_or_family : ∀ {n m : ℕ},
+  Sheshadri.BorderRepresentation.OrdinaryFiniteSupportBorder n m →
+    Sheshadri.PolynomialModel.ExactRepresentation n m ℂ ∨ Sheshadri.DeterminantDvrFamily.HasOrdinaryFamily n m
+@Sheshadri.BorderDvrFamily.symmetric_finiteSupportBorder_exact_or_family : ∀ {n m : ℕ},
+  Sheshadri.BorderRepresentation.SymmetricFiniteSupportBorder n m →
+    Sheshadri.PolynomialModel.SymmetricExactRepresentation n m ℂ ∨ Sheshadri.DeterminantDvrFamily.HasSymmetricFamily n m
+@Sheshadri.DVRGaussContainment.original_conormalClosure_subset_specialFibre : ∀ {R : Type u_1} {A : Type u_2}
+  {Z : Type u_3} [inst : CommRing R] [inst_1 : IsDomain R] [inst_2 : IsDiscreteValuationRing R] [inst_3 : Fintype A]
+  [inst_4 : Fintype Z] (ε : R →+* ℂ) (π : R),
+  Irreducible π →
+    RingHom.ker ε = Ideal.span {π} →
+      ∀ (F : MvPolynomial Z R),
+        (MvPolynomial.map ε) F ≠ 0 →
+          ∀ (G : MvPolynomial (A ⊕ Z) ℂ) (a : A → ℂ),
+            (Sheshadri.ConormalPersistence.specialize a) G = (MvPolynomial.map ε) F →
+              Sheshadri.ConormalZariski.conormalClosure G a ⊆
+                MvPolynomial.zeroLocus (Sheshadri.DVRGaussContainment.specialFibreIdeal ε F)
+@Sheshadri.DVRGaussHomogeneous.horizontalGaussIdeal_bihomogeneous : ∀ {R : Type u_1} {Z : Type u_2} [inst : CommRing R]
+  [inst_1 : IsDomain R] [inst_2 : IsDiscreteValuationRing R] [inst_3 : Fintype Z] (K : Type u_3) [inst_4 : Field K]
+  [inst_5 : Algebra R K] [inst_6 : IsFractionRing R K] [inst_7 : Infinite K] (F : MvPolynomial Z R),
+  Sheshadri.FlatGradedHilbert.IsBihomogeneous (Sheshadri.DVRGaussContainment.GraphVariables Z) R
+    Sheshadri.HilbertPolynomialExistence.sumBlock (Sheshadri.DVRGaussContainment.horizontalGaussIdeal F)
+Sheshadri.DeterminantDvrGaussContainment.ordinary_border_exact_or_conormalFamily : ∀ (n m : ℕ),
+  0 < n →
+    Sheshadri.ZariskiBridge.OrdinaryZariskiBorder n m →
+      Sheshadri.PolynomialModel.ExactRepresentation n m ℂ ∨
+        ∃ Q M P family,
+          Sheshadri.DeterminantDvrGaussContainment.fermatConormal n ⊆
+            MvPolynomial.zeroLocus
+              (Sheshadri.DVRGaussContainment.specialFibreIdeal family.residue.toRingHom family.polynomial)
+Sheshadri.DeterminantDvrGaussContainment.symmetric_border_exact_or_conormalFamily : ∀ (n m : ℕ),
+  0 < n →
+    Sheshadri.ZariskiBridge.SymmetricZariskiBorder n m →
+      Sheshadri.PolynomialModel.SymmetricExactRepresentation n m ℂ ∨
+        ∃ Q M P family,
+          (∀ (i : Fin (n + 1)), (family.pencil i).transpose = family.pencil i) ∧
+            Sheshadri.DeterminantDvrGaussContainment.fermatConormal n ⊆
+              MvPolynomial.zeroLocus
+                (Sheshadri.DVRGaussContainment.specialFibreIdeal family.residue.toRingHom family.polynomial)
+@Sheshadri.ConormalBorder.ordinary_quadratic_from_family : ∀ {A C : Type} [inst : Fintype A]
+  [inst_1 : TopologicalSpace C] {n m : ℕ} (geometry : Sheshadri.ConormalExact.GaussDegreeTheory n),
+  3 ≤ n →
+    0 < m →
+      ∀ (D : Sheshadri.ConormalBorder.FamilyCertificate A C n geometry),
+        (∀ c ∈ D.good,
+            ∃ M,
+              Sheshadri.PolynomialModel.determinant M =
+                (Sheshadri.ConormalPersistence.specialize (D.parameter c)) D.family) →
+          (↑n - 1) ^ 2 / (4 * Real.exp 1) ≤ ↑m
+@Sheshadri.ConormalBorder.symmetric_quadratic_from_family : ∀ {A C : Type} [inst : Fintype A]
+  [inst_1 : TopologicalSpace C] {n m : ℕ} (geometry : Sheshadri.ConormalExact.GaussDegreeTheory n),
+  3 ≤ n →
+    0 < m →
+      ∀ (D : Sheshadri.ConormalBorder.FamilyCertificate A C n geometry),
+        (∀ c ∈ D.good,
+            ∃ M,
+              (∀ (i : Fin (n + 1)), (M i).transpose = M i) ∧
+                Sheshadri.PolynomialModel.determinant M =
+                  (Sheshadri.ConormalPersistence.specialize (D.parameter c)) D.family) →
+          (↑n - 1) ^ 2 / (2 * Real.exp 1) ≤ ↑m
+'Sheshadri.DVRGaussHomogeneous.specialFibre_bicoordinate_dimensions' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.DVRGaussHomogeneous.exists_common_gaussHilbertPolynomial' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@Sheshadri.DVRGaussHomogeneous.specialFibre_bicoordinate_dimensions : ∀ {R : Type u_1} {Z : Type u_2} {E : Type u_3}
+  [inst : CommRing R] [inst_1 : IsDomain R] [inst_2 : IsDiscreteValuationRing R] [inst_3 : Fintype Z] [inst_4 : Field E]
+  (K : Type u_4) [inst_5 : Field K] [inst_6 : Algebra R K] [inst_7 : IsFractionRing R K] [inst_8 : Infinite K]
+  (ε : R →+* E) (F : MvPolynomial Z R) (a b : ℕ),
+  Module.finrank E
+      ↥(Sheshadri.FlatGradedHilbert.bicoordinatePiece (Sheshadri.DVRGaussContainment.GraphVariables Z) E
+          Sheshadri.HilbertPolynomialExistence.sumBlock (Sheshadri.DVRGaussContainment.specialFibreIdeal ε F) a b) =
+    Module.finrank K
+      ↥(Sheshadri.FlatGradedHilbert.bicoordinatePiece (Sheshadri.DVRGaussContainment.GraphVariables Z) K
+          Sheshadri.HilbertPolynomialExistence.sumBlock (Sheshadri.DVRGaussContainment.genericGaussIdeal K F) a b)
+@Sheshadri.DVRGaussHomogeneous.exists_common_gaussHilbertPolynomial : ∀ {R : Type u_1} {Z : Type u_2} {E : Type u_3}
+  [inst : CommRing R] [inst_1 : IsDomain R] [inst_2 : IsDiscreteValuationRing R] [inst_3 : Fintype Z] [inst_4 : Field E]
+  (K : Type u_4) [inst_5 : Field K] [inst_6 : Algebra R K] [inst_7 : IsFractionRing R K] [inst_8 : Infinite K]
+  (ε : R →+* E) (F : MvPolynomial Z R),
+  ∃ H N,
+    ∀ (a b : ℕ),
+      N ≤ a →
+        N ≤ b →
+          Sheshadri.BiMonomialHilbert.biEval H ↑a ↑b =
+              ↑(Module.finrank K
+                  ↥(Sheshadri.FlatGradedHilbert.bicoordinatePiece (Sheshadri.DVRGaussContainment.GraphVariables Z) K
+                      Sheshadri.HilbertPolynomialExistence.sumBlock
+                      (Sheshadri.DVRGaussContainment.genericGaussIdeal K F) a b)) ∧
+            Sheshadri.BiMonomialHilbert.biEval H ↑a ↑b =
+              ↑(Module.finrank E
+                  ↥(Sheshadri.FlatGradedHilbert.bicoordinatePiece (Sheshadri.DVRGaussContainment.GraphVariables Z) E
+                      Sheshadri.HilbertPolynomialExistence.sumBlock
+                      (Sheshadri.DVRGaussContainment.specialFibreIdeal ε F) a b))
+'Sheshadri.DeterminantDvrGaussContainment.ordinary_finiteSupportBorder_exact_or_conormalFamily' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.DeterminantDvrGaussContainment.symmetric_finiteSupportBorder_exact_or_conormalFamily' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Sheshadri.DeterminantDvrGaussContainment.ordinary_finiteSupportBorder_exact_or_conormalFamily : ∀ (n m : ℕ),
+  0 < n →
+    Sheshadri.BorderRepresentation.OrdinaryFiniteSupportBorder n m →
+      Sheshadri.PolynomialModel.ExactRepresentation n m ℂ ∨
+        ∃ Q M P family,
+          Sheshadri.DeterminantDvrGaussContainment.fermatConormal n ⊆
+            MvPolynomial.zeroLocus
+              (Sheshadri.DVRGaussContainment.specialFibreIdeal family.residue.toRingHom family.polynomial)
+Sheshadri.DeterminantDvrGaussContainment.symmetric_finiteSupportBorder_exact_or_conormalFamily : ∀ (n m : ℕ),
+  0 < n →
+    Sheshadri.BorderRepresentation.SymmetricFiniteSupportBorder n m →
+      Sheshadri.PolynomialModel.SymmetricExactRepresentation n m ℂ ∨
+        ∃ Q M P family,
+          (∀ (i : Fin (n + 1)), (family.pencil i).transpose = family.pencil i) ∧
+            Sheshadri.DeterminantDvrGaussContainment.fermatConormal n ⊆
+              MvPolynomial.zeroLocus
+                (Sheshadri.DVRGaussContainment.specialFibreIdeal family.residue.toRingHom family.polynomial)
+'Sheshadri.DeterminantDvrFamily.Family.isFractionRing' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.DeterminantDvrGaussContainment.family_specialFibre_bicoordinate_dimensions' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@Sheshadri.DeterminantDvrGaussContainment.family_specialFibre_bicoordinate_dimensions : ∀ {n m : ℕ} {D : Type u_1}
+  {L : Type u_2} [inst : CommRing D] [inst_1 : IsDomain D] [inst_2 : Algebra ℂ D] [inst_3 : Field L]
+  [inst_4 : Algebra ℂ L] (family : Sheshadri.DeterminantDvrFamily.Family n m D L) (a b : ℕ),
+  Module.finrank ℂ
+      ↥(Sheshadri.FlatGradedHilbert.bicoordinatePiece (Sheshadri.DVRGaussContainment.GraphVariables (Fin n)) ℂ
+          Sheshadri.HilbertPolynomialExistence.sumBlock
+          (Sheshadri.DVRGaussContainment.specialFibreIdeal family.residue.toRingHom family.polynomial) a b) =
+    Module.finrank L
+      ↥(Sheshadri.FlatGradedHilbert.bicoordinatePiece (Sheshadri.DVRGaussContainment.GraphVariables (Fin n)) L
+          Sheshadri.HilbertPolynomialExistence.sumBlock
+          (Sheshadri.DVRGaussContainment.genericGaussIdeal L family.polynomial) a b)
+def Sheshadri.PolynomialModel.ExactRepresentation.{u_2} : ℕ → ℕ → (K : Type u_2) → [inst : CommRing K] → Prop :=
+fun n m K [CommRing K] => ∃ A, Sheshadri.PolynomialModel.determinant A = Sheshadri.PolynomialModel.fermat n
+def Sheshadri.PolynomialModel.SymmetricExactRepresentation.{u_2} : ℕ →
+  ℕ → (K : Type u_2) → [inst : CommRing K] → Prop :=
+fun n m K [CommRing K] =>
+  ∃ A,
+    (∀ (i : Fin (n + 1)), (A i).transpose = A i) ∧
+      Sheshadri.PolynomialModel.determinant A = Sheshadri.PolynomialModel.fermat n
+'Sheshadri.DVRRootPersistence.local_equations_parameter_regular' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.DVRRootPersistence.family_contraction_annihilates_local' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.DVRRootPersistence.specialized_contractedIdeal_localization_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.DVRSaturatedPersistence.family_saturated_contraction_annihilates_local' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.DVRSaturatedPersistence.specialized_saturated_contractedIdeal_localization_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.DVRSaturatedGaussPersistence.family_saturated_contraction_preserves' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.DVRSaturatedGaussPersistence.section_saturated_contraction_local_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.DVRFibreDimension.generic_independent_of_residue_independent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.DVRFibreDimension.residue_finrank_le_generic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.DVRFibreDimension.residue_finite_of_generic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.DVRFibreDimension.polynomial_quotient_finrank_le_generic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.DVRSectionLength.sum_local_length_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.DVRSectionLength.selected_lengths_le_generic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.DVRGaussLengthBound.family_section_degree_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.DeterminantDvrFamily.Family.matrix_size_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.DeterminantDvrHomogeneous.generic_hypersurface_hilbert' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.HomogeneousSystemSaturation.map_saturation_eq_of_unit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.HomogeneousSystemSaturation.eq_saturation_of_unit_span' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.HomogeneousSystemSaturation.associatedPrime_omits_system_factor' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.RegularFlagsWithResidue.exists_regular_coefficients' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.PrescribedResidueGaussSequence.exists_regular_sequence' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.PrescribedResidueGaussSequence.exists_normalized_primal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.HomogeneousHilbertDegree.quotient_hilbert_natDegree_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.HomogeneousHilbertDegree.regular_cut_natDegree_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.SaturatedSectionHilbert.cut_sequence_chart_finite_of_initial_enlargement' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.SaturatedChartSmoothness.chart_isUnit_of_homogeneous_regular' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.SaturatedChartSmoothness.exists_unit_system_coefficients' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.FinitePrescribedGaussSection.exists_finite_section' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.HomogeneousDehomogenization.chartEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.DehomogeneousGaussSection.rawIdeal_map_dehom' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.DehomogeneousGaussSection.saturated_rawIdeal_map_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ActualGenericGaussSection.exists_actual_section' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.MixedHilbertComparison.top_mixed_coefficient_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.AdicScalarCompatibility.completionEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.AdicScalarCompatibility.ring_completion_scalar_regular' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.CompletionFiniteGeneration.map_surjective_of_reduce_surjective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.CompletionFiniteGeneration.completionEquivOfReduction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.DVRCompletionDomain.completion_isDomain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.FieldPolarMultiplicityBound.ordinary_polar_multiplicity_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.FieldPolarMultiplicityBound.symmetric_polar_multiplicity_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.FieldFinitePolarBound.ordinary_finite_local_polar_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.FieldFinitePolarBound.symmetric_finite_local_polar_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ArbitraryFieldFinitePolarBound.quotient_finrank_baseChange' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ArbitraryFieldFinitePolarBound.local_eq_of_saturation_sandwich' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ArbitraryFieldFinitePolarBound.ordinary_finite_saturated_polar_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ArbitraryFieldFinitePolarBound.symmetric_finite_saturated_polar_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ConormalBorderMultiplicity.ordinary_family_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ConormalBorderMultiplicity.symmetric_family_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ConormalBorderMultiplicity.ordinary_zariski_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ConormalBorderMultiplicity.symmetric_zariski_count' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ConormalBorderMultiplicity.ordinary_border_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ConormalBorderMultiplicity.symmetric_border_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.ConormalBorderMultiplicity.ordinary_border_quadratic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ConormalBorderMultiplicity.symmetric_border_quadratic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ConormalBorderMultiplicity.ordinary_borderAtSize_count' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ConormalBorderMultiplicity.symmetric_borderAtSize_count' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ConormalBorderMultiplicity.ordinary_borderAtSize_quadratic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ConormalBorderMultiplicity.symmetric_borderAtSize_quadratic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@Sheshadri.ActualGenericGaussSection.exists_actual_section : ∀ {n m : ℕ} {D : Type u_1} {L : Type u_2}
+  [inst : CommRing D] [inst_1 : IsDomain D] [inst_2 : Algebra ℂ D] [inst_3 : Field L] [inst_4 : Algebra ℂ L]
+  (family : Sheshadri.DeterminantDvrFamily.Family n m D L),
+  2 ≤ n →
+    ∀ (s : Sheshadri.ConormalGaussSection.Section (Sheshadri.PolynomialModel.fermat n) n),
+      ∃ ell a J c,
+        (∀ (j : ℕ) (i : Fin n), family.residue (ell j i) = s.ell j i) ∧
+          (∀ (i : Fin n), family.residue (a i) = s.a i) ∧
+            Module.Finite L (MvPolynomial (Fin n) L ⧸ J) ∧
+              Sheshadri.ActualGenericGaussSection.polarEquationIdeal family ell a ≤ J ∧
+                (J ≤
+                    Sheshadri.HomogeneousSystemSaturation.saturation
+                      (Sheshadri.ActualGenericGaussSection.polarEquationIdeal family ell a) fun i =>
+                      (MvPolynomial.pderiv i) (Sheshadri.PolynomialModel.determinant family.pencil)) ∧
+                  IsUnit
+                      ((Ideal.Quotient.mk J)
+                        (∑ i,
+                          MvPolynomial.C (c i) *
+                            (MvPolynomial.pderiv i) (Sheshadri.PolynomialModel.determinant family.pencil))) ∧
+                    J =
+                      Sheshadri.HomogeneousSystemSaturation.saturation
+                        (Sheshadri.ActualGenericGaussSection.polarEquationIdeal family ell a) fun i =>
+                        (MvPolynomial.pderiv i) (Sheshadri.PolynomialModel.determinant family.pencil)
+@Sheshadri.ArbitraryFieldFinitePolarBound.ordinary_finite_saturated_polar_bound : ∀ {K : Type u_1} [inst : Field K]
+  [inst_1 : CharZero K] {n m : ℕ},
+  2 ≤ n →
+    0 < m →
+      ∀ (A : Sheshadri.Incidence.PencilCoefficients n m K) (ell : ℕ → Fin n → K) (a : Fin n → K)
+        (J : Ideal (MvPolynomial (Fin n) K))
+        [inst_2 : Module.Finite K (Sheshadri.IsolatedLocalMultiplicity.EquationQuotient J)],
+        Sheshadri.SmoothGaussSectionLength.polarChartIdeal (Sheshadri.PolynomialModel.determinant A) ell (n - 2) a ≤ J →
+          (J ≤
+              Sheshadri.HomogeneousSystemSaturation.saturation
+                (Sheshadri.SmoothGaussSectionLength.polarChartIdeal (Sheshadri.PolynomialModel.determinant A) ell
+                  (n - 2) a)
+                fun i => (MvPolynomial.pderiv i) (Sheshadri.PolynomialModel.determinant A)) →
+            ∀ (b : Fin n → K),
+              IsUnit
+                  ((Ideal.Quotient.mk J)
+                    (Sheshadri.GaussSectionSmoothLocalization.derivativeCombination
+                      (Sheshadri.PolynomialModel.determinant A) b)) →
+                Module.finrank K (Sheshadri.IsolatedLocalMultiplicity.EquationQuotient J) ≤ Sheshadri.ordinaryBezout m n
+@Sheshadri.ArbitraryFieldFinitePolarBound.symmetric_finite_saturated_polar_bound : ∀ {K : Type u_1} [inst : Field K]
+  [inst_1 : CharZero K] {n m : ℕ},
+  2 ≤ n →
+    0 < m →
+      ∀ (A : Sheshadri.Incidence.PencilCoefficients n m K),
+        (∀ (i : Fin (n + 1)), (A i).transpose = A i) →
+          ∀ (ell : ℕ → Fin n → K) (a : Fin n → K) (J : Ideal (MvPolynomial (Fin n) K))
+            [inst_2 : Module.Finite K (Sheshadri.IsolatedLocalMultiplicity.EquationQuotient J)],
+            Sheshadri.SmoothGaussSectionLength.polarChartIdeal (Sheshadri.PolynomialModel.determinant A) ell (n - 2) a ≤
+                J →
+              (J ≤
+                  Sheshadri.HomogeneousSystemSaturation.saturation
+                    (Sheshadri.SmoothGaussSectionLength.polarChartIdeal (Sheshadri.PolynomialModel.determinant A) ell
+                      (n - 2) a)
+                    fun i => (MvPolynomial.pderiv i) (Sheshadri.PolynomialModel.determinant A)) →
+                ∀ (b : Fin n → K),
+                  IsUnit
+                      ((Ideal.Quotient.mk J)
+                        (Sheshadri.GaussSectionSmoothLocalization.derivativeCombination
+                          (Sheshadri.PolynomialModel.determinant A) b)) →
+                    Module.finrank K (Sheshadri.IsolatedLocalMultiplicity.EquationQuotient J) ≤
+                      Sheshadri.symmetricBezout m n
+@Sheshadri.ConormalBorderMultiplicity.ordinary_family_count : ∀ {n m : ℕ} {D : Type u_1} {L : Type u_2}
+  [inst : CommRing D] [inst_1 : IsDomain D] [inst_2 : Algebra ℂ D] [inst_3 : Field L] [inst_4 : Algebra ℂ L],
+  3 ≤ n → Sheshadri.DeterminantDvrFamily.Family n m D L → Sheshadri.fermatCount n ≤ Sheshadri.ordinaryBezout m n
+@Sheshadri.ConormalBorderMultiplicity.symmetric_family_count : ∀ {n m : ℕ} {D : Type u_1} {L : Type u_2}
+  [inst : CommRing D] [inst_1 : IsDomain D] [inst_2 : Algebra ℂ D] [inst_3 : Field L] [inst_4 : Algebra ℂ L],
+  3 ≤ n →
+    ∀ (family : Sheshadri.DeterminantDvrFamily.Family n m D L),
+      (∀ (i : Fin (n + 1)), (family.pencil i).transpose = family.pencil i) →
+        Sheshadri.fermatCount n ≤ Sheshadri.symmetricBezout m n
+@Sheshadri.ConormalBorderMultiplicity.ordinary_zariski_count : ∀ {n m : ℕ},
+  3 ≤ n → Sheshadri.ZariskiBridge.OrdinaryZariskiBorder n m → Sheshadri.fermatCount n ≤ Sheshadri.ordinaryBezout m n
+@Sheshadri.ConormalBorderMultiplicity.symmetric_zariski_count : ∀ {n m : ℕ},
+  3 ≤ n → Sheshadri.ZariskiBridge.SymmetricZariskiBorder n m → Sheshadri.fermatCount n ≤ Sheshadri.symmetricBezout m n
+@Sheshadri.ConormalBorderMultiplicity.ordinary_border_count : ∀ {n m : ℕ},
+  3 ≤ n →
+    Sheshadri.BorderRepresentation.OrdinaryFiniteSupportBorder n m →
+      Sheshadri.fermatCount n ≤ Sheshadri.ordinaryBezout m n
+@Sheshadri.ConormalBorderMultiplicity.symmetric_border_count : ∀ {n m : ℕ},
+  3 ≤ n →
+    Sheshadri.BorderRepresentation.SymmetricFiniteSupportBorder n m →
+      Sheshadri.fermatCount n ≤ Sheshadri.symmetricBezout m n
+@Sheshadri.ConormalBorderMultiplicity.ordinary_border_quadratic : ∀ {n m : ℕ},
+  3 ≤ n → Sheshadri.BorderRepresentation.OrdinaryFiniteSupportBorder n m → (↑n - 1) ^ 2 / (4 * Real.exp 1) ≤ ↑m
+@Sheshadri.ConormalBorderMultiplicity.symmetric_border_quadratic : ∀ {n m : ℕ},
+  3 ≤ n → Sheshadri.BorderRepresentation.SymmetricFiniteSupportBorder n m → (↑n - 1) ^ 2 / (2 * Real.exp 1) ≤ ↑m
+@Sheshadri.ConormalBorderMultiplicity.ordinary_borderAtSize_quadratic : ∀ {n m : ℕ},
+  3 ≤ n → Sheshadri.BorderRepresentation.OrdinaryBorderAtSize n m → (↑n - 1) ^ 2 / (4 * Real.exp 1) ≤ ↑m
+@Sheshadri.ConormalBorderMultiplicity.symmetric_borderAtSize_quadratic : ∀ {n m : ℕ},
+  3 ≤ n → Sheshadri.BorderRepresentation.SymmetricBorderAtSize n m → (↑n - 1) ^ 2 / (2 * Real.exp 1) ≤ ↑m
+def Sheshadri.BorderRepresentation.OrdinaryFiniteSupportBorder : ℕ → ℕ → Prop :=
+fun n m => ∃ S, Sheshadri.BorderRepresentation.OrdinaryBorder n m S
+def Sheshadri.BorderRepresentation.SymmetricFiniteSupportBorder : ℕ → ℕ → Prop :=
+fun n m => ∃ S, Sheshadri.BorderRepresentation.SymmetricBorder n m S
+def Sheshadri.BorderRepresentation.OrdinaryBorderAtSize : ℕ → ℕ → Prop :=
+fun n m => Sheshadri.BorderRepresentation.OrdinaryBorder n m (Sheshadri.BorderRepresentation.coefficientSupport n m)
+def Sheshadri.BorderRepresentation.SymmetricBorderAtSize : ℕ → ℕ → Prop :=
+fun n m => Sheshadri.BorderRepresentation.SymmetricBorder n m (Sheshadri.BorderRepresentation.coefficientSupport n m)
+def Sheshadri.BorderRepresentation.OrdinaryBorder : (n : ℕ) →
+  ℕ → Finset (Sheshadri.BorderRepresentation.Exponent n) → Prop :=
+fun n m S =>
+  ∃ c₀,
+    Sheshadri.BorderRepresentation.polynomialOfCoefficients S c₀ = Sheshadri.PolynomialModel.fermat n ∧
+      c₀ ∈ closure (Sheshadri.BorderRepresentation.ordinaryLocus n m S)
+def Sheshadri.BorderRepresentation.SymmetricBorder : (n : ℕ) →
+  ℕ → Finset (Sheshadri.BorderRepresentation.Exponent n) → Prop :=
+fun n m S =>
+  ∃ c₀,
+    Sheshadri.BorderRepresentation.polynomialOfCoefficients S c₀ = Sheshadri.PolynomialModel.fermat n ∧
+      c₀ ∈ closure (Sheshadri.BorderRepresentation.symmetricLocus n m S)
+def Sheshadri.BorderRepresentation.ordinaryLocus : (n : ℕ) →
+  ℕ → (S : Finset (Sheshadri.BorderRepresentation.Exponent n)) → Set (Sheshadri.BorderRepresentation.Coefficients S) :=
+fun n m S =>
+  {c | ∃ A, Sheshadri.PolynomialModel.determinant A = Sheshadri.BorderRepresentation.polynomialOfCoefficients S c}
+def Sheshadri.BorderRepresentation.symmetricLocus : (n : ℕ) →
+  ℕ → (S : Finset (Sheshadri.BorderRepresentation.Exponent n)) → Set (Sheshadri.BorderRepresentation.Coefficients S) :=
+fun n m S =>
+  {c |
+    ∃ A,
+      (∀ (i : Fin (n + 1)), (A i).transpose = A i) ∧
+        Sheshadri.PolynomialModel.determinant A = Sheshadri.BorderRepresentation.polynomialOfCoefficients S c}
+'Sheshadri.ConormalBorderMultiplicity.ordinary_zariski_quadratic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.ConormalBorderMultiplicity.symmetric_zariski_quadratic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@Sheshadri.ConormalBorderMultiplicity.ordinary_zariski_quadratic : ∀ {n m : ℕ},
+  3 ≤ n → Sheshadri.ZariskiBridge.OrdinaryZariskiBorder n m → (↑n - 1) ^ 2 / (4 * Real.exp 1) ≤ ↑m
+@Sheshadri.ConormalBorderMultiplicity.symmetric_zariski_quadratic : ∀ {n m : ℕ},
+  3 ≤ n → Sheshadri.ZariskiBridge.SymmetricZariskiBorder n m → (↑n - 1) ^ 2 / (2 * Real.exp 1) ≤ ↑m

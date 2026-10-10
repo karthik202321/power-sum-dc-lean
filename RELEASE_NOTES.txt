@@ -1,0 +1,80 @@
+QUADRATIC DETERMINANTAL LOWER BOUNDS — RELEASE NOTES
+Version: 1.0.0-rc.1
+Author: Karthik Sheshadri
+Prepared: 2026-10-10 UTC
+
+PUBLICATION STATUS
+
+Repository: https://github.com/karthik202321/power-sum-dc-lean
+Archive DOI: 10.5281/zenodo.23274251 (reserved on Zenodo for this release)
+The identifiers are recorded in release-metadata.json and CITATION.cff. No
+arXiv replacement is implied by the presence of the revised source and PDF.
+RELEASE_PUBLISHING.md explains how to finish the archive and publish the
+cross-links.
+
+WHAT THIS CANDIDATE ADDS
+
+* The paper is retitled "A fully Lean-verified quadratic lower bound on the border determinantal complexity of x_1^n + ... + x_n^n over C, including the symmetric and exact models". Its subtitle is "Proof by conormal
+  specialization".
+* The original ACM article format is retained. A comprehensive verification
+  appendix gives the exact endpoint hypotheses, concrete definitions, the
+  seven-step proof chain, limitations and reproducible build/inspection
+  commands. Source and PDF are under paper/.
+* Apache-2.0 LICENSE, NOTICE, CITATION.cff, release metadata, attribution
+  headers and publication tools are included. The software license does not
+  change the manuscript's existing arXiv license or third-party licenses.
+* Direct ordinary_zariski_quadratic and symmetric_zariski_quadratic wrappers
+  now expose the quadratic bounds from literal Zariski-border membership.
+  They compose existing count theorems with the proved numerical estimates.
+  The principal axiom audit now requests 349 reports, including both wrappers.
+* Mathlib is pinned by its commit in the Lake configuration; the manifest
+  records all resolved dependency revisions. The Lean version is 4.19.0.
+
+MATHEMATICAL CLARIFICATIONS IN THE REVISED PAPER
+
+The manuscript's conservation argument now uses constancy of the Euler
+characteristic of every bidegree twist in the proper flat family. Equality
+of the two-variable numerical polynomials identifies all multiplicity-weighted
+multidegrees. It does not infer rational equivalence merely because the base
+is an arbitrary smooth curve, and it does not use a single Segre Hilbert
+polynomial to recover all mixed coefficients. The roadmap, glossary,
+standard-inputs table and explanatory multidegree passage are aligned with
+this correction. Precise Stacks Project references are added.
+
+The cone comparison now restricts radial projection to the complement of the
+vertex. A primal hyperplane avoiding the vertex gives an actual isomorphism
+with the base hypersurface, and its conormal section preserves the dual
+coordinate with multiplicity one. No global projective-line-bundle map through
+the vertex is asserted.
+
+These are repairs to the human-readable global exposition. The Lean endpoints
+use actual local Gauss sections and full local-ring lengths. The release does
+not claim verbatim formalization of every global-cycle assertion in the paper,
+nor a complete independent Chow/intersection library.
+
+VERIFIED ENDPOINTS AND REPRODUCTION
+
+For n >= 3, literal ordinary exact or border representations imply
+  (n-1)^2/(4e) <= m.
+The corresponding symmetric endpoints imply
+  (n-1)^2/(2e) <= m.
+Finite-support Euclidean, canonical-support Euclidean, and literal Zariski
+border predicates are exposed. Final statements require no geometric
+certificate, assumed Bezout theorem, genericity, finite-section or
+specialization premise. Stronger coefficient-count bounds remain available.
+
+The archive contains the complete local Lean entry-point source graph.
+It is not an offline distribution of Lean, Mathlib or their compiled caches.
+Initial dependency downloads are required; exact toolchain/dependency pins,
+build commands and paper compilation instructions are supplied in README.md,
+paper/BUILDING.txt and the verification appendix. The delivered verification
+transcripts, source/import audit and checksum manifest support reproduction;
+the scripts should be rerun for an independent check.
+
+Audit documents from earlier development stages remain historical snapshots.
+ORIGINAL_CONORMAL_SCOPE.txt, END_TO_END_HYPOTHESES_AUDIT.txt, the current
+endpoint sources and the new paper appendix state the current scope. An old
+file saying an obligation remained open does not supersede these later
+assembled proofs. Axiom audits and semantic hypothesis reviews answer
+different questions; both must be inspected. Source-level reviews were
+automated and AI-assisted, not independent human peer review.

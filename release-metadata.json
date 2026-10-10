@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "title": "Lean verification of quadratic determinantal complexity lower bounds",
+  "author": "Karthik Sheshadri",
+  "author_email": "karthiksheshadri217@gmail.com",
+  "copyright_year": 2026,
+  "version": "1.0.0-rc.1",
+  "publication_status": "not_published",
+  "doi_status": "reserved",
+  "zenodo_doi": "10.5281/zenodo.23274251",
+  "repository_url": "https://github.com/karthik202321/power-sum-dc-lean",
+  "paper_url": "https://arxiv.org/abs/2606.13628",
+  "software_license": "Apache-2.0",
+  "paper_license": "Unchanged; see NOTICE and existing arXiv record",
+  "dependencies": {
+    "lean_toolchain": "leanprover/lean4:v4.19.0",
+    "mathlib_repository": "https://github.com/leanprover-community/mathlib4.git",
+    "mathlib_commit": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+    "lean_toolchain_sha256": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea",
+    "lake_manifest_sha256": "bea8ec2e23f075c7a194102fe5fb77d511e103cf672fe7b2195340d2e28bad11"
+  }
+}

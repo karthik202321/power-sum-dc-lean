@@ -1,0 +1,247 @@
+CURRENT VERIFICATION SCOPE: ORIGINAL CONORMAL / GAUSS SPECIALIZATION
+2026-10-10
+
+A. FINAL EXACT AND BORDER STATEMENTS
+
+The final exact and border endpoint modules compile.
+
+The target is the literal Fermat polynomial sum_i X_i^n in n variables.
+For n >= 3, an ordinary size-m affine-linear determinant representation,
+or its border membership, implies
+
+  (n-1)^2 / (4e) <= m.
+
+For symmetric affine-linear determinant representations and their border,
+
+  (n-1)^2 / (2e) <= m.
+
+ConormalExactMultiplicity contains ordinary_exact_count,
+symmetric_exact_count, ordinary_exact_quadratic and symmetric_exact_quadratic.
+Their only mathematical inputs are n >= 3 and the corresponding literal
+complex representation. Symmetric representations require actual symmetric
+coefficient matrices. Positive matrix size is derived.
+
+ConormalBorderMultiplicity contains ordinary_border_count,
+symmetric_border_count, ordinary_border_quadratic and
+symmetric_border_quadratic. Their only mathematical inputs are n >= 3 and
+OrdinaryFiniteSupportBorder or SymmetricFiniteSupportBorder. This membership
+means the target coefficient vector belongs to the Euclidean closure of the
+actual determinant locus in some finite coefficient space. The AtSize
+wrappers use the proved canonical support containing the target and every
+size-m determinant. The Zariski count endpoints instead use the literal
+Zariski-border predicates.
+
+The count conclusions are fermatCount n <= ordinaryBezout m n and
+fermatCount n <= symmetricBezout m n, with
+fermatCount n = n*(n-1)^(n-2). The proved coefficient estimates give the
+quadratic constants. None of these final statements accepts a family,
+GaussDegreeTheory, genericity, finite-section, transversality, persistence,
+Bezout, closure-comparison, cycle, or geometric count hypothesis.
+
+The exact smooth homogeneous variants assume n >= 2, a nonzero homogeneous
+polynomial of positive degree d, smoothness at its nonzero zeros, and a
+literal representation. They prove d*(d-1)^(n-2) bounded by the appropriate
+incidence coefficient. No claim for a larger class of polynomials is hidden
+in the Fermat endpoint.
+
+B. THE SPECIAL SECTION IS CONSTRUCTED, INCLUDING ITS FULL LENGTH
+
+SmoothGaussPolars, GenericGaussPolars, IrrelevantSaturation and
+GenericGaussPolarSequence prove gradient basepoint freeness and construct
+successive polar flags by finite associated-prime avoidance. Irrelevant
+saturation preserves sufficiently high graded pieces. The relevant
+multiplication maps are proved regular; generic regularity is not an input.
+
+SmoothGaussDegree computes the eventual Hilbert value from actual exact
+sequences. SmoothGaussSection and SmoothGaussSectionLength construct a
+support-avoiding linear form and an actual finite chart quotient.
+ArtinianLocalDecomposition, FiniteQuotientPointFamily and SmoothGaussPointFamily
+identify its dimension with the sum of the full local module lengths over
+all its distinct support points. Nonreduced structure is retained.
+
+ConormalGaussSection packages the flags, actual points, finite quotient,
+Artinian local rings, smoothness, and length identity in a Section record.
+The final exact and border proofs invoke its existence theorem, discharging
+its hypotheses for Fermat. They do not ask the caller to supply a Section or
+assume its degree. The special length sum is n*(n-1)^(n-2).
+
+C. AN ACTUAL DVR FAMILY IS CONSTRUCTED FROM BORDER MEMBERSHIP
+
+BorderDvrFamily proves the necessary continuous coefficient reindexing and
+Euclidean-closure inclusion in Zariski closure. It does not assume that
+Euclidean and Zariski closures agree for arbitrary sets, or use the reverse
+inclusion.
+
+AlgebraicCurveSelection and CurveThroughBoundary construct an algebraic
+curve through the boundary point in the actual polynomial-image closure.
+NormalGoingDown, CurveNormalization and FiniteCurveExtension supply a finite
+normalized branch and local DVR, with rational residue field, uniformizer,
+and the finite extension needed to carry a coherent generic preimage.
+GenericPolynomialLift and AlgebraicBorderFamily construct that one tuple
+of matrix parameters. The generic field is proved to be the fraction field
+of the DVR. DvrRationalEntries clears all matrix-entry poles by one common
+uniformizer power.
+
+DeterminantDvrFamily reconstructs the coefficient polynomial and proves both
+its literal generic determinant identity and its exact specialization to
+Fermat. The border proof obtains either an exact representation or this
+actual family. An arbitrary algebraic curve is never replaced by an assumed
+parametrization over C[t].
+
+D. FINITE GENERIC GAUSS SECTIONS WITH THE REQUIRED RESIDUES
+
+ActualGenericGaussSection.exists_actual_section starts with the actual
+family and the constructed special Section. It chooses dual and primal flag
+coefficients in the DVR with precisely the special coefficients as residues.
+RegularFlagsWithResidue proves that these choices can avoid the finitely many
+associated primes: the perturbations are uniformizer multiples, and the
+constant field is infinite. The primal normalization divides only by a
+proved DVR unit and retains the prescribed residue.
+
+The family polynomial is actually homogenized in one added coordinate.
+DeterminantDvrHomogeneous proves its homogeneous and dehomogenization
+identities, including the derivative identities. SaturatedSectionHilbert
+and FinitePrescribedGaussSection use regular homogeneous cuts and Hilbert
+polynomial degree descent to prove the eventual Hilbert function constant.
+The added coordinate is regular on the saturated quotient, so its affine
+chart is a finite-dimensional algebra.
+
+HomogeneousDehomogenization and DehomogeneousGaussSection identify the
+resulting actual affine ideal J. If Igen is the literal ideal of the generic
+determinant, its n-2 chosen polar equations, and the chosen primal equation,
+then the construction proves
+
+  Igen <= J <= saturation(Igen, gradient(det A)),
+  J = saturation(Igen, gradient(det A)).
+
+It proves finiteness of L[x]/J over the actual generic field L and constructs
+a unit linear combination of the derivatives in that full quotient.
+SaturatedChartSmoothness supplies this unit from regularity and finiteness.
+Consequently every geometric support point is smooth, also after extension
+to an algebraic closure. The full unsaturated generic polar quotient is not
+assumed finite and may have excess components.
+
+This saturation is an ideal operation using power membership, not
+radicalization. Localizing where one displayed derivative is a unit recovers
+the original ideal exactly, preserving its nilpotents.
+
+E. FULL SPECIAL LOCAL MULTIPLICITIES PERSIST
+
+DVRRootPersistence starts from actual square equations and an isolated
+Artinian special local ring. It derives a regular sequence and regularity
+of the actual uniformizer on the total localized equation quotient. It then
+cancels nonzero DVR denominators to prove that contraction from the generic
+fibre preserves the special local equations.
+
+DVRSaturatedPersistence extends the result to the generic saturated ideal.
+At each chosen smooth special point some actual derivative has nonzero
+value, so it is a unit in the full special local algebra. Explicit power
+membership and unit cancellation show that every contracted generic equation
+annihilates that whole algebra. DVRSaturatedGaussPersistence applies this to
+the actual family and the residue-preserving flags, and also proves equality
+of the actual localized ideals. It preserves local intersection length,
+not merely a point or its residue field.
+
+DVRSectionLength uses simultaneous interpolation onto the actual special
+local algebras. The contraction of J gives a torsion-free DVR quotient.
+DVRFibreDimension compares its special and finite generic dimensions;
+it does not assume finite generation of the total module over the DVR or
+infer generic finiteness from special finiteness. DVRGaussLengthBound
+combines the constructions into
+
+  fermatCount n <= finrank L (L[x]/J).
+
+Generic finiteness is the independently constructed fact in part D.
+No completion or local Zariski-main-theorem hypothesis is inserted.
+
+F. INCIDENCE BEZOUT OVER THE ACTUAL GENERIC FIELD
+
+KernelIncidenceAlgebra identifies normalized left/right kernel equations
+with the determinant equation where an actual cofactor is nonzero.
+KernelReducedIncidenceAlgebra and IncidenceReductionPoint prove the literal
+reduced ideal equality using a constructed common reduction matrix.
+The symmetric modules give the native one-vector kernel graph and two-factor
+incidence chart. All these are actual quotient and localized-ring
+identifications, preserving nilpotents and lengths.
+
+The FieldPolarMultiplicityBound and FieldFinitePolarBound modules apply
+these constructions over an algebraically closed characteristic-zero field.
+FieldSingularBezoutWithExcess bounds the sum of full local lengths for
+selected projectively distinct isolated zeros of actual multihomogeneous
+square equation systems. Its hypotheses specify valid charts, actual zeros,
+Artinian local intersection rings, the displayed multidegrees, and the
+ambient dimension count. These facts are proved for the actual incidence
+systems. Excess components elsewhere are permitted. No simplicity, global
+finiteness of the entire incidence scheme, or generic transversality is
+assumed.
+
+ArbitraryFieldFinitePolarBound extends the actual finite quotient L[x]/J
+to an algebraic closure of L. Tensor/quotient isomorphisms preserve its
+finite dimension. The unit derivative combination persists, and the
+saturation sandwich identifies the original polar and J local rings at
+all geometric support points. The proof uses the proved inclusion for
+mapped saturations, not an assumed equality under arbitrary base change.
+The actual function field is never identified with C.
+
+The resulting upper bound is
+
+  finrank L (L[x]/J) <= ordinaryBezout m n
+
+or symmetricBezout m n. ConormalBorderMultiplicity combines it with part E
+and the proved coefficient estimates. The exact proof applies the analogous
+incidence bound directly to the constructed special section.
+
+G. METHOD, LEGACY INTERFACES, AND WHAT IS NOT CLAIMED
+
+The accurate method description is a local Gauss-section implementation of
+conormal/Gauss specialization. It does not count a fixed Fermat polar slice
+by setting an original variable to one. The generic chart x_0 = 1 sets the
+ADDED HOMOGENIZING COORDINATE to one; the original polynomial variables
+remain variables. The primal and dual flags are constructed as above.
+This description identifies the mathematical route in the source. It does
+not establish historical provenance or originality, or claim verbatim
+formalization of every line of the manuscript's global cycle presentation.
+
+The older ConormalExact GaussDegreeTheory and ConormalBorder.FamilyCertificate
+interfaces remain conditional and are not claimed to be instantiated in
+full generality. Their inputs include genuine geometric content. The final
+ConormalExactMultiplicity and ConormalBorderMultiplicity endpoints use the
+constructed local-section route instead. They do not require those legacy
+certificates or UniversalPolynomialImageClosure.
+
+Independent results on actual horizontal Gauss closure, flatness, conormal
+containment, bihomogeneous ideals, bidegree conservation, projective ratio
+charts, and torus-preserved generic local lengths remain in the development.
+A separate global Chow ring, assembly of projective fibre cycles, and their
+full intersection-theoretic interpretation are not claimed. They are not
+undischarged hypotheses of the final numerical endpoints.
+
+In particular, support containment alone is not used to assert the required
+component multiplicity or dimension. Pointwise bigraded Hilbert inequalities
+are not used to infer coefficientwise mixed leading-term inequalities.
+The concrete local intersection rings are polynomial equation quotients
+localized at actual evaluation points in valid projective charts; a separate
+identification with stalks of a product of Mathlib Proj schemes is not claimed.
+
+H. REPRODUCIBILITY AND AUDIT INTERPRETATION
+
+The declared toolchain is Lean 4.19.0 with Mathlib v4.19.0 at commit
+c44e0c8ee63ca166450922a373c7409c5d26b00b. Run:
+
+  lake exe cache get
+  ./verify.sh
+
+The verification script builds the project, runs AxiomAudit.lean, and runs
+audit_imports.py. BUILD_LOG.txt, AXIOM_AUDIT.txt and IMPORT_AUDIT.txt record
+those checks. The axiom report concerns foundational dependencies; it does
+not by itself establish the meaning or discharge of mathematical hypotheses.
+The printed final types and END_TO_END_HYPOTHESES_AUDIT.txt address that
+separate question. SOURCE_SHA256SUMS.txt covers delivered files except itself;
+build products and temporary experiments are excluded from the archive.
+
+This scope and END_TO_END_HYPOTHESES_AUDIT.txt supersede completion-status
+statements in older audits. Those earlier documents remain historical
+snapshots of what was proved and what was still assumed at their time.
+Construction-specific details are in GAUSS_DEGREE_CONSTRUCTION_AUDIT.txt,
+BORDER_DVR_CONSTRUCTION_AUDIT.txt, GENERIC_GAUSS_SECTION_AUDIT.txt,
+DVR_LOCAL_PERSISTENCE_AUDIT.txt and EXACT_MULTIPLICITY_AUDIT.txt.

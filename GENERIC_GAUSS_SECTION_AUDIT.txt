@@ -1,0 +1,73 @@
+ACTUAL GENERIC GAUSS SECTION: CONSTRUCTION AND HYPOTHESIS AUDIT
+
+Principal endpoint:
+  Sheshadri.ActualGenericGaussSection.exists_actual_section
+
+Inputs are only the actual constructed determinant DVR family, 2 <= n,
+and the already constructed special Fermat Gauss section. There is no
+generic-flag, finite-section, transversality, regular-sequence, dimension,
+count, smoothness, or local-ring-identification certificate among its inputs.
+
+The endpoint constructs coefficients ell and a in the DVR, with their
+residues equal pointwise to the special section's coefficients. It also
+constructs an ideal J in the generic affine polynomial ring and coefficients
+c in the actual generic representation field. It proves all of the following:
+
+* The literal quotient by J is finite-dimensional over the generic field.
+* I <= J <= saturation(I, gradient), where I is exactly the literal affine
+  polar-chart ideal of the generic determinant, with the chosen dual flags
+  and the normalized primal equation a.x - 1.
+* The image of sum_i c_i partial_i(det A) is a unit in the full quotient by J.
+* J is exactly saturation(I, gradient).
+
+The unit statement retains nilpotents and forces every field-valued point
+to be smooth. It also persists under coefficient-field extension. Thus the
+later algebraic-closure incidence argument need not assume that arbitrary
+base change commutes with saturation.
+
+WHY THE GENERIC FLAGS EXIST
+
+RegularFlagsWithResidue uses a moment-curve parameter in the embedded
+constant field. For every associated prime, a nonzero coefficient
+polynomial has finitely many bad parameters. Their finite union can be
+avoided because the constant field is infinite. Each perturbation is a
+multiple of the actual uniformizer, so every requested residue is retained.
+This is an explicit construction from associated-prime avoidance, not an
+assumption of genericity. The final primal coefficient at X0 is a proved
+unit of the DVR with residue -1; multiplication by its negative inverse
+normalizes that coefficient to exactly -1 in the DVR itself.
+
+WHY THE GENERIC SECTION IS FINITE
+
+The actual coefficient polynomial is homogenized. The initial principal
+hypersurface ideal has Hilbert-polynomial degree at most n-1, with this
+bound proved for its literal homogeneous quotient. Successive derivative
+flags are regular on actual ideals saturated by X0 times the derivative
+system. Each regular homogeneous cut lowers the Hilbert degree, and each
+saturation only enlarges the ideal, so cannot increase the degree. After
+n-2 derivative flags and one primal flag, the actual Hilbert function is
+eventually constant. X0 is regular on the saturated quotient. The already
+proved projective-chart theorem therefore gives a finite X0=1 chart.
+
+HomogeneousDehomogenization supplies an actual quotient-algebra
+isomorphism. DehomogeneousGaussSection identifies the mapped unsaturated
+ideal with the literal affine polar equations. Its saturation comparison
+maps explicit power-membership witnesses. The unit gradient combination
+then upgrades the two ideal inclusions to exact saturation equality using
+the radical of the actual annihilator of an element.
+
+BOUNDARY AND SCOPE
+
+Saturation removes components entirely supported where X0 or every
+spatial derivative vanishes. At a point with X0 != 0 and a nonzero
+derivative, the original and saturated localized ideals are equal as
+ideals, preserving all local scheme multiplicities.
+
+X0 is the added homogenizing coordinate. Setting X0=1 is ordinary
+dehomogenization. No original Fermat variable is fixed to manufacture
+an explicit Fermat polar point count. The special count remains the
+constructed Gauss-section length n(n-1)^(n-2).
+
+This module supplies the actual generic finite section required by the
+border argument. The numerical border conclusion additionally uses the
+separate DVR local-length comparison and arbitrary-field incidence bound.

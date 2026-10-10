@@ -1,0 +1,113 @@
+BORDER DVR CONSTRUCTION AUDIT
+=============================
+
+Scope
+-----
+This audit concerns the construction of an algebraic determinant family from
+literal border membership. It does not claim the final border degree bound.
+The construction uses the original conormal-specialization route. It introduces
+no custom axioms, sorry/admit proofs, or Kumar--Volk explicit-slice argument.
+
+Input and coefficient-space control
+-----------------------------------
+The paper-facing inputs are the existing predicates:
+  BorderRepresentation.OrdinaryFiniteSupportBorder n m
+  BorderRepresentation.SymmetricFiniteSupportBorder n m
+and their canonical OrdinaryBorderAtSize / SymmetricBorderAtSize versions.
+
+Finite-support border membership means that an actual coefficient vector whose
+polynomial is Fermat lies in the Euclidean closure of the actual ordinary or
+symmetric determinant locus in some finite coefficient space.
+
+BorderDvrFamily.coefficientReindex is the literal map obtained by reconstructing
+a polynomial in the first coefficient space and reading its coefficients in the
+canonical symbolic support. Its continuity is proved coefficient by coefficient.
+BorderDvrFamily.actual_determinant_support_subset proves that this canonical
+support contains every actual size-m determinant, using specialization of the
+universal pencil. Support containment is not supplied as a new hypothesis.
+
+Coefficient reindexing sends the original determinant locus into the canonical
+locus and sends the distinguished coefficient vector to the canonical Fermat
+vector. Continuity then transfers Euclidean closure membership. The already
+proved inclusion of Euclidean closure in Zariski closure supplies canonical
+Zariski border membership.
+
+No reverse closure comparison is assumed or proved here. In particular none of
+these endpoints takes ZariskiBridge.UniversalPolynomialImageClosure as input,
+and this audit does not claim equality of Euclidean and Zariski closures.
+
+Actual curve, field extension, and normalized local branch
+---------------------------------------------------------
+For an omitted point of the polynomial image, the construction applies actual
+algebraic curve selection through that point. The selected curve is an integral
+one-dimensional quotient, finite over a polynomial parameter ring. Its generic
+point has an actual preimage under the original polynomial parameterization.
+
+GenericPolynomialLift constructs one finite extension of the curve's fraction
+field containing a simultaneous solution for all representation parameters.
+Thus the generic matrix entries form one coherent representation; independent
+pointwise choices of matrices are not substituted for a family.
+
+FiniteCurveExtension takes the actual integral closure of the curve ring in
+that finite generic representation field. Finiteness follows from the
+characteristic-zero finite-extension normalization argument over the parameter
+PID. A point above the specified boundary point is constructed. Localization
+there is proved to be a discrete valuation ring with residue field C.
+
+The generic embedding of that local ring into the representation field is
+injective. Every element of the representation field is proved to be a fraction
+of local-ring elements. DeterminantDvrFamily.Family.isFractionRing therefore
+identifies the representation field as the fraction field of this normalized
+DVR, with the algebra structure specified by the actual embedding. It is not
+silently identified with the smaller pre-extension curve fraction field.
+
+Literal determinant polynomial and specialization
+--------------------------------------------------
+The coefficient functions lie in the actual DVR. Their finite reconstruction is
+an actual multivariate polynomial over that ring. Mapping it through the
+residue homomorphism gives exactly PolynomialModel.fermat n. Mapping it through
+the generic embedding gives exactly PolynomialModel.determinant of the generic
+matrix pencil. These are polynomial equalities, not only equality of zero sets
+or assumed coefficient identities.
+
+The symmetric construction proves symmetry of the generic matrix pencil. Its
+pole-cleared regular pencil is also symmetric. Representation entries may have
+poles at the boundary point: the construction does not assert that the original
+generic matrix entries themselves specialize. Instead an actual uniformizer
+and one finite exponent are constructed whose power simultaneously clears all
+matrix-entry poles. Coefficient regularity and exact Fermat specialization hold
+before this pole clearing.
+
+Principal paper-facing endpoints
+-------------------------------
+In namespace Sheshadri.BorderDvrFamily:
+  ordinary_finiteSupportBorder_zariski
+  symmetric_finiteSupportBorder_zariski
+  ordinary_finiteSupportBorder_exact_or_family
+  symmetric_finiteSupportBorder_exact_or_family
+  ordinary_borderAtSize_exact_or_family
+  symmetric_borderAtSize_exact_or_family
+
+The exact-or-family conclusions separate an already-existing complex exact
+representation from a genuine boundary case. In the boundary case they produce
+the constructed normalized DVR family, with actual quotient and localization
+rings, the generic determinant equality, residue Fermat equality, fraction-field
+property, and uniformizer pole bound. These properties are derived from literal
+border membership, not passed in as a family-specific certificate.
+
+Validation and remaining obligations
+------------------------------------
+The modules CurveNormalization, GenericPolynomialLift, FiniteCurveExtension,
+DvrRationalEntries, AlgebraicBorderFamily, DeterminantDvrFamily, and
+BorderDvrFamily passed Lean builds. A separate audit of sixteen principal
+construction and endpoint declarations reported only Lean's standard axioms:
+  propext, Classical.choice, Quot.sound.
+
+This construction is not a proof of the final numerical border theorem.
+The incidence/degree estimate over the actual generic representation field
+still requires its applicable proof or a justified transfer to a suitable
+complex fibre. The required projective cycle/intersection identification and
+its connection to the constructed family likewise remain separate obligations.
+Those conclusions must not be inferred merely from the existence of this DVR
+family or from the clean axiom audit. No analytic accumulation theorem is
+claimed by the algebraic normalization construction itself.

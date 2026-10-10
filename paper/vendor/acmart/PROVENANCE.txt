@@ -1,0 +1,26 @@
+Vendored ACM article class
+=========================
+
+Upstream: https://github.com/borisveytsman/acmart
+Commit: cb4bea05438ac81de82df97e8b15326df5e602b3 (primary branch)
+Retrieved: 2026-10-10 UTC
+Class version: acmart 2026/10/04 v2.21
+License: LaTeX Project Public License version 1.3c (see LICENSE).
+
+The files acmart.dtx, acmart.ins, LICENSE, and README are unmodified upstream
+files. The distributed paper/acmart.cls was generated from acmart.dtx using
+the unmodified acmart.ins, by running `latex -interaction=batchmode acmart.ins`.
+Original copyright and license notices are preserved. This third-party class
+is not covered by the formalization's Apache-2.0 license.
+
+SHA-256:
+8780f6b7763852a290b0fcbc5d53a7209e324569a082aaa95ade79d2e7f7db8f acmart.dtx
+fa7daaa9375775ce699f33f909667bdb83c0408fd8d67606926df86c346c4044 acmart.ins
+ca3227f672053cb608959d7e1d476c7a13efea11be3f6e53758a68b650c918e8 LICENSE
+22d3bc6308fb8f64aa38b69bedc5ff5f311bbfd71f02f4af3746ae7a91ac3585 ../../acmart.cls
+
+Source URLs:
+https://raw.githubusercontent.com/borisveytsman/acmart/cb4bea05438ac81de82df97e8b15326df5e602b3/acmart.dtx
+https://raw.githubusercontent.com/borisveytsman/acmart/cb4bea05438ac81de82df97e8b15326df5e602b3/acmart.ins
+https://raw.githubusercontent.com/borisveytsman/acmart/cb4bea05438ac81de82df97e8b15326df5e602b3/LICENSE
+https://raw.githubusercontent.com/borisveytsman/acmart/cb4bea05438ac81de82df97e8b15326df5e602b3/README

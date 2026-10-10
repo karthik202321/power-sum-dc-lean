@@ -1,0 +1,246 @@
+PROJECTIVE CHARTS, LOCAL LENGTHS AND INTERSECTION DEGREES: PRECISE SCOPE
+2026-10-10
+
+The chart, Hilbert-comparison and finite-section results below are proved
+constructions. The scaling-torus local-length gap is closed. Top mixed Hilbert
+coefficient comparison for actual nested bihomogeneous ideals is now proved,
+and the generic finite Gauss section is constructed with prescribed special
+flags. The numerical border route uses local Gauss-section specialization;
+it does not require claiming a completed global projective-cycle formalization.
+This document describes these capabilities, not the final border endpoints.
+
+A. ACTUAL CHART ALGEBRAS AND GENERIC MULTIPLICITIES
+
+ConormalProjectiveCharts starts with a genuinely bihomogeneous ideal I in
+R[x_i,y_j]. It proves that the literal normalized chart algebra
+
+  R[x_i,y_j]/(I,x_i-1,y_j-1)
+
+is algebra-isomorphic to the actual coordinate-ratio subalgebra in
+(R[x_i,y_j]/I)[1/(x_i*y_j)]. The kernel equality is an equality of ideals;
+no radicalization or supplied chart certificate replaces the equations.
+ConormalChartTorus constructs both maps and proves the inverse laws for
+
+  (R[x_i,y_j]/I)[1/(x_i*y_j)]
+    ≃ (R[x_i,y_j]/(I,x_i-1,y_j-1))[u,v,1/(u*v)].
+
+ActualProjectiveFibreCharts applies this to the actual specialized ideal
+ActualGaussFamily.fibreIdeal, using its proved bihomogeneity. The fibre ideal
+retains its nilpotents. The module constructs Spec of each actual chart ring
+and its affine fundamental cycle, with weights given by actual minimal-prime
+local-ring lengths, positive weights, and whole-spectrum support.
+
+ProjectiveCycleLengths proves local-ring equivalences and length preservation
+under localization and ring isomorphisms. The additional torus cancellation is
+now also PROVED:
+
+- FlatLocalLength.tensor_length_eq proves length preservation under flat local
+  base change when extension of the source maximal ideal equals the target
+  maximal ideal. It tensors an actual finite composition series; the residue
+  module becomes the target residue field. The maximal-ideal equality and
+  flatness are explicit hypotheses of this general theorem.
+- TorusGenericLocalRings derives those hypotheses for the actual local maps.
+  It constructs a bijection between all minimal primes of R and of
+  R[u,v,1/(u*v)], and, for Noetherian R, proves equality of their generic local
+  lengths. Inverting the two torus coordinates discards no base component.
+- ActualProjectiveCycleMultiplicities applies this to each literal Gauss fibre
+  chart. chartConeComponentEquiv is the actual component bijection;
+  chart_coneOpen_generic_length, chartCycle_eq_coneOpenCycle and
+  fibreCone_chart_multiplicity identify its full weights with the surviving
+  cone weights. Multiplicity one and reducedness are not assumed.
+
+B. FINITE PROJECTIVE SECTIONS: HILBERT VALUES EQUAL ALL LOCAL LENGTHS
+
+FiniteProjectiveHilbert treats a homogeneous ideal in three coordinate blocks
+and actual linear forms lx, lu, lv of the corresponding multidegrees. Its
+BoundaryAvoidance hypothesis is the literal ideal condition
+
+  every Segre coordinate Xi*Uj*Vk belongs to radical(I + (lx*lu*lv)).
+
+This is a support condition, not a count or degree certificate. From it the
+module proves eventual bijectivity between diagonal homogeneous quotient
+pieces and the actual quotient by lx-1, lu-1, lv-1. Finite-dimensionality of
+that quotient is a conclusion. No reducedness is required.
+
+ArtinianLocalDecomposition proves that a commutative Artinian ring is the
+product of its actual localizations at ALL maximal ideals. For a finite
+algebra over an algebraically closed field, it derives the residue-field
+identifications and equality between dimension and the sum of actual local
+module lengths. No selected list of roots or assumed CRT isomorphism enters.
+
+ProjectiveHilbertLocalLengths combines these results. Its
+  eventually_hilbert_eq_sum_local_lengths
+identifies every sufficiently high diagonal piece dimension with the full
+sum over maximal ideals of the normalized chart. Its
+  chartCycleDegree_eq_of_boundary
+also proves equality of this numerical degree for any two common charts
+satisfying the stated support condition. This numerical chart independence
+does not construct a globally glued projective cycle.
+
+OrdinaryProjectiveHilbert proves the corresponding ordinary graded result:
+an eventually constant actual Hilbert function and a filter-regular linear
+form yield eventual piece isomorphisms with K[Z]/(I,l-1), finiteness of that
+quotient, and equality of the constant value with its full sum of local
+lengths. Filter-regularity means eventual injectivity of actual multiplication
+on homogeneous pieces. GenericHomogeneousSections and FiniteHomogeneousSection
+construct the required forms and support avoidance in the relevant finite
+section setting.
+
+SmoothGaussSectionLength applies the constructed derivative-polar section to
+a nonzero smooth homogeneous form of degree d in r+2 variables, over an
+algebraically closed field of characteristic zero. It constructs the polar
+coefficients and primal chart, proves the chart quotient finite, and proves
+its total local length is d*(d-1)^r. FiniteQuotientPointFamily constructs ALL
+actual rational coordinate zeros of any finite polynomial quotient, proves
+their distinctness and completeness, and identifies their literal localized
+equation rings. SmoothGaussPointFamily applies this to the polar section.
+These are length identities, retaining possible nonreduced section points;
+they are not an unsupported claim that every section point is simple.
+
+AffineIncidenceLocalCharts proves that the literal dehomogenization quotient
+isomorphism respects evaluation at the normalized point and identifies its
+actual local equation rings with the nested affine presentation. Local lengths
+are preserved without smoothness, reducedness or a finite-length premise.
+This supplies local transport for the separate final incidence assembly.
+
+C. TRUE TOP MIXED-COEFFICIENT COMPARISON
+
+MonomialOrthantDecomposition constructs an explicit finite disjoint partition
+of all exponent vectors. Truncating each coordinate at a common bound for
+finite monomial divisibility tests gives finitely many cells; each cell is
+literally a translate of a coordinate orthant. The cellFiberEquiv and
+exponentEquivCells equivalences retain every exponent exactly once. The
+orthantPolynomial_eval theorem identifies the resulting polynomial with the
+actual bidegree count. Its summands are products of shifted stars-and-bars
+polynomials, with positive coefficients at their own top bidegrees.
+
+The important distinction is between top coefficients and lower terms:
+lower coefficients of a shifted stars-and-bars polynomial may be negative.
+active_cell_degree_le proves that a surviving orthant cannot hide above a
+supplied total-degree bound through cancellation. From this,
+orthantPolynomial_top_coeff_nonneg proves positivity on the top total-degree
+face, rather than falsely deriving it from nonnegative evaluations.
+
+MixedHilbertComparison.top_mixed_coefficient_mono is the resulting theorem
+for actual equation ideals. For bihomogeneous I <= J in K[x_i,y_j], actual
+eventual Hilbert polynomials HI and HJ, and total degree of HI at most d,
+
+  coefficient_(i,j)(HJ) <= coefficient_(i,j)(HI) whenever d <= i+j.
+
+The standard-monomial equivalences for the actual quotients and one common
+monomial order supply a shared nested cell decomposition. The theorem has
+no cycle, effectivity, coefficient-positivity, or desired-count hypothesis.
+The stated total-degree bound is still a genuine hypothesis of this general
+theorem; it is not automatically an established fact for every Gauss family.
+Its coefficients are literal polynomial coefficients, not independently
+constructed global intersection numbers.
+
+D. CONSTRUCTED FINITE GENERIC GAUSS SECTIONS
+
+HomogeneousHilbertDegree proves the ordinary graded facts needed for the
+finite-section construction:
+
+- quotient_hilbert_natDegree_le: an actual homogeneous ideal enlargement
+  cannot increase the degree of the actual Hilbert polynomial. This applies
+  to saturation because saturation enlarges the original ideal.
+- regular_cut_natDegree_le and filterRegular_cut_natDegree_le: an actual
+  regular or filter-regular homogeneous equation lowers Hilbert degree by
+  one, with natural subtraction handling constant and zero polynomials.
+- filterRegular_cut_eq_zero_of_natDegree_eq_zero: a further filter-regular
+  cut after an eventual constant polynomial yields the zero polynomial.
+
+SaturatedSectionHilbert constructs every intermediate Hilbert polynomial
+and proves the degree induction through regular cuts and ideal enlargements.
+cut_sequence_chart_finite_of_initial_enlargement starts from the literal
+initial homogeneous ideal and its actual Hilbert polynomial. Enough cuts
+force an eventual constant natural-number dimension, extracted from a real
+graded piece. A prescribed regular linear chart then has a finite-dimensional
+literal quotient. No finite-section or count certificate is assumed.
+
+SaturatedRegularSequence defines the actual recursion
+
+  S0 = saturation(I, opens),
+  S(j+1) = saturation(Sj + (gj), opens).
+
+sequence_eq_saturation_idealSequence identifies the final ideal with one
+saturation of all original equations. map_sequence_eq_of_unit proves equality
+with those original equations after any one displayed open is inverted.
+sequence_homogeneous proves homogeneous-component stability, and
+common_factor_regular_sequence proves regularity of a coordinate common to
+all open equations. In particular, using opens_i = x0 * derivative_i makes
+x0 regular; x0=1 is the ordinary dehomogenizing coordinate chart.
+
+RegularFlagsWithResidue and PrescribedResidueGaussSequence construct the
+coefficients of all generic regular derivative sections in the actual base
+ring. Perturbations preserve their prescribed special residues. The final
+primal equation is normalized in the base ring itself to have x0 coefficient
+-1, dividing only by a proved unit. Generic regularity and the required
+residue identities are conclusions of these constructions.
+
+FinitePrescribedGaussSection.exists_finite_section integrates these facts.
+It takes the initial homogeneous equations and derivative system, coefficient
+maps to the generic and special fields, a nonzero generic parameter killed
+by specialization, and the initial quotient's actual Hilbert degree bound.
+It CONSTRUCTS derivative flags and the normalized primal flag with all
+prescribed residues, proves the full saturated chart finite, and constructs
+one derivative combination which is a unit in the actual chart algebra.
+The ideal is literally
+
+  saturation(initial equations + all selected cuts,
+             x0 * displayed derivatives), followed by x0=1.
+
+No generic-flag, finite-support, smoothness, local-length, or counting bound
+is an extra hypothesis of that constructor. Applying it to the actual DVR
+determinant family still requires the family-specific polynomial identities
+and initial degree bound; those are separate explicit application steps.
+
+SaturatedChartSmoothness supplies the smoothness bridge without assuming it.
+chart_nonZeroDivisor_of_homogeneous_regular proves that a homogeneous regular
+element remains a non-zero-divisor after l=1. The proof uses homogeneous
+representatives and the actual chart kernel; it retains nilpotents. In a
+finite chart algebra this element is a unit. Associated-prime avoidance then
+constructs a unit combination of the displayed derivative system:
+exists_unit_system_coefficients gives its actual scalar coefficients.
+chart_system_nonvanishing_eval₂ proves that every point over every field extension lies on one of
+these smooth opens. No claim that saturation commutes with arbitrary base
+change is needed for this argument.
+
+E. SCOPE OF THE LOCAL SPECIALIZATION ROUTE
+
+The numerical construction can compare special Gauss-section local lengths
+with a generic finite section and apply the isolated-zero incidence bound.
+These are literal local equation algebras; singular section points keep
+their full lengths. This route supplies the algebraic conormal-specialization
+comparison using finite sections, rather than assuming a projective cycle
+intersection formula for the constructed family.
+
+The following global formalizations are not claimed by these modules:
+
+- Gluing all projective charts and their fundamental cycles into a global
+  biprojective conormal family, with an identification with a chosen Proj
+  or scheme-theoretic conormal construction.
+- A general purity/minimal-component theorem for the special Gauss fibre.
+  Support containment by itself does not prove component membership.
+- Identifying every top mixed Hilbert coefficient with a separately defined
+  global mixed intersection number, together with global cycle additivity.
+
+These global statements must not be reported as proved merely because the
+finite local-section route yields a numerical conclusion. Conversely, their
+absence does not erase the actual ideal, local-ring, Hilbert-comparison, and
+finite-section theorems listed above. Final theorem statements and the
+integrated audit determine which numerical border conclusions are closed.
+
+Curve normalization, the actual DVR family, Gauss containment, and graded
+fibre-dimension conservation have their own proved modules. They are not
+assumed analytic closure certificates. Extension-field incidence bounds and
+the final local specialization assembly are separate modules; this document
+does not substitute for their actual theorem statements.
+
+The chart normalizations and varying derivative flags described here stay
+within the conormal-specialization route. They do not use a fixed Fermat
+coordinate slice to count solutions. This is a structural statement about
+the development, not a historical originality claim about classical methods.
+
+No assertion is made that arbitrary nonregular equations satisfy a
+complete-intersection Bezout equality. The excess-compatible Bezout bound
+uses actual isolated local lengths and permits other components.

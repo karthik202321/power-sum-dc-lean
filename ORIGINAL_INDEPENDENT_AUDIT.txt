@@ -1,0 +1,249 @@
+INITIAL-RELEASE AUDIT — HISTORICAL SNAPSHOT
+
+This records the earlier release. Several missing steps described below are now
+proved; see ORIGINAL_CONORMAL_SCOPE.txt and NEW_OBLIGATIONS_AUDIT.txt for current
+status. Retained to preserve the original audit trail, not as current scope.
+
+INDEPENDENT SEMANTIC AUDIT OF THE ORIGINAL CONORMAL ROUTE
+
+Scope: OriginalConormal.lean and its local transitive imports, including
+ConormalCone, ConormalPersistence, ConormalZariski, ConormalTopology,
+ConormalFlatness, MultiplicityOne, ConormalHilbert, ConormalEulerHilbert,
+ConormalCycles, ConormalSpecialization, ConormalIncidence, ConormalExact,
+and ConormalBorder. This is a source-level semantic review. Compilation
+and Lean axiom-dependency reports are separate evidence.
+
+OVERALL CONCLUSION
+
+The new entry point is independent of the previous explicit Fermat polar
+slice. It verifies substantial algebraic and analytic ingredients and a
+conditional assembly following the conormal-specialization argument.
+It does NOT verify the complete original proof from bare exact or border
+representation hypotheses using only the previously stated Bezout input.
+
+The original-route exact results additionally require an unconstructed
+GaussDegreeTheory. The original-route border results additionally require
+an unconstructed FamilyCertificate, positive matrix size, and fibrewise
+determinant representations over its good parameters. No theorem here
+constructs that certificate from Euclidean or Zariski border membership.
+This limitation is visible in the final theorem signatures and is stated
+in the source documentation.
+
+No false mathematical theorem or inconsistent universal hypothesis was
+found in this review. No custom axiom declaration, sorry, admit, or unsafe
+declaration was found in the reviewed new source. That does not discharge
+its proposition-valued arguments and certificate fields.
+
+IMPORT INDEPENDENCE
+
+The source import graph of OriginalConormal.lean contains 42 local modules
+at the time of review. It has no transitive import of any Explicit* module,
+ExpandedExact, ExpandedBorder, BorderPolarFamily, BorderIncidence, or the
+Fermat-specific ExactKernelLifts module. GenericKernelLifts is used instead.
+The shared PolynomialFamilies/StableFiniteFibres material supplies a
+general inverse-function theorem argument, not a preselected Fermat slice.
+
+ZariskiBridge is imported for its polynomial closure definitions and easy
+Euclidean-to-Zariski inclusion. Importing its definition of
+UniversalPolynomialImageClosure does not supply that proposition as a
+proof. The original-route final statements do not require that principle;
+they also do not construct a family from border membership.
+
+WHAT IS PROVED ABOUT ACTUAL POLYNOMIALS AND MATRICES
+
+1. The determinant-side incidence work is substantive. Literal affine
+   matrix pencils, their evaluated derivatives, nonzero cofactors, actual
+   normalized kernel vectors, and adjugate factorizations are used. The
+   full homogeneous Gauss covector, including its zero-th coordinate, is
+   identified with the gradient of the literal homogeneous determinant.
+   General dual flags have the chart equation
+       sum_i (ell_i - ell_0*x_i) * partial_i f = 0.
+   The coefficient ell_0 is unrestricted. The first-order elimination and
+   normalized kernel uniqueness prove incidence chart simplicity. Given
+   actual finite transverse roots, the universal Bezout input bounds their
+   number in both ordinary and symmetric models.
+
+2. ConormalPersistence proves local persistence at every actual smooth
+   polynomial zero: a coordinate with nonzero partial derivative supplies
+   an invertible square system, and the inverse function theorem gives a
+   continuous local branch with nonzero differential. The entire Gauss
+   covector converges. Euler's identity identifies that covector with the
+   differential of any homogeneous polynomial having the given affine
+   restriction, at roots in the chart x0=1.
+
+3. ConormalZariski proves containment of the closure of the target's
+   scaled smooth Gauss representatives in the special fibre of any supplied
+   closed total family satisfying its graph-containment and algebraicity
+   hypotheses. The target containment is a conclusion, not a field assumed
+   verbatim. The total family itself is not constructed by this theorem.
+
+4. ConormalFlatness proves actual local ring/module algebra: a reduced
+   ring injects into the product of its minimal-prime quotients;
+   componentwise injectivity of the base implies torsion-freeness; and an
+   arbitrary torsion-free module over a PID is flat, without a finite-module
+   restriction. This is useful for the DVR argument. Applying these lemmas
+   to the local rings of a constructed horizontal Gauss family, and then
+   obtaining a flat scheme morphism, is not done here.
+
+5. MultiplicityOne proves that a nonzero differential excludes a squared
+   vanishing factor and, for a supplied finite factorization, selects a
+   unique vanishing factor with exponent one. It does not construct the
+   irreducible-component decomposition or fundamental fibre cycle.
+
+6. ConormalCone proves the power-sum gradient and Euler identities,
+   smoothness away from the vertex, and a scaling-compatible representative
+   equivalence between vectors and a hyperplane avoiding the vertex. This
+   is not yet an identification of conormal schemes or a proof of the
+   cone multidegree shift or classical dual-degree formula.
+
+GAUSS DEGREE THEORY: VALID BUT UNCONSTRUCTED GEOMETRY
+
+GaussDegreeTheory assigns a natural number degree f to every polynomial.
+It requests a GenericGaussSection containing that many distinct smooth
+transverse roots, using one primal and n-2 unrestricted dual flags. The
+section data are actual polynomial equations and actual derivatives.
+They do not assert that the listed roots exhaust an independently defined
+generic intersection. The upper-bound proof only requires their existence,
+so this weaker section interface is logically sufficient.
+
+The smooth_homogeneous_degree field says that for n>=3, d>=2, and a
+nonzero homogeneous polynomial in n variables whose projective hypersurface
+is smooth, the degree is d*(d-1)^(n-2). This has the correct exponent and
+normalization for the (n-2)-nd conormal multidegree of the projective cone:
+one primal hyperplane removes the cone direction and n-2 dual hyperplanes
+give the smooth hypersurface's classical dual degree. No counterexample
+was found under its characteristic-zero, dimension, and smoothness premises.
+
+The intended invariant must use the literal polynomial's nonzero-gradient
+locus, hence multiplicity-one components. For a pure repeated polynomial
+such as g^2, that locus is empty and the section law forces degree zero.
+The interface cannot mean the full conormal of the reduced underlying
+hypersurface for every polynomial. This agrees with the paper's use of
+the multiplicity-one Gauss graph rather than the full reduced conormal.
+
+Nevertheless, degree is an abstract function constrained only by the two
+fields. No inhabitant of GaussDegreeTheory, no intersection theory, and no
+identification of this function with the paper's actual multidegree is
+constructed. Fermat's homogeneity, nonzero polynomial, and smoothness
+hypotheses are proved; its numerical degree then uses the supplied general
+degree law. Calling the resulting exact theorem unconditional would be
+incorrect.
+
+AFFINE REPRESENTATIVES VERSUS PROJECTIVE CONORMAL GEOMETRY
+
+ConormalZariski.conormalClosure is literally the affine polynomial-Zariski
+closure of pairs
+       (mu*(1,z), nu*(-sum z_i*partial_i f(z), gradient f(z)))
+at smooth roots, with mu and nu nonzero. It includes boundary points with
+zero coordinate blocks. No projective quotient, projective closed subscheme,
+or fundamental conormal cycle is constructed by this definition.
+
+The intended identification requires restricting to the two nonzero
+blocks, quotienting the two scalar actions, and proving the appropriate
+chart-density/closure statement. For the irreducible Fermat cone the affine
+chart is the expected dense chart, but that geometric theorem remains a
+bridge rather than a consequence already formalized here.
+
+For a general size-m homogeneous determinant, the affine chart can omit a
+multiplicity-one component x0=0 created by degree padding. The paper's
+Remark 6.1 explains that this component has zero multidegree in slots k>=1.
+Any identification with the full projective Gauss graph must establish
+that fact or explicitly use the chart closure invariant. The generic and
+target degree-identification fields currently carry such identifications.
+
+A nonempty affine bi-cone has dimension two more than its projectivization.
+The FamilyCycleData documentation now correctly distinguishes its affine
+support dimension from its projective degree/Hilbert dimension d=n-1.
+No equation erroneously identifies the two dimensions in the proofs.
+However, scalar invariance of component sets, their actual dimensions, and
+their interpretation as cones of projective fibre components are not
+enforced or constructed by the record.
+
+TOPOLOGY CORRECTION
+
+The standard topology of complex coordinate space is Euclidean. Its
+nontrivial algebraic sets are not irreducible in the topological sense
+used by the generic component lemma, since that topology is Hausdorff.
+The earlier risk is resolved in the integrated statements:
+ConormalTopology constructs a separate explicit algebraicTopology, proves
+that its closed sets are exactly polynomial-closure fixed points, and
+identifies its closure operation with zariskiClosure.
+
+Persistence uses the unchanged Euclidean topology. Target irreducibility
+and component closedness explicitly use algebraicTopology. The topology
+is not installed globally, so the two arguments are not conflated.
+Algebraic irreducibility of the actual Fermat conormal remains a supplied
+certificate field; it is not proved merely by defining this topology.
+
+HILBERT AND CYCLE BOUNDARY
+
+ConormalCycles defines effective cycles as finitely supported natural
+weights on labels. It proves additivity, monotonicity, and the component
+contribution inequality. Its finite-closed-cover irreducibility argument
+is also proved. Equal dimension and an explicit strict dimension-drop
+hypothesis then give equality with a supported component. These are
+correct general arguments; component labels and weights are not thereby
+identified with scheme components or generic local-ring lengths.
+
+ConormalHilbert.topHilbertPolynomial is an injective factorial-normalized
+encoding of a supplied multidegree vector. Equality of that encoding is
+exactly equivalent to equality of the vector. Alone, this does not prove
+geometric conservation from flatness.
+
+ConormalEulerHilbert makes the boundary more explicit: integer-valued Euler
+data and full polynomials are independently supplied, rather than defined
+from multidegrees. It proves that equality on the natural-number grid
+determines the full polynomial, and extracts the q^d coefficient after the
+substitution (a,b)=(q,q*t). The coefficient has the correct factorial
+normalization and retains all multidegrees.
+
+The external data still include the evaluation identity with the supplied
+integer values, the identification of the top coefficient with intersection
+numbers, and the hypothesis hChi that those integer values are constant.
+No sheaf cohomology or geometric Euler characteristic is constructed, and
+proper flatness is not proved to imply hChi. Thus the numerical implication
+from constant Euler data is verified, while the geometric conservation
+theorem remains an obligation.
+
+FAMILY CERTIFICATE AND FINAL STATEMENTS
+
+FamilyCertificate supplies a polynomial family, a continuous parameter map,
+a base point specializing to Fermat, good parameters accumulating at that
+base, and a Euclidean closed total set containing their smooth Gauss graphs.
+It further supplies a special-fibre support description, Zariski
+irreducibility/closedness, dimension laws, independent Euler/Hilbert data
+with constancy, and target/generic degree identifications.
+
+It does not itself require a scheme, a smooth algebraic curve, a regular
+parameter map, a proper or flat morphism, genuine irreducible fibre
+components, scalar-invariant component sets, or actual local-length
+multiplicities. Its fields record numerical/set-theoretic consequences
+that the intended geometric construction must justify. In particular,
+dimension_drop is a supplied no-proper-containment law for the chosen
+dimension function, not a derived theorem of algebraic dimension theory.
+
+ConormalSpecialization derives target containment and then the degree
+comparison from these individual premises. ConormalBorder combines it
+with the general section law, literal determinant incidence, universal
+Bezout, and proved arithmetic. This is a valid conditional proof; the
+certificate does not contain the final count inequality verbatim. It
+still carries substantial paper-specific construction obligations.
+
+ConormalFlatness and MultiplicityOne are available supporting lemmas, but
+the final FamilyCertificate proof does not instantiate them on a geometric
+family: its Euler constancy and degree-identification fields are supplied
+directly. Their presence among imports must not be described as completing
+the missing scheme-to-cycle application.
+
+RECOMMENDED DISCLOSURE
+
+Verified an independent partial formalization of the original conormal
+route: actual determinant incidence and isolatedness, smooth Gauss-point
+persistence, local flatness algebra, multiplicity-one algebra, and the
+conditional cycle/Hilbert/numerical assembly. The exact results additionally
+assume an unconstructed general Gauss-degree theory. The border results
+additionally assume an unconstructed family certificate and fibrewise
+representations. Construction of the actual conormal schemes and family,
+their cycles and multidegrees, generic section realization, the classical
+degree formula, and geometric conservation remain explicit obligations.
+There is no new original-route theorem from bare border membership.

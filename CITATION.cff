@@ -1,0 +1,28 @@
+cff-version: "1.2.0"
+message: "If you use this formalization, please cite this software and the associated paper."
+type: "software"
+title: "Lean verification of quadratic determinantal complexity lower bounds"
+authors:
+  - family-names: "Sheshadri"
+    given-names: "Karthik"
+    email: "karthiksheshadri217@gmail.com"
+version: "1.0.0-rc.1"
+license: "Apache-2.0"
+abstract: "Lean 4 formalization accompanying quadratic lower bounds for ordinary and symmetric determinantal complexity, including exact and border representations. See the verification report for the precise formal statements, scope and reproduction instructions."
+keywords:
+  - "Lean 4"
+  - "formal verification"
+  - "determinantal complexity"
+  - "conormal specialization"
+references:
+  - type: "article"
+    title: "A near-quadratic lower bound on the border determinantal complexity of $\\sum_i x_i^n$ via conormal specialization"
+    authors:
+      - family-names: "Sheshadri"
+        given-names: "Karthik"
+    year: 2026
+    url: "https://arxiv.org/abs/2606.13628"
+    notes: "Original arXiv record (title of v1). The accompanying revision is titled 'A fully Lean-verified quadratic lower bound on the border determinantal complexity of x_1^n + ... + x_n^n over C, including the symmetric and exact models' and adds the Lean verification report."
+repository-code: "https://github.com/karthik202321/power-sum-dc-lean"
+url: "https://github.com/karthik202321/power-sum-dc-lean"
+doi: "10.5281/zenodo.23274251"

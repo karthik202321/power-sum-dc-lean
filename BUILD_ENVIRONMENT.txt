@@ -1,0 +1,40 @@
+BUILD ENVIRONMENT
+
+Lean 4.19.0, official Linux release, commit 6caaee842e94.
+Mathlib v4.19.0, commit c44e0c8ee63ca166450922a373c7409c5d26b00b.
+The original compiler and shared library were unmodified.
+
+The execution container exposes /proc/self/exe but not /proc/<pid>/exe.
+A small LD_PRELOAD compatibility wrapper redirected only the process's own
+executable-location readlink request. It did not change Lean's kernel,
+proof terms, import handling, or verification. Normal local installations
+do not need this wrapper. The wrapper source is included below for review.
+
+Compiler SHA-256:
+92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023
+lib/lean/libleanshared.so SHA-256:
+2ab605c74c78f9ba4431a7b5305a4b28a9071d8a826f223eb14fe5530f78e14d
+
+All project modules compiled successfully. BUILD_LOG.txt is the final
+incremental build transcript; AXIOM_AUDIT.txt is the actual Lean output.
+
+Compatibility wrapper source:
+
+#define _GNU_SOURCE
+#include <dlfcn.h>
+#include <stdio.h>
+#include <string.h>
+#include <unistd.h>
+/* Lean 4.19 uses /proc/<pid>/exe. This environment exposes /proc/self/exe. */
+ssize_t readlink(const char *path, char *buf, size_t size) {
+ static ssize_t (*original)(const char *, char *, size_t);
+ if (!original) original = dlsym(RTLD_NEXT, "readlink");
+ char own[64]; snprintf(own, sizeof own, "/proc/%d/exe", (int)getpid());
+ return original(strcmp(path, own) == 0 ? "/proc/self/exe" : path, buf, size);
+}
+
+ORIGINAL-ROUTE BUILD
+
+The isolated OriginalConormal entry point was built from the copied source
+graph. Build, axiom and import audit outputs accompany this release.
+Explicit theorem hypotheses are not discharged by an axiom-list audit.

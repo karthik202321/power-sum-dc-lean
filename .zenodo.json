@@ -1,0 +1,32 @@
+{
+  "title": "Lean verification of quadratic determinantal complexity lower bounds",
+  "creators": [
+    {
+      "name": "Sheshadri, Karthik"
+    }
+  ],
+  "description": "Lean 4 formalization and reproduction materials for quadratic ordinary and symmetric determinantal complexity lower bounds. The included paper explains the proof and formalization scope. Apache-2.0 applies to code, scripts and reproduction documentation; the paper retains its author's copyright as stated in NOTICE.",
+  "upload_type": "software",
+  "version": "1.0.0-rc.1",
+  "license": "apache-2.0",
+  "access_right": "open",
+  "related_identifiers": [
+    {
+      "identifier": "https://arxiv.org/abs/2606.13628",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-preprint"
+    },
+    {
+      "identifier": "https://github.com/karthik202321/power-sum-dc-lean",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    }
+  ],
+  "keywords": [
+    "Lean 4",
+    "formal verification",
+    "determinantal complexity",
+    "conormal specialization"
+  ],
+  "doi": "10.5281/zenodo.23274251"
+}

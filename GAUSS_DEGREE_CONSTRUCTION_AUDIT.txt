@@ -1,0 +1,166 @@
+GAUSS DEGREE / ORIGINAL CONORMAL ROUTE — CONSTRUCTION AUDIT
+
+Scope of the existing interface
+
+The legacy ConormalExact.GaussDegreeTheory remains an interface, not an
+intrinsic construction of a conormal multidegree. The new unconditional
+ConormalExactMultiplicity exact theorems do not consume this interface. Its arbitrary-polynomial section
+field is not visibly inconsistent: degree zero and an empty root family
+can handle zero polynomials, repeated factors, or other cases without
+smooth roots. But outside the smooth-homogeneous law it may select a
+realizable cardinal rather than the degree of a canonical scheme.
+Axiom auditing alone therefore cannot validate its geometric meaning.
+
+The transverse-section field is stronger infrastructure than the exact
+bound needs now that isolated local scheme lengths satisfy the proved
+singular excess-compatible Bezout theorem. The following construction uses
+actual generic Gauss polars and preserves their nonreduced local algebras.
+It does not assume generic transversality or identify length with a reduced
+point count.
+
+Proved geometric/algebraic inputs
+
+SmoothGaussPolars proves Euler's polynomial identity for any homogeneous
+form in characteristic zero. For positive degree, f belongs to its literal
+gradient ideal. Consequently smoothness away from the origin on f=0
+implies that the derivative system has no common zero off the origin.
+Nullstellensatz then proves every coordinate is in the radical of that
+actual gradient ideal. The derivative list and its span/ideal are linked
+exactly to actual linear combinations of partial derivatives.
+
+Its gaussFlag_ideal_eq_polar_ideal is an equality of ideals, including all
+nilpotents: unrestricted projective Gauss flags differ from ordinary polar
+linear combinations only by an explicit scalar multiple of f. Thus the
+polar section is the actual conormal/Gauss flag section in the cone chart.
+This is not a replacement by a target-specific coordinate slice.
+
+GenericGaussPolars constructs the coefficients of a regular polar on every
+actual irrelevant-saturated quotient. The input is the literal smoothness
+condition and not a basepoint-free, count, or genericity certificate. The
+finite associated-prime avoidance used here is general algebraic linear
+system selection.
+
+IrrelevantSaturation constructs the ideal consisting of polynomials q for
+which, for each coordinate Xi, some power Xi^N*q lies in I. This is the
+intersection of coordinate-open contractions. The source proves inclusion,
+idempotence, the irrelevant-saturated property, homogeneous closure, and
+that a fixed power of the entire irrelevant ideal annihilates sat(I)/I.
+SaturationHilbertTail independently turns this into equality of all large
+actual homogeneous pieces. Hence low-degree irrelevant torsion is not
+silently discarded in a claimed global Hilbert-series equality.
+
+GenericGaussPolarSequence constructs actual coefficients ell_j at every
+step. The next derivative polar is regular on the actual saturation and
+therefore filter regular on the preceding literal equation ideal. Neither
+irrelevant saturation nor a regular-sequence condition is an unproved
+input for these constructed polars.
+
+Constructed Hilbert degree and its meaning
+
+For a nonzero smooth homogeneous f of degree d in n variables, SmoothGaussDegree now constructs an actual sequence of n-2 derivative polars such
+that the sufficiently large graded pieces of
+
+  K[z_1,...,z_n] / (f, polar_1, ..., polar_(n-2))
+
+have dimension exactly d*(d-1)^(n-2). The full locked build passed, and its
+principal theorem uses only propext, Classical.choice, and Quot.sound.
+FilterRegularCompleteIntersection
+computes this by actual eventual Hilbert-polynomial differences. This is
+the length degree of the Gauss-polar section. It is not by itself a theorem
+that the dual hypersurface is birationally parametrized by the Gauss map.
+The latter reflexivity assertion in paper Lemma 3.7 is separate and is
+unnecessary for the stated conormal-pullback degree computation.
+
+SmoothGaussSection constructs the actual coefficients of a further
+filter-regular linear form L and proves that every Xi
+belong to radical(I+(L)). The proof uses the vanishing of the finite
+difference of an eventually constant Hilbert function. Consequently L
+avoids the entire projective support, not merely some selected points.
+The ordinary chart quotient is the literal ring K[z]/(I,L-1).
+OrdinaryProjectiveHilbert proves actual high-piece/chart bijectivity,
+finite-dimensionality, and equality of its vector-space dimension with
+the sum of all local module lengths, using ArtinianLocalDecomposition.
+SmoothGaussSectionLength.exists_polar_section_length integrates these
+results: both flags are constructed, the actual chart quotient is finite,
+and the full local-length sum is exactly d*(d-1)^(n-2). Its locked build
+passed 2331/2331. The source also proves every literal chart point is
+nonzero and smooth. Thus this specific section-length realization is now
+a theorem, rather than an input resembling GaussDegreeTheory.
+
+On the cone, choosing the primal hyperplane x0-L(z)=0 gives x0=1 and
+L(z)=1 on this actual chart. It avoids the cone vertex. The inherited
+Gauss flag conditions are the polars modulo f by the proved ideal identity.
+The determinant incidence comparison is now constructed at the level of
+actual local rings. ConormalPolarIdeal proves the derivative/trace flag
+identity and identifies the determinant-polar ideal with the literal
+chosen Gauss section ideal. OrdinaryIncidenceLocalMultiplicity and
+SymmetricIncidenceLocalMultiplicity identify the literal projective
+incidence-chart local rings with those actual polar local rings, including
+all nilpotents. The ordinary reduction matrix is chosen simultaneously
+for the finite actual point family using the proved generic reduction
+lemma; its nonzero augmented determinant is proved, not assumed.
+
+ConormalExactMultiplicity constructs the finite section, its normalized
+kernel lifts, the common reduction, the actual incidence charts, their
+Artinian local rings, and preservation of their full lengths. The proved
+singular excess-compatible Bezout theorem therefore bounds the sum, and
+the constructed Gauss-polar section supplies the exact lower quantity
+
+  d*(d-1)^(n-2).
+
+The main smooth homogeneous endpoints require only a literal determinant
+representation, positive degree, a nonzero homogeneous polynomial, and
+its literal smoothness away from the origin. The symmetric endpoint also
+requires literal symmetry of the coefficient matrices. Their Fermat
+specializations require only n>=3 and the ordinary/symmetric literal
+representation. Thus both exact coefficient bounds and constants
+1/(4e), 1/(2e) now have an unconditional conormal/Gauss-polar proof. They
+have no GaussDegreeTheory argument, no assumed Bezout proposition, no
+section-length certificate, and no transversality/reducedness hypothesis.
+The complete final source passed a direct Lean check; its serialized build
+and principal theorem axiom audit are recorded in the final status below.
+
+Checks against misleading claims
+
+* No assumption that an arbitrary excess system is globally zero-dimensional
+  is used or should be reintroduced at the determinant incidence stage.
+* No assertion that generic Cox equations form a global regular sequence
+  is used. Only the actually proved filter-regular statements enter the
+  Hilbert-polynomial computation.
+* No global P1-bundle projection through the cone vertex is claimed. The
+  actual hyperplane chart avoids that vertex. The paper's global fibre
+  wording requires this qualification.
+* Selecting a generic projective chart after constructing the polar section
+  is not a special-coordinate Fermat counting method. No assertion of
+  historical originality or independence of mathematical ideas follows
+  from these formal proofs or this source audit.
+* The normalized-curve conormal specialization/cycle-comparison obligations
+  for the border theorem remain separate from this smooth special-side
+  degree calculation. These files do not construct the whole border
+  FamilyCertificate.
+
+Final exact status
+
+Serialized `lake build Sheshadri.ConormalExactMultiplicity` passed
+3142/3142 targets. All six principal endpoints were then checked with
+`#print axioms`; each depends exactly on propext, Classical.choice,
+and Quot.sound. The printed final types of ordinary_exact_quadratic and
+symmetric_exact_quadratic take only n>=3 and the corresponding literal
+Fermat representation. No custom axiom, sorry, or geometric certificate
+is present in these final exact dependencies.
+
+New actual DVR family grading (separate boundary progress)
+
+An independent read-only source audit of DVRGaussHomogeneous found no
+hidden geometric premise in its bihomogeneity or Hilbert constancy route.
+RadicalKernelFieldPoints proves that radical kernel membership is detected
+by actual fraction fields of every prime quotient of the target algebra.
+This correctly permits nonreduced/empty charts. Independent primal and
+dual scalar rescaling then proves bihomogeneity of the actual generic
+smooth Gauss-chart ideal. The contraction is the literal previously
+constructed horizontal ideal. Actual field fibre dimensions agree in
+every bidegree by the proved PID-flat homogeneous base-change theory;
+special-fibre nilpotents remain in that quotient. No embedding of the
+generic fraction field into the special residue field is assumed. This
+family grading/constancy is not yet a comparison of conormal cycle degrees
+or a full unconditional border bound.

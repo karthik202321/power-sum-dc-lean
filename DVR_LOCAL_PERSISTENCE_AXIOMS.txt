@@ -1,0 +1,121 @@
+'Sheshadri.DVRRootPersistence.specialFiberEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.DVRRootPersistence.special_equations_regular' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.DVRRootPersistence.local_equations_parameter_regular' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.DVRRootPersistence.family_contraction_annihilates_local' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.DVRRootPersistence.specialized_contractedIdeal_localization_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.DVRSaturatedPersistence.localPolynomialMap_isUnit_of_eval_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.DVRSaturatedPersistence.family_power_contraction_annihilates_local' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.DVRSaturatedPersistence.family_saturated_contraction_annihilates_local_of_isUnit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.DVRSaturatedPersistence.family_saturated_contraction_annihilates_local' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.DVRSaturatedPersistence.specialized_saturated_contraction_le_localKernel' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.DVRSaturatedPersistence.specialized_saturated_contractedIdeal_localization_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.AdicScalarCompatibility.completionEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.AdicScalarCompatibility.ring_completion_scalar_regular' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.AdicScalarCompatibility.module_completion_scalar_regular' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.DVRCompletionDomain.completion_isDomain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Sheshadri.CompletionFiniteGeneration.map_surjective_of_reduce_surjective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.CompletionFiniteGeneration.completionEquivOfReduction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.CompletionFiniteGeneration.finite_of_quotient_finite' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.CompletionFiniteGeneration.basisOfReduction' depends on axioms: [propext, Classical.choice, Quot.sound]
+Sheshadri.DVRSaturatedPersistence.specialized_saturated_contraction_le_localKernel.{u_1, u_2, u_3, u_4, u_5}
+  {σ : Type u_1} {k : Type u_2} {D : Type u_3} {L : Type u_4} {E : Type u_5} [Fintype σ] [Field k] [Infinite k]
+  [CommRing D] [IsDomain D] [IsDiscreteValuationRing D] [Field L] [Algebra D L] [IsFractionRing D L] (ε : D →+* k)
+  (hε : Function.Surjective ⇑ε) (π : D) (hπ : Irreducible π) (hker : RingHom.ker ε = Ideal.span {π})
+  (fs : List (MvPolynomial σ D)) (p : σ → k) (hsquare : fs.length = Fintype.card σ)
+  (hz : ∀ r ∈ fs, (MvPolynomial.eval p) ((Sheshadri.DVRRootPersistence.specialize ε) r) = 0)
+  [IsArtinianRing
+      (Sheshadri.IsolatedLocalMultiplicity.LocalIntersectionRing (Sheshadri.DVRRootPersistence.specialIdeal ε fs) p ⋯)]
+  (gs : E → MvPolynomial σ D) (J : Ideal (MvPolynomial σ L))
+  (hJ :
+    J ≤
+      Sheshadri.HomogeneousSystemSaturation.saturation
+        (Sheshadri.GeneralGradedBaseChange.extendedIdeal (Ideal.ofList fs)) fun i =>
+        (MvPolynomial.map (algebraMap D L)) (gs i))
+  (i : E) (hi : (MvPolynomial.eval p) ((Sheshadri.DVRRootPersistence.specialize ε) (gs i)) ≠ 0) :
+  Ideal.map (Sheshadri.DVRRootPersistence.specialize ε) (Sheshadri.BezoutHorizontalFamily.contractedIdeal J) ≤
+    RingHom.ker
+      (Sheshadri.IsolatedLocalMultiplicity.localPolynomialMap (Sheshadri.DVRRootPersistence.specialIdeal ε fs) p ⋯)
+Sheshadri.DVRSaturatedPersistence.specialized_saturated_contractedIdeal_localization_eq.{u_1, u_2, u_3, u_4, u_5}
+  {σ : Type u_1} {k : Type u_2} {D : Type u_3} {L : Type u_4} {E : Type u_5} [Fintype σ] [Field k] [Infinite k]
+  [CommRing D] [IsDomain D] [IsDiscreteValuationRing D] [Field L] [Algebra D L] [IsFractionRing D L] (ε : D →+* k)
+  (hε : Function.Surjective ⇑ε) (π : D) (hπ : Irreducible π) (hker : RingHom.ker ε = Ideal.span {π})
+  (fs : List (MvPolynomial σ D)) (p : σ → k) (hsquare : fs.length = Fintype.card σ)
+  (hz : ∀ r ∈ fs, (MvPolynomial.eval p) ((Sheshadri.DVRRootPersistence.specialize ε) r) = 0)
+  [IsArtinianRing
+      (Sheshadri.IsolatedLocalMultiplicity.LocalIntersectionRing (Sheshadri.DVRRootPersistence.specialIdeal ε fs) p ⋯)]
+  (gs : E → MvPolynomial σ D) (J : Ideal (MvPolynomial σ L))
+  (hIJ : Sheshadri.GeneralGradedBaseChange.extendedIdeal (Ideal.ofList fs) ≤ J)
+  (hJI :
+    J ≤
+      Sheshadri.HomogeneousSystemSaturation.saturation
+        (Sheshadri.GeneralGradedBaseChange.extendedIdeal (Ideal.ofList fs)) fun i =>
+        (MvPolynomial.map (algebraMap D L)) (gs i))
+  (i : E) (hi : (MvPolynomial.eval p) ((Sheshadri.DVRRootPersistence.specialize ε) (gs i)) ≠ 0) :
+  Ideal.map (algebraMap (MvPolynomial σ k) (Sheshadri.CoordinatePowerRegular.PointLocalRing p))
+      (Ideal.map (Sheshadri.DVRRootPersistence.specialize ε) (Sheshadri.BezoutHorizontalFamily.contractedIdeal J)) =
+    Ideal.map (algebraMap (MvPolynomial σ k) (Sheshadri.CoordinatePowerRegular.PointLocalRing p))
+      (Sheshadri.DVRRootPersistence.specialIdeal ε fs)
+'Sheshadri.DVRSaturatedGaussPersistence.section_saturated_contraction_preserves' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.DVRSaturatedGaussPersistence.section_saturated_contraction_local_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Sheshadri.DVRSaturatedGaussPersistence.family_saturated_contraction_preserves' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Sheshadri.DVRSaturatedGaussPersistence.family_saturated_contraction_preserves.{u_1, u_2} {n m : ℕ} {D : Type u_1}
+  {L : Type u_2} [CommRing D] [IsDomain D] [Algebra ℂ D] [Field L] [Algebra ℂ L]
+  (family : Sheshadri.DeterminantDvrFamily.Family n m D L)
+  (s : Sheshadri.ConormalGaussSection.Section (Sheshadri.PolynomialModel.fermat n) n) (ell : ℕ → Fin n → D)
+  (a : Fin n → D) (hell : ∀ (j : ℕ) (i : Fin n), family.residue (ell j i) = s.ell j i)
+  (ha : ∀ (i : Fin n), family.residue (a i) = s.a i) (hn : 2 ≤ n) (J : Ideal (MvPolynomial (Fin n) L))
+  (hIJ :
+    Ideal.map (MvPolynomial.map family.generic.toRingHom)
+        (Ideal.ofList (Sheshadri.DVRGaussSection.equations family.polynomial ell (n - 2) a)) ≤
+      J)
+  (hJI :
+    J ≤
+      Sheshadri.HomogeneousSystemSaturation.saturation
+        (Ideal.map (MvPolynomial.map family.generic.toRingHom)
+          (Ideal.ofList (Sheshadri.DVRGaussSection.equations family.polynomial ell (n - 2) a)))
+        fun i => (MvPolynomial.map family.generic.toRingHom) ((MvPolynomial.pderiv i) family.polynomial)) :
+  Sheshadri.SmoothGaussSectionLength.polarChartIdeal (Sheshadri.PolynomialModel.fermat n) s.ell (n - 2) s.a ≤
+      Ideal.map (MvPolynomial.map family.residue.toRingHom)
+        (Ideal.comap (MvPolynomial.map family.generic.toRingHom) J) ∧
+    ∀ (p : Fin s.count),
+      ∀ q ∈ Ideal.comap (MvPolynomial.map family.generic.toRingHom) J,
+        (Sheshadri.IsolatedLocalMultiplicity.localPolynomialMap
+              (Sheshadri.SmoothGaussSectionLength.polarChartIdeal (Sheshadri.PolynomialModel.fermat n) s.ell (n - 2)
+                s.a)
+              (s.point p) ⋯)
+            ((MvPolynomial.map family.residue.toRingHom) q) =
+          0

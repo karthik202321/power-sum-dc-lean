@@ -1,0 +1,150 @@
+INITIAL INFRASTRUCTURE INVENTORY — HISTORICAL SNAPSHOT
+
+This records the earlier release. Several missing steps described below are now
+proved; see ORIGINAL_CONORMAL_SCOPE.txt and NEW_OBLIGATIONS_AUDIT.txt for current
+status. Retained to preserve the original audit trail, not as current scope.
+
+MATHLIB v4.19.0 INFRASTRUCTURE FOR THE ORIGINAL CONORMAL PROOF
+
+This inventory records a search of the pinned local Mathlib source. It is
+an implementation map, not a proof of the paper's geometric statements.
+Availability below means actual source definitions/theorems were located.
+Missing means no ready theorem or construction was found in this version;
+it does not mean that the mathematics cannot be formalized.
+
+INDEPENDENT GENERIC INCIDENCE CHAIN
+
+GenericKernelLifts.lean contains the actual ordinary/symmetric kernel-line
+and finite-family lift constructions formerly in ExactKernelLifts.lean.
+The namespace Sheshadri.ExactKernelLifts is retained for compatibility.
+ExactKernelLifts.lean now contains only exists_fermat_ordinary_lift_family
+and exists_fermat_symmetric_lift_family and imports the generic module
+together with ExplicitProjectiveSlice.
+
+GeneralIncidenceCount imports GenericKernelLifts. Transitive source-import
+inspection shows no Explicit* or Expanded* dependencies in
+GenericKernelLifts, GeneralIncidenceCount, IncidenceSimple, IncidenceBezout,
+PolynomialFamilies, or ZariskiBridge. This separates generic ingredients
+from their former concrete-slice applications; it does not yet identify
+the generic root data with slices of an actual conormal cycle.
+
+The three changed/new targets and the full existing default lake build
+succeeded after this refactor. No theorem statement was weakened. The
+only replacement dependency needed was Mathlib.Algebra.CharZero.Infinite,
+for the Infinite C instance formerly obtained through the explicit slice.
+
+SCHEMES, FIBRES, AND CLOSURES: AVAILABLE BUILDING BLOCKS
+
+* AlgebraicGeometry/Scheme, Spec, AffineScheme, Limits, Pullbacks, Fiber,
+  Stalk, and ResidueField provide actual schemes, morphisms, fibre products,
+  stalks, and residue fields.
+* AlgebraicGeometry/Properties and Noetherian provide reduced/integral
+  schemes and Noetherian facts. finite_irreducibleComponents_of_isNoetherian
+  gives finitely many topological irreducible components.
+* AlgebraicGeometry/FunctionField defines Scheme.functionField at the
+  generic point and proves it is a field for integral schemes, with the
+  expected injectivity statements.
+* AlgebraicGeometry/IdealSheaf defines Scheme.IdealSheafData, its support,
+  radical, and morphism kernel ideal sheaf. Scheme.Hom.support_ker identifies
+  its support with the closure of the image under quasi-compactness.
+  There is affine quotient/gluing data for ideal-sheaf subschemes.
+* AlgebraicGeometry/AffineScheme defines specTargetImageIdeal,
+  specTargetImage, affineTargetImage, and actual image factorizations for
+  affine targets. These are useful for local schematic closure calculations.
+* AlgebraicGeometry/Morphisms/ClosedImmersion has actual closed immersions,
+  quotient-ring examples, composition, and base-change stability.
+* RingTheory/Localization/Ideal provides extension/contraction identities,
+  including IsLocalization.map_comap and the prime/disjointness version of
+  contraction after extension. This supports local closure-by-contraction
+  constructions, but no completed conormal-family closure construction is
+  supplied by those identities alone.
+
+FLATNESS AND DVRs
+
+* RingTheory/DiscreteValuationRing/Basic defines IsDiscreteValuationRing,
+  extending IsPrincipalIdealRing and IsLocalRing, and supplies uniformizer
+  and ideal structure results. Valuation and fraction/localization theory
+  are available in their own modules.
+* RingTheory/Flat/Basic defines Module.Flat via tensor exactness/injectivity
+  criteria. Module.Flat.of_free, localization and base-change results are
+  available. Flat/EquationalCriterion provides the relation criterion.
+* AlgebraicGeometry/Morphisms/Flat defines actual flat scheme morphisms.
+  AlgebraicGeometry.Flat.iff_flat_stalkMap and Flat.of_stalkMap give the
+  local-ring criterion; composition and base change are proved.
+* LinearAlgebra/FreeModule/PID proves
+  Module.free_of_finite_type_torsion_free' and
+  Module.free_iff_noZeroSMulDivisors for FINITE modules over a PID.
+  Together with Module.Flat.of_free, this supplies flatness for finite
+  torsion-free modules over a DVR.
+* No general arbitrary-module torsion-free-implies-flat theorem over a
+  valuation ring/PID/DVR was found. Coordinate rings of finite-type
+  families are generally not finite modules over the base DVR, so the
+  finite-module theorem must not be applied merely from finite TYPE.
+  A proof using the equational criterion, or directed unions of finite
+  free submodules, remains needed for that general route.
+* RingTheory/Spectrum/Prime/FreeLocus proves isOpen_freeLocus for finitely
+  presented modules and isLocallyConstant_rankAtStalk for finitely
+  presented flat modules. This is a finite-module rank theorem, not
+  constancy of projective fibre multidegrees or a generic-flatness theorem
+  for arbitrary finite-type families.
+
+PROJECTIVITY AND PROPERNESS
+
+* AlgebraicGeometry/ProjectiveSpectrum constructs Proj of a graded algebra,
+  its scheme, basic affine charts, stalks, and the structure map to Spec of
+  degree zero. It also has the projective-spectrum Zariski topology.
+* IMPORTANT: ProjectiveSpectrum/Proper.lean currently proves separatedness
+  of Proj. Its documentation explicitly leaves the valuative criterion as
+  a TODO. The filename is not evidence that general Proj properness is
+  already proved.
+* AlgebraicGeometry/Morphisms/Proper defines IsProper (separated,
+  universally closed, locally of finite type), proves composition/base
+  change, and proves finite morphisms proper.
+* AlgebraicGeometry/ValuativeCriterion provides existence/uniqueness
+  criteria and IsProper.eq_valuativeCriterion / IsProper.of_valuativeCriterion.
+  Actual properness of the relevant projective ambient family still needs
+  an application/proof, rather than a bare reference to this interface.
+
+HILBERT POLYNOMIALS, CYCLES, AND INTERSECTION NUMBERS
+
+* RingTheory/Polynomial/HilbertPoly defines Polynomial.hilbertPoly p d
+  from the coefficients of the rational power series p/(1-X)^d. It proves
+  eventual polynomiality and uniqueness for that generating series.
+  Its documentation explicitly lists Hilbert polynomials of finitely
+  generated graded modules over Noetherian rings as TODO.
+* Graded algebras/modules, homogeneous ideals, finite type, Noetherian
+  graded algebras, and homogeneous localization are present. There is no
+  located bridge from those to projective-family Hilbert polynomials,
+  flat-family Hilbert polynomial constancy, or multigraded degree
+  conservation.
+* RingTheory/Length and FiniteLength provide actual module length,
+  finiteness/positivity, and additivity in exact sequences. Associated
+  primes, minimal primes, ideal height, and Krull dimension are present.
+  These are useful local ingredients for defining cycle multiplicities.
+* No library of algebraic cycles, fundamental cycles, Chow groups/rings,
+  proper cycle pushforward, flat cycle pullback, intersection with
+  hyperplane classes, effective cycle specialization, or conservation of
+  multidegrees was found in this pinned version.
+* RingTheory/Kaehler has the conormal MODULE I/I^2 and cotangent theory.
+  That is not a ready construction of the paper's projective conormal
+  variety or multiplicity-one Gauss-graph cycle.
+
+CONSEQUENCES FOR AN HONEST ORIGINAL-ROUTE FORMALIZATION
+
+A faithful assembly must separately construct the actual projective
+Gauss-graph/conormal closed objects, the horizontal closure family over
+the curve/DVR, and their relevant cycles or an equivalent actual
+multigraded coordinate-ring invariant. It must then establish flatness,
+properness, the target component inclusion with positive multiplicity,
+and conservation of the relevant multidegree. Identifying generic
+transverse slices with that invariant and computing the Fermat value are
+additional geometric bridges.
+
+Proving arithmetic for finitely supported formal sums with arbitrary
+nonnegative weights does prove useful abstract cycle algebra. It does
+not instantiate fundamental cycles of schemes or establish that the
+chosen weights are actual multidegrees. Likewise, accepting a record
+whose fields already assert flatness, conservation, or target inclusion
+keeps those fields as explicit hypotheses; it does not prove them for
+the paper's determinant degeneration. Any shortcut must expose this
+boundary and connect its statement to the actual geometric objects.

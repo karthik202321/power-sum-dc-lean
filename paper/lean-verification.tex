@@ -1,0 +1,854 @@
+\begingroup
+% Distinguish source identifiers and permit wrapping without changing their text.
+\def\UrlFont{\small\ttfamily}
+\setlength{\LTpre}{0.5\baselineskip}
+\setlength{\LTpost}{0.5\baselineskip}
+\section{End-to-end Lean verification and reproduction guide}
+\label{app:lean-verification}
+
+This appendix describes the accompanying Lean development, identifies the
+precise statements that it proves, and gives instructions for rebuilding and
+inspecting the proofs.  The author of the development is Karthik Sheshadri.  The sources and the
+archived release, which also contains this paper, are at
+\begin{itemize}[leftmargin=*]
+\item Lean sources: \leanRepositoryURL;
+\item archived release: \leanArchiveDOI.
+\end{itemize}
+The entry point is \nolinkurl{OriginalConormal.lean}; the final numerical
+theorems are in \nolinkurl{Sheshadri/ConormalExactMultiplicity.lean} and
+\nolinkurl{Sheshadri/ConormalBorderMultiplicity.lean}.
+
+\begin{readerbox}{What ``end to end'' means here}
+For every pair of natural numbers $n,m$ with $n\geq3$, the development proves
+the ordinary and symmetric lower bounds from a literal determinant
+representation, or from literal border membership, respectively.  The final
+theorems do not ask the user to provide a B\'ezout theorem, a generic flag,
+a degree formula, a finite section, a specialization principle, or a geometric
+certificate.  These inputs are proved or constructed in the dependency chain.
+
+The formal implementation uses \emph{local Gauss sections and their full
+intersection lengths} to obtain the numerical consequences of
+conormal/Gauss specialization.  It is not a claim that every intermediate
+global-cycle assertion in the main text has been formalized verbatim.
+Section~\ref{app:lean-scope} specifies this distinction.
+\end{readerbox}
+
+\subsection{The statements checked by Lean}
+\label{app:lean-statements}
+
+Throughout the development, the target is the actual multivariate polynomial
+\[
+ f_n=\sum_{i\in\{0,\ldots,n-1\}}X_i^n
+ \quad\text{in}\quad \CC[X_0,\ldots,X_{n-1}].
+\]
+This indexing differs from $F_n=x_1^n+\cdots+x_n^n$ only by renaming variables.
+An affine matrix pencil is an $(n+1)$-tuple of constant $m\times m$ matrices,
+and its polynomial is literally
+\[
+ \det\left(A_0+\sum_{i=0}^{n-1}X_iA_{i+1}\right).
+\]
+In the symmetric model every coefficient matrix is required to equal its
+transpose.  The definitions occur in \nolinkurl{PolynomialModel.lean}, in
+the namespace \nolinkurl{Sheshadri.PolynomialModel}.
+
+Put
+\begin{align*}
+ C(n)&=n(n-1)^{n-2},\\
+ B(m,n)&=\sum_{i=1}^{n-1}
+   \binom mi\binom{m-1}{n-1-i}\binom{n-2}{i-1},\\
+ B_{\mathrm{sym}}(m,n)&=2^{n-2}\binom m{n-1}.
+\end{align*}
+Their Lean names are, respectively, \nolinkurl{fermatCount},
+\nolinkurl{ordinaryBezout}, and \nolinkurl{symmetricBezout}.  These are
+natural-number definitions, including the usual zero values of binomial
+coefficients outside their range.  The final real-number inequalities use
+\texttt{\detokenize{Real.exp 1}} for $e$.
+
+The following is a complete account of the inputs of the final endpoints.
+All entries quantify only $n,m\in\mathbb N$, have the additional hypothesis
+$3\leq n$, and have no further implicit geometric or typeclass parameter.
+The short names in the first table are in the namespace
+\nolinkurl{Sheshadri.ConormalExactMultiplicity}.
+
+\begingroup\small
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.36\textwidth}>{\raggedright\arraybackslash}p{0.40\textwidth}>{\raggedright\arraybackslash}p{0.18\textwidth}@{}}
+\toprule
+Lean theorem & Remaining representation hypothesis & Conclusion\\
+\midrule
+\endhead
+\nolinkurl{ordinary_exact_count} &
+\nolinkurl{ExactRepresentation}\newline\texttt{n m Complex} & $C(n)\leq B(m,n)$\\[2pt]
+\nolinkurl{symmetric_exact_count} &
+\nolinkurl{SymmetricExactRepresentation}\newline\texttt{n m Complex} &
+$C(n)\leq B_{\mathrm{sym}}(m,n)$\\[2pt]
+\nolinkurl{ordinary_exact_quadratic} &
+\nolinkurl{ExactRepresentation}\newline\texttt{n m Complex} &
+$\displaystyle\frac{(n-1)^2}{4e}\leq m$\\[5pt]
+\nolinkurl{symmetric_exact_quadratic} &
+\nolinkurl{SymmetricExactRepresentation}\newline\texttt{n m Complex} &
+$\displaystyle\frac{(n-1)^2}{2e}\leq m$\\
+\bottomrule
+\end{longtable}
+\endgroup
+
+The border names below are in
+\nolinkurl{Sheshadri.ConormalBorderMultiplicity}.  In each paired row,
+``ordinary'' and ``symmetric'' select the corresponding hypothesis and
+conclusion.
+
+\begingroup\small
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.38\textwidth}>{\raggedright\arraybackslash}p{0.38\textwidth}>{\raggedright\arraybackslash}p{0.18\textwidth}@{}}
+\toprule
+Lean theorem & Remaining border hypothesis & Conclusion\\
+\midrule
+\endhead
+\nolinkurl{ordinary_border_count},
+\nolinkurl{symmetric_border_count} &
+\nolinkurl{OrdinaryFiniteSupportBorder} \texttt{n m},
+\nolinkurl{SymmetricFiniteSupportBorder} \texttt{n m} &
+$C(n)\leq B(m,n)$ or $B_{\mathrm{sym}}(m,n)$\\[4pt]
+\nolinkurl{ordinary_border_quadratic},
+\nolinkurl{symmetric_border_quadratic} &
+The same finite-support predicates &
+$\displaystyle\frac{(n-1)^2}{4e}\leq m$ or
+$\displaystyle\frac{(n-1)^2}{2e}\leq m$\\[7pt]
+\nolinkurl{ordinary_borderAtSize_count},
+\nolinkurl{symmetric_borderAtSize_count} &
+\nolinkurl{OrdinaryBorderAtSize} \texttt{n m},
+\nolinkurl{SymmetricBorderAtSize} \texttt{n m} &
+The corresponding count bound\\[4pt]
+\nolinkurl{ordinary_borderAtSize_quadratic},
+\nolinkurl{symmetric_borderAtSize_quadratic} &
+The same canonical-support predicates &
+The corresponding quadratic bound\\[4pt]
+\nolinkurl{ordinary_zariski_count},
+\nolinkurl{symmetric_zariski_count} &
+\nolinkurl{OrdinaryZariskiBorder} \texttt{n m},
+\nolinkurl{SymmetricZariskiBorder} \texttt{n m} &
+The corresponding count bound\\[4pt]
+\nolinkurl{ordinary_zariski_quadratic},
+\nolinkurl{symmetric_zariski_quadratic} &
+The same Zariski-border predicates &
+The corresponding quadratic bound\\
+\bottomrule
+\end{longtable}
+\endgroup
+
+For example, the full mathematical content of the ordinary finite-support
+border endpoint is exactly
+\[
+ \forall n,m\in\mathbb N,\quad
+ 3\leq n\ \Longrightarrow\
+ \operatorname{OrdinaryFiniteSupportBorder}(n,m)
+ \ \Longrightarrow\
+ \frac{((n:\mathbb R)-1)^2}{4\exp(1)}\leq(m:\mathbb R).
+\]
+Positive matrix size is derived inside the proof.  The stronger count
+theorems are retained rather than only their asymptotic consequences.
+The direct Zariski quadratic endpoints compose the Zariski count theorems
+with \nolinkurl{Sheshadri.ordinary_quadratic_bound} and
+\nolinkurl{Sheshadri.symmetric_quadratic_bound}.  They do not
+need a Zariski-to-Euclidean closure theorem.
+
+There is also an exact, non-Fermat version.  The theorems
+\nolinkurl{ordinary_smooth_degree_bound} and
+\nolinkurl{symmetric_smooth_degree_bound} assume $n\geq2$, a nonzero
+homogeneous $f$ of positive degree $d$, a literal determinant representation,
+and
+\[
+ x\ne0,\quad f(x)=0\quad\Longrightarrow\quad
+ \text{some }\partial_i f(x)\ne0.
+\]
+They conclude $d(d-1)^{n-2}\leq B(m,n)$ or
+$d(d-1)^{n-2}\leq B_{\mathrm{sym}}(m,n)$.  The smoothness and degree
+hypotheses are proved for $f_n$ before applying these results.
+
+\subsection{The closure definitions are literal}
+\label{app:lean-closure}
+
+Let $S$ be a finite set of exponent vectors.  The coefficient space used in
+\nolinkurl{BorderRepresentation.lean} is the finite-dimensional complex
+space $\CC^S$, equipped with its usual topology.  A coefficient vector $c$
+denotes the polynomial $\sum_{\alpha\in S}c_\alpha X^\alpha$.  The ordinary
+locus consists of exactly those vectors whose polynomial is a size-$m$
+affine determinant; the symmetric locus additionally requires symmetric
+coefficient matrices.  Thus
+\texttt{\detokenize{OrdinaryFiniteSupportBorder n m}} means that there exists a finite
+$S$ and a vector representing $f_n$ that belongs to the Euclidean closure
+of this actual locus.  No family or specialization assertion is part of
+this definition.
+
+The canonical \nolinkurl{AtSize} predicates use
+\texttt{\detokenize{coefficientSupport n m}}.  The development proves that this
+finite set contains the support of $f_n$ and of every size-$m$ affine
+determinant.  The theorems \nolinkurl{ordinaryLocus_eq_range} and
+\nolinkurl{symmetricLocus_eq_range} identify the loci with the coefficient
+images of all such pencils.  Consequently, the canonical support introduces
+no unproved restriction on the determinant locus.
+
+The Zariski predicates, defined in \nolinkurl{ZariskiBridge.lean}, use the
+common zeros of all polynomials vanishing on the actual coefficient locus.
+The proof needed for the Euclidean endpoints is only
+\[
+ \overline{T}^{\,\mathrm{Euclidean}}
+ \ \subseteq\ \overline{T}^{\,\mathrm{Zariski}}.
+\]
+It is proved using continuity of polynomial evaluation.  The finite-support
+coefficient reindexing required to apply this inclusion is also proved.
+The final argument then constructs its algebraic family directly from
+Zariski membership.  It neither assumes that these two closures agree for
+arbitrary sets nor uses their reverse inclusion.  An older conditional
+interface named \nolinkurl{UniversalPolynomialImageClosure} is retained in
+the source, but it is not an input to any final endpoint listed above.
+
+\subsection{A definition-level dictionary}
+\label{app:lean-dictionary}
+
+The formal objects below are concrete algebraic objects, rather than names
+for desired numerical properties.  Local module names in this appendix
+refer to files in the \nolinkurl{Sheshadri/} directory.
+
+\begingroup\small
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.64\textwidth}@{}}
+\toprule
+Mathematical object & Formal realization\\
+\midrule
+\endhead
+Affine determinant and target &
+\nolinkurl{PolynomialModel.affinePencil},
+\nolinkurl{determinant}, and \nolinkurl{fermat}; actual matrices and
+multivariate polynomials.\\[4pt]
+Polar section &
+\nolinkurl{SmoothGaussSectionLength.polarChartIdeal}; the ideal generated
+by $f$, the selected derivative combinations, and $a\cdot x-1$.\\[4pt]
+Local intersection algebra &
+\nolinkurl{IsolatedLocalMultiplicity.LocalIntersectionRing}; the actual
+polynomial quotient localized at the evaluation point.\\[4pt]
+Multiplicity &
+\nolinkurl{IsolatedLocalMultiplicity.multiplicity}; module length of that
+local ring over itself, with proved equality to field dimension in the
+rational Artinian setting.\\[4pt]
+Special Gauss section &
+\nolinkurl{ConormalGaussSection.Section}; actual flags and distinct points,
+vanishing, finite quotient, Artinian local rings, smoothness, and a proved
+length sum.  \nolinkurl{exists_section} constructs the record.\\[4pt]
+Border family &
+\nolinkurl{DeterminantDvrFamily.Family}; a DVR, residue and generic maps,
+a polynomial over the DVR, one generic pencil, a uniformizer, and literal
+specialization and determinant identities.\\[4pt]
+Open-locus saturation &
+\nolinkurl{HomogeneousSystemSaturation.saturation}; the ideal of $q$ such
+that, for every displayed $g_i$, some power $g_i^{N_i}q$ belongs to the
+original ideal.\\[4pt]
+Finite generic section &
+\nolinkurl{ActualGenericGaussSection.exists_actual_section}; constructs
+flags with prescribed residues and a finite quotient by the derivative
+saturation of the actual generic polar equations.\\[4pt]
+Incidence multiplicity &
+The actual normalized kernel-incidence equation quotient in a valid
+projective chart, localized at its evaluation point; identified with the
+polar local ring by proved ring equivalences.\\
+\bottomrule
+\end{longtable}
+\endgroup
+
+For clarity, write the special affine polar ideal as
+\[
+ I_0=\left(f_n,\
+ \sum_i\ell_{1i}\partial_i f_n,\ldots,
+ \sum_i\ell_{n-2,i}\partial_i f_n,\ a\cdot x-1\right).
+\]
+It has $n$ displayed equations in $n$ affine variables.  If $p$ is one of
+its selected points, its contribution is
+\[
+ \mu_p=\operatorname{length}_{(\CC[x]/I_0)_p}
+                  (\CC[x]/I_0)_p,
+\]
+not an assigned weight and not merely the number one.  This distinction
+is essential when the polar section is nonreduced.
+
+\subsection{Step 1: construct the special Gauss section and its degree}
+\label{app:lean-special}
+
+The construction begins with a homogeneous polynomial that is smooth away
+from the cone vertex.  \nolinkurl{SmoothGaussPolars} proves the relevant
+Euler identity and gradient basepoint-freeness.  The modules
+\nolinkurl{GenericGaussPolars}, \nolinkurl{IrrelevantSaturation}, and
+\nolinkurl{GenericGaussPolarSequence} choose successive polar combinations
+by avoiding finitely many associated primes.  Irrelevant saturation preserves
+sufficiently high graded pieces, while the chosen equations act regularly
+on the appropriate saturated quotients.  Generic regularity is thus the
+output of an existence proof, not a premise supplied by the caller.
+
+\nolinkurl{SmoothGaussDegree} uses exact sequences of actual graded
+quotients to calculate the eventual Hilbert value after the $n-2$ polar
+cuts.  It obtains $d(d-1)^{n-2}$.  The construction then chooses a linear
+form avoiding the resulting projective support.  Setting this form to one
+gives an actual finite-dimensional affine algebra, as proved in
+\nolinkurl{SmoothGaussSection} and \nolinkurl{SmoothGaussSectionLength}.
+
+The modules \nolinkurl{ArtinianLocalDecomposition},
+\nolinkurl{FiniteQuotientPointFamily}, and
+\nolinkurl{SmoothGaussPointFamily} identify the dimension of this finite
+algebra with the sum of the full local lengths at its distinct support
+points.  The resulting theorem
+\nolinkurl{ConormalGaussSection.exists_section} supplies all the data in
+the \nolinkurl{Section} record and the identity
+\[
+ \sum_p\mu_p=d(d-1)^{n-2}.
+\]
+Specializing to the actual Fermat polynomial gives $\sum_p\mu_p=C(n)$.
+The endpoint proof invokes this constructor and discharges its hypotheses;
+it does not assume the existence or the numerical degree of such a section.
+
+The chart condition $a\cdot x=1$ is chosen after the homogeneous polar
+section.  The proof does not fix an original Fermat coordinate to one and
+then explicitly solve the resulting polar equations to obtain the lower
+count.  The degree comes from the regular-cut Hilbert calculation.
+
+\subsection{Step 2: construct a genuine DVR family from the border}
+\label{app:lean-family}
+
+The border argument starts with the coefficient-space membership of
+Section~\ref{app:lean-closure}.  \nolinkurl{AlgebraicCurveSelection} and
+\nolinkurl{CurveThroughBoundary} construct a curve through the boundary
+point of the polynomial-image closure.  \nolinkurl{NormalGoingDown},
+\nolinkurl{CurveNormalization}, and \nolinkurl{FiniteCurveExtension}
+construct the normalized branch and the finite extension needed to carry
+a coherent generic preimage.  Localizing at the selected point supplies
+a discrete valuation ring $D$, a residue map $D\to\CC$, and its actual
+fraction field $L$.
+
+\nolinkurl{GenericPolynomialLift} and \nolinkurl{AlgebraicBorderFamily}
+produce one tuple of generic matrix parameters.  They do not choose
+unrelated representations at separate fibres.  Pole clearing in
+\nolinkurl{DvrRationalEntries} uses one common power of a uniformizer.
+\nolinkurl{DeterminantDvrFamily} then reconstructs a polynomial
+$F\in D[x_1,\ldots,x_n]$ and a pencil $A$ over $L$ satisfying the actual
+polynomial identities
+\[
+ F\bmod\pi=f_n,\qquad F\otimes_D L=\det A(x).
+\]
+The theorem \nolinkurl{Family.isFractionRing} verifies that the field used
+by the pencil is the fraction field of the constructed DVR.  Symmetry is
+retained in the symmetric construction.
+
+The final family-selection results are
+\nolinkurl{ordinary_border_exact_or_family} and
+\nolinkurl{symmetric_border_exact_or_family}.  They return either an exact
+representation, to which the exact theorem applies, or the family just
+described.  An arbitrary algebraic curve is never replaced by an assumed
+parametrization over $\CC[t]$, and the generic field $L$ is never identified
+with $\CC$.
+
+\subsection{Step 3: prove that a compatible generic section is finite}
+\label{app:lean-generic}
+
+It would be incorrect to infer finite generic fibre merely from finite
+special fibre: components can escape the special fibre.  The development
+therefore proves generic finiteness separately, using the actual family.
+
+\nolinkurl{DeterminantDvrHomogeneous} homogenizes $F$ in an added variable
+and proves the dehomogenization and derivative identities.  Its theorem
+\nolinkurl{generic_hypersurface_hilbert} bounds the degree of the initial
+Hilbert polynomial by $n-1$.  The saturated generic construction works on
+the open locus where the added coordinate and at least one spatial
+derivative are nonzero.
+
+The prescribed special flags cannot simply be replaced by unrelated
+generic flags.  \nolinkurl{RegularFlagsWithResidue.exists_regular_coefficients}
+chooses coefficients in $D$ with exactly the required residues, while
+avoiding the finitely many associated primes of the generic quotients.
+The choices are perturbations by uniformizer multiples.  The modules
+\nolinkurl{PrescribedResidueGaussSequence} and
+\nolinkurl{FinitePrescribedGaussSection} apply this construction to all
+$n-2$ polar cuts and the final primal cut.  Normalization of the primal
+equation divides only by a proved unit of $D$ and preserves its prescribed
+residue.
+
+\nolinkurl{HomogeneousHilbertDegree} proves the degree decrease under a
+regular homogeneous cut and the required monotonicity under enlargement
+of the ideal.  \nolinkurl{SaturatedSectionHilbert} applies these results
+through the actual cut sequence.  After $n-1$ cuts the Hilbert function is
+eventually constant.  Regularity of the added coordinate then proves that
+the corresponding affine chart algebra is finite-dimensional.
+
+Dehomogenization identifies an actual ideal $J\subseteq L[x]$.  If
+\[
+ I_\eta=\left(\det A,\
+ \sum_i\widetilde\ell_{1i}\partial_i\det A,\ldots,
+ \sum_i\widetilde\ell_{n-2,i}\partial_i\det A,\
+ \widetilde a\cdot x-1\right),
+\]
+then \nolinkurl{ActualGenericGaussSection.exists_actual_section} proves
+\begin{gather*}
+ \dim_L L[x]/J<\infty,\\
+ I_\eta\subseteq J\subseteq
+ \operatorname{Sat}_{\partial\det A}(I_\eta),\qquad
+ J=\operatorname{Sat}_{\partial\det A}(I_\eta).
+\end{gather*}
+Here $q\in\operatorname{Sat}_{g}(I)$ means
+$\forall i\,\exists N_i\geq0:\ g_i^{N_i}q\in I$.  This operation removes
+components supported on the excluded closed locus; it does not take a
+radical.  Where one $g_i$ is a unit, the localized saturated and original
+ideals are proved equal.
+
+Finally, \nolinkurl{SaturatedChartSmoothness} constructs a derivative
+combination whose class in the full finite quotient $L[x]/J$ is a unit.
+Regularity gives injectivity of multiplication; finite dimension gives
+surjectivity and hence the inverse.  Therefore all geometric support
+points of $J$ are smooth points of the determinant hypersurface, including
+after passage to an algebraic closure.  The full quotient by $I_\eta$
+need not be finite: excess components outside this smooth section are
+allowed throughout.
+
+\subsection{Step 4: preserve singular local multiplicities}
+\label{app:lean-persistence}
+
+The lower comparison must preserve nilpotents, not merely show that the
+selected special points are in a limiting support.  This is the role of
+\nolinkurl{DVRRootPersistence}.
+
+At a selected special point, the actual local polar algebra is Artinian
+and is given by a square equation system.  The regular-sequence machinery
+in \nolinkurl{CoordinatePowerRegular},
+\nolinkurl{LocalCompleteIntersection}, and
+\nolinkurl{IsolatedCompleteIntersection} derives regularity of these
+equations in the local polynomial ring.  It does not require a nonzero
+Jacobian determinant.  The total local equation quotient then has regular
+uniformizer action.  Cancelling generic denominators shows that contraction
+from the generic fibre annihilates the entire original special local
+algebra.
+
+\nolinkurl{DVRSaturatedPersistence} handles the additional saturation in
+$J$.  At a selected special point, one spatial derivative has nonzero
+value, and consequently is a unit in its full Artinian local ring.  Power
+membership in the saturation, followed by cancellation of this unit, shows
+that every contracted element of $J$ still annihilates that ring.
+\nolinkurl{DVRSaturatedGaussPersistence} applies this result to the actual
+family and the residue-preserving flags.  Its theorem
+\nolinkurl{section_saturated_contraction_local_eq} proves equality of the
+corresponding localized ideals.  Thus this step retains local scheme
+structure and local length.
+
+Let $T=J\cap D[x]$ and let $T_0$ be its residue ideal.  Simultaneous
+interpolation onto the full special local algebras gives
+\[
+ \sum_p\mu_p\ \leq\ \dim_{\CC}\CC[x]/T_0.
+\]
+The quotient $D[x]/T$ embeds in its generic fibre and is torsion-free over
+$D$.  \nolinkurl{DVRFibreDimension} proves the residue-dimension inequality
+\[
+ \dim_{\CC}\CC[x]/T_0\ \leq\ \dim_L L[x]/J.
+\]
+It does not assume finite generation of the whole horizontal algebra over
+$D$; the already proved finite generic dimension is used where needed.
+\nolinkurl{DVRSectionLength.selected_lengths_le_generic} combines these
+facts, and \nolinkurl{DVRGaussLengthBound.family_section_degree_le}
+instantiates them to obtain
+\begin{equation}
+ \label{eq:lean-special-generic}
+ n(n-1)^{n-2}\ \leq\ \dim_L L[x]/J.
+\end{equation}
+
+\subsection{Step 5: B\'ezout with isolated singular zeros and excess}
+\label{app:lean-bezout}
+
+The precise B\'ezout statement matters.  The development proves an
+isolated-intersection inequality; it does not assert that an arbitrary
+nonproper intersection has the expected total length.  The theorem
+\nolinkurl{FieldSingularBezoutWithExcess.isolated_multiplicity_bound}
+is over a characteristic-zero field and has the following inputs:
+\begin{enumerate}[leftmargin=*]
+\item Three finite nonempty homogeneous coordinate blocks of projective
+dimensions $a,b,c$, and exactly $a+b+c$ actual equations.
+\item The displayed multihomogeneity of each equation, with multidegree
+$(d_{e,1},d_{e,2},d_{e,3})$.
+\item A finite family of common zeros, each with a specified nonzero chart
+coordinate in every block, distinct modulo the independent projective
+block scalings.
+\item Artinianness of each selected point's actual localized chart
+equation ring.
+\end{enumerate}
+Its conclusion is
+\begin{equation}
+ \label{eq:lean-bezout}
+ \sum_p\operatorname{length}(\mathcal A_p)
+ \ \leq\
+ [H_1^aH_2^bH_3^c]
+ \prod_e(d_{e,1}H_1+d_{e,2}H_2+d_{e,3}H_3).
+\end{equation}
+The family of selected zeros need not exhaust the zero set.  Other
+components may have positive dimension.  The selected roots need not be
+simple or reduced.  A companion theorem,
+\nolinkurl{isolated_multiplicity_bound_of_isOpen}, derives Artinianness
+from literal isolatedness expressed as an open singleton in the actual
+chart spectrum.
+
+The proof of~\eqref{eq:lean-bezout} is itself part of the formalization.
+It interpolates the given equations with a split comparison system of the
+same multidegrees, contracts the generic ideal without radicalizing it,
+and proves flatness and conservation of actual finite multigraded pieces.
+Local complete-intersection persistence retains all selected local
+lengths at the original endpoint.  At the comparison endpoint, the split
+equation quotient surjects onto the contracted-fibre quotient, giving the
+upper-bound inequality in the correct direction.
+
+The split-system estimate uses a Hilbert-function inequality for products,
+not an unproved regular-sequence equality in the entire homogeneous
+coordinate ring.  Expanding products gives finitely many branches.
+Branches selecting too many linear equations in a block vanish in
+sufficiently positive degree; branches meeting exactly the dimension
+quotas contribute at most one.  The number of quota choices is the
+coefficient on the right of~\eqref{eq:lean-bezout}.  All required degree
+thresholds and componentwise shifts are proved.  This approach allows
+irrelevant and excess components without identifying point counts with
+the degree of an arbitrary homogeneous quotient.
+
+The main dependency modules for this part are
+\nolinkurl{FieldSingularBezoutDeformationBound},
+\nolinkurl{FieldBezoutSplitHilbert},
+\nolinkurl{FieldBezoutVariableTransport}, and
+\nolinkurl{FieldSingularBezoutWithExcess}, together with their local
+persistence and multigraded algebra dependencies.  The comparison split
+system is a general B\'ezout upper-bound construction; it is unrelated to
+a fixed-coordinate explicit count for the Fermat polynomial.
+
+\subsection{Step 6: apply B\'ezout to the actual determinant incidence}
+\label{app:lean-incidence}
+
+At a smooth determinant zero, the proof constructs normalized kernel
+vectors and valid cofactor charts.  In the ordinary model it also
+constructs one reduction matrix valid simultaneously for the finite
+selected family.  The Schur-complement calculations are equalities of
+ideals and actual quotient/local-ring equivalences, not only equalities
+of their zero sets.  The symmetric model uses its native one-kernel-vector
+incidence rather than discarding the symmetry condition.
+
+\nolinkurl{FieldPolarMultiplicityBound} applies the singular isolated-zero
+B\'ezout theorem to these literal incidence equations.  It proves the
+equation count, multidegrees, projective distinctness and Artinian local
+conditions from the constructed polar data.  The local equivalences
+transfer the full intersection lengths.  The resulting incidence
+coefficients are precisely $B(m,n)$ and $B_{\mathrm{sym}}(m,n)$.
+
+The generic field of the border family need not be algebraically closed.
+\nolinkurl{ArbitraryFieldFinitePolarBound} therefore extends the actual
+finite algebra $L[x]/J$ to an algebraic closure $\overline L$.  Explicit
+tensor/quotient equivalences prove
+\[
+ \dim_{\overline L}\bigl(\overline L\otimes_L L[x]/J\bigr)
+ =\dim_L L[x]/J.
+\]
+The unit derivative combination remains a unit after extension, so every
+support point over $\overline L$ is smooth.  The proved saturation
+inclusions suffice to identify each localized $J$-algebra with the
+original polar algebra.  The argument uses the required inclusion under
+mapping an ideal; it does not assume that saturation commutes with every
+base change.
+
+\nolinkurl{FieldFinitePolarBound} constructs the complete point family
+of the finite quotient and sums its local lengths.  Consequently
+\nolinkurl{ArbitraryFieldFinitePolarBound.ordinary_finite_saturated_polar_bound}
+and its symmetric counterpart give
+\begin{equation}
+ \label{eq:lean-generic-upper}
+ \dim_L L[x]/J\leq B(m,n),
+ \qquad\text{or}\qquad
+ \dim_L L[x]/J\leq B_{\mathrm{sym}}(m,n).
+\end{equation}
+No generic homogeneity of the original affine determinant polynomial and
+no finite-dimensionality of its entire unsaturated polar quotient is
+assumed here.
+
+\subsection{Step 7: assemble the endpoints and the constants}
+\label{app:lean-assembly}
+
+The family-level theorem
+\nolinkurl{ConormalBorderMultiplicity.ordinary_family_count} constructs
+the special section and the compatible finite generic section, applies
+\eqref{eq:lean-special-generic} and~\eqref{eq:lean-generic-upper}, and
+concludes $C(n)\leq B(m,n)$.  The symmetric theorem performs the same
+assembly with the symmetric incidence.  The Zariski endpoints invoke
+the exact-or-family constructor, and the Euclidean endpoints invoke the
+proved one-way closure transfer.  Thus the intermediate family and section
+records are outputs of proved constructors, not undeclared obligations
+of the endpoint user.
+
+\nolinkurl{Bezout.lean} proves the coefficient identities and the
+Vandermonde estimate.  \nolinkurl{Numerical.lean} proves
+\[
+ B(m,n)\leq\left(\frac{4em}{n-1}\right)^{n-1},
+ \qquad
+ B_{\mathrm{sym}}(m,n)
+ \leq\left(\frac{2em}{n-1}\right)^{n-1}.
+\]
+Combining these with $(n-1)^{n-1}\leq C(n)$ and the positivity following
+from $n\geq3$ yields the two quadratic bounds.  All casts between natural
+numbers and real numbers, the exponential constants, and the power
+comparison are checked by Lean.
+
+The exact proof is shorter: it constructs the special section, identifies
+its actual local rings with the kernel incidence, and applies B\'ezout
+directly.  It does not need the border family or specialization comparison.
+
+\subsection{What the formalization establishes, and what it does not}
+\label{app:lean-scope}
+
+The verified numerical chain for the border theorem is
+\[
+ \underbrace{n(n-1)^{n-2}}_{\text{constructed special local lengths}}
+ \ \leq\
+ \underbrace{\dim_L L[x]/J}_{\text{constructed generic section}}
+ \ \leq\
+ \underbrace{B(m,n)}_{\text{proved incidence B\'ezout coefficient}},
+\]
+with the symmetric replacement in the last term.  This is a local
+Gauss-section implementation of the conormal/Gauss specialization
+argument.  It establishes the stated exact and border lower-bound
+endpoints without assuming a global projective cycle/intersection
+certificate.
+
+The written proof also distinguishes numerical
+constancy of fibre multidegrees from rational equivalence of fibres over
+an arbitrary base curve: the relevant numerical constancy is obtained
+from the bigraded Euler--Hilbert calculation.  Likewise, the cone
+comparison is made away from the vertex, and the primal hyperplane is
+chosen to avoid the vertex.  No global projective-line-bundle description
+through the vertex is needed.  These distinctions are consistent with
+the local-section implementation; the end-to-end Lean guarantee remains
+the precise endpoint statements in Section~\ref{app:lean-statements}.
+
+The development also contains separately proved results on actual Gauss
+families, flatness, conormal containment, grading, Hilbert functions, and
+projective charts.  It does not claim a separately complete global Chow
+ring library, the full global projective fibre-cycle assembly of the main
+text, or an identification of every concrete local chart ring with a
+stalk on a product of Mathlib \nolinkurl{Proj} schemes.  Those broader
+claims are not needed as hypotheses of the assembled endpoints.
+
+Older modules retain conditional interfaces called
+\nolinkurl{GaussDegreeTheory} and \nolinkurl{FamilyCertificate}.  A theorem
+accepting one of these records remains conditional.  Importing its module
+does not make the record an axiom, but a clean axiom list also does not
+prove the record exists.  The final \nolinkurl{Multiplicity} endpoint
+modules use the constructed local-section route described above and do
+not require those interfaces.
+
+The only affine chart used in the generic construction sets the
+\emph{added homogenizing coordinate} $x_0$ to one.  No original coordinate
+of $F_n$ is set to one, and no explicit count of polar points is used: the
+lower count comes from the Hilbert-function calculation of
+Section~\ref{app:lean-special}.
+
+\subsection{What the audits check}
+\label{app:lean-audits}
+
+The release's entry-point dependency graph contains 225 local modules.
+The principal axiom audit requests 349 reports.  The accompanying
+\nolinkurl{BUILD_LOG.txt}, \nolinkurl{AXIOM_AUDIT.txt}, and
+\nolinkurl{IMPORT_AUDIT.txt} record successful build and audit results.
+The scripts recompute the checks from the delivered source; these counts
+are descriptive release metadata rather than mathematical assumptions.
+The implementation and source-level review were AI-assisted.  The
+semantic audit documents record separate automated source reviews, not
+independent human peer review.  The compiler and axiom transcripts are
+the reproducible machine-checking evidence.
+
+There are three distinct checks.
+\begin{enumerate}[leftmargin=*]
+\item \textbf{Compilation.}  Lean elaborates the local development against
+the pinned dependencies and checks the resulting proof terms.  A build
+failure is not converted into a successful verification claim.
+\item \textbf{Foundational dependencies.}
+\nolinkurl{AxiomAudit.lean} runs \texttt{\detokenize{#print axioms}} on the principal
+declarations, including the final endpoints.  The only reported axioms
+are Lean's standard \nolinkurl{propext}, \nolinkurl{Classical.choice}, and
+\nolinkurl{Quot.sound}.  \nolinkurl{audit_axioms.py} checks that every
+requested report is present and rejects unexpected dependencies.
+\nolinkurl{audit_imports.py} checks the local entry-point import graph for
+missing files, custom axioms, unfinished proofs, unsafe shortcuts and the
+excluded alternative explicit-slice modules.
+\item \textbf{Mathematical statement and applicability.}
+\nolinkurl{END_TO_END_HYPOTHESES_AUDIT.txt} reviews the literal definitions,
+the final theorem types, and how the proof supplies every constructor's
+applicability conditions.  This check is necessary because a theorem of
+the form ``if the desired count bound holds, then the desired conclusion
+holds'' can compile with only standard foundational axioms while proving
+little about the intended geometric problem.
+\end{enumerate}
+
+These checks address different questions.  A source scan is not a
+substitute for compilation, an axiom report is not a semantic audit, and
+the existence of a successful transcript is not a substitute for rebuilding
+the sources when independent reproduction is desired.  The trusted base
+includes the Lean kernel and the pinned mathematical definitions and
+dependencies.  The verification is a proof for all admitted $n,m$, not
+numerical testing of finitely many dimensions.
+
+Construction-specific reading guides are
+\nolinkurl{GAUSS_DEGREE_CONSTRUCTION_AUDIT.txt},
+\nolinkurl{BORDER_DVR_CONSTRUCTION_AUDIT.txt},
+\nolinkurl{GENERIC_GAUSS_SECTION_AUDIT.txt},
+\nolinkurl{DVR_LOCAL_PERSISTENCE_AUDIT.txt}, and
+\nolinkurl{EXACT_MULTIPLICITY_AUDIT.txt}.  Historical audit files are
+retained to document earlier stages; their earlier lists of remaining
+obligations are superseded by \nolinkurl{ORIGINAL_CONORMAL_SCOPE.txt} and
+\nolinkurl{END_TO_END_HYPOTHESES_AUDIT.txt}.
+
+\subsection{Reproducing the build from the release sources}
+\label{app:lean-reproduce}
+
+The release is source-complete for its local entry-point graph.  It does
+not vendor the Lean compiler, Mathlib, or precompiled Mathlib caches.
+A fresh machine therefore needs an Internet connection for the initial
+toolchain and dependency download, Git, Python~3, a shell capable of
+running the supplied Bash script, and Lean's toolchain manager Elan.
+The mathematical toolchain is pinned to
+\begin{itemize}[leftmargin=*]
+\item Lean \nolinkurl{leanprover/lean4:v4.19.0};
+\item Mathlib revision
+\nolinkurl{c44e0c8ee63ca166450922a373c7409c5d26b00b}
+(Mathlib v4.19.0);
+\item the remaining dependency revisions in the delivered
+\nolinkurl{lake-manifest.json}.
+\end{itemize}
+Download and extract the archived release, or clone the repository (both linked at the start of this appendix), and keep its manifest.  From the
+directory containing \nolinkurl{lean-toolchain}, \nolinkurl{lakefile.toml},
+and \nolinkurl{verify.sh}, run:
+
+\begingroup\small
+\begin{verbatim}
+elan toolchain install leanprover/lean4:v4.19.0
+lake env lean --version
+lake exe cache get
+./verify.sh
+\end{verbatim}
+\endgroup
+
+If the extraction did not preserve executable permissions, use
+\texttt{\detokenize{bash verify.sh}}.  The script executes, in order:
+
+\begingroup\small
+\begin{verbatim}
+lake build
+lake env lean AxiomAudit.lean | tee AXIOM_AUDIT.txt
+python3 audit_axioms.py
+python3 audit_imports.py
+\end{verbatim}
+\endgroup
+
+It stops on failure.  A successful return code is zero.  The expected
+audit summaries report all requested declarations, only the standard
+foundational axioms, and a complete entry-point source graph with no
+prohibited shortcuts.  The Mathlib cache is a build accelerator; the
+release supplies source proofs for its own modules.  A reader wishing
+to rebuild dependencies from source may omit the cache download and
+allow the dependency build to complete instead.
+
+The manifest-preserving build above is the reproduction procedure for
+the archived release.  \texttt{\detokenize{lake update}} is useful when deliberately
+regenerating dependency metadata, but is not necessary for this procedure
+and may change transitive dependency resolutions.  If it is used, retain
+a copy of the archived manifest, compare every resolved revision with
+that copy, and restore the archived manifest before claiming an exact
+release reproduction.  The Mathlib checkout can be checked directly:
+
+\begingroup\small
+\begin{verbatim}
+git -C .lake/packages/mathlib rev-parse HEAD
+\end{verbatim}
+\endgroup
+
+It must print the Mathlib commit above.  The release's
+\nolinkurl{SOURCE_SHA256SUMS.txt} records the delivered file contents
+except the checksum manifest itself.  Verify these checksums on the
+untouched extraction before rerunning scripts that regenerate logs.
+On a system with the GNU checksum utility, run
+\texttt{\detokenize{sha256sum -c SOURCE_SHA256SUMS.txt}} from the directory to which
+the manifest paths are relative.
+
+\nolinkurl{BUILD_ENVIRONMENT.txt} describes the original build environment
+and the small executable-location compatibility wrapper needed by that
+container.  The wrapper changes only the process executable-location
+lookup and is not part of the mathematical development.  A normal Lean
+installation does not need it.  The compiler and shared-library hashes
+are recorded there for inspection.
+
+\subsection{A short independent endpoint inspection}
+\label{app:lean-smokecheck}
+
+A reader need not begin by reading every implementation file.  After
+building the release, create a new file named
+\nolinkurl{EndpointInspection.lean} in the project root with the following
+contents.  This file only inspects the already defined statements; it
+does not introduce assumptions or replace a proof.
+
+\begingroup\small
+\begin{verbatim}
+import OriginalConormal
+
+set_option pp.explicit true
+set_option pp.universes true
+
+open Sheshadri.ConormalExactMultiplicity in
+#check @ordinary_exact_quadratic
+open Sheshadri.ConormalExactMultiplicity in
+#check @symmetric_exact_quadratic
+
+open Sheshadri.ConormalBorderMultiplicity in
+#check @ordinary_border_quadratic
+open Sheshadri.ConormalBorderMultiplicity in
+#check @symmetric_border_quadratic
+open Sheshadri.ConormalBorderMultiplicity in
+#check @ordinary_borderAtSize_quadratic
+open Sheshadri.ConormalBorderMultiplicity in
+#check @symmetric_borderAtSize_quadratic
+open Sheshadri.ConormalBorderMultiplicity in
+#check @ordinary_zariski_count
+open Sheshadri.ConormalBorderMultiplicity in
+#check @symmetric_zariski_count
+open Sheshadri.ConormalBorderMultiplicity in
+#check @ordinary_zariski_quadratic
+open Sheshadri.ConormalBorderMultiplicity in
+#check @symmetric_zariski_quadratic
+
+open Sheshadri.ConormalBorderMultiplicity in
+#print axioms ordinary_border_quadratic
+open Sheshadri.ConormalBorderMultiplicity in
+#print axioms symmetric_border_quadratic
+
+#print Sheshadri.PolynomialModel.ExactRepresentation
+#print Sheshadri.PolynomialModel.SymmetricExactRepresentation
+open Sheshadri.BorderRepresentation in
+#print OrdinaryFiniteSupportBorder
+open Sheshadri.BorderRepresentation in
+#print OrdinaryBorder
+open Sheshadri.BorderRepresentation in
+#print ordinaryLocus
+open Sheshadri.ZariskiBridge in
+#print OrdinaryZariskiBorder
+open Sheshadri.ZariskiBridge in
+#print zariskiClosure
+\end{verbatim}
+\endgroup
+
+Run \texttt{\detokenize{lake env lean EndpointInspection.lean}}.  The output makes
+all implicit parameters visible.  In particular, the final exact and
+border statements must have only the natural numbers $n,m$, the condition
+$3\leq n$, and the literal representation or border predicate.  The
+ordinary and symmetric endpoint axiom lists must contain no custom axiom
+or \nolinkurl{sorryAx}.  Repeat the definition inspection with the symmetric
+border names if desired; their extra condition is literal matrix symmetry.
+
+For a mathematical review, a useful order is: inspect the definitions and
+final types; read the two endpoint modules; follow
+\nolinkurl{exists_section} and \nolinkurl{exists_actual_section}; inspect
+\nolinkurl{family_section_degree_le}; then inspect the arbitrary-field
+finite polar bound and the singular B\'ezout statement.  At each step,
+check both the intermediate theorem's assumptions and the constructor
+that supplies them.  This follows the actual proof dependency chain and
+separates a reusable conditional lemma from an assembled unconditional
+endpoint.
+
+\endgroup

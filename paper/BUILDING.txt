@@ -1,0 +1,46 @@
+Building the manuscript
+=======================
+
+Run from this paper directory:
+
+    latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
+
+The command runs pdfLaTeX repeatedly until references stabilize. Bibliographic
+entries are embedded in the source, so no external .bib file or BibTeX run is
+needed. Shell escape is not required.
+
+Install a current TeX Live distribution with latexmk, standard LaTeX packages,
+the acmart dependencies, tcolorbox, PGF/TikZ, xurl, and the libertine, inconsolata,
+newtx, and kastrup font/support packages. With an upstream TeX Live installation:
+
+    tlmgr install latexmk acmart collection-latexextra xurl libertine inconsolata newtx kastrup
+
+On Debian/Ubuntu, the broad distribution packages are:
+
+    sudo apt-get install latexmk texlive-latex-extra texlive-fonts-extra texlive-publishers
+
+The original acmsmall, screen, nonacm formatting is preserved. An unmodified
+upstream acmart.cls is included so the exact class can be reproduced; its source,
+license, commit, and hashes are in vendor/acmart/PROVENANCE.txt. Do not remove the
+font packages just to make a partial installation compile: acmart's fallback
+fonts may alter pagination and omit mathematical symbols used by the paper.
+
+Validation environment used to prepare this release:
+  pdfTeX 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian)
+  LaTeX2e 2023-11-01 patch level 1
+  latexmk 4.83
+  acmart 2026/10/04 v2.21 (vendored)
+  TeX Live package revisions: libertine 77682, inconsolata 79618,
+                             newtx 78101, kastrup 15878
+
+Before the verification report and title changes were added, the supplied
+original source compiled to exactly 37 pages in this environment. No source
+changes or article-class substitution were required for that baseline build.
+
+To remove generated auxiliary files while retaining the PDF:
+
+    latexmk -c main.tex
+
+To remove all generated files including the PDF:
+
+    latexmk -C main.tex

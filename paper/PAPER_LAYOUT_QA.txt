@@ -1,0 +1,42 @@
+Manuscript build and layout check
+================================
+
+Command (from paper/):
+    latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
+
+Result: success; 50 pages. The log is PAPER_BUILD_LOG.txt.
+
+Rebuilt on 2026-10-10 after the retitling and revision, with the Debian
+TeX Live 2023 font packages (texlive-fonts-extra 2023.20240207-1) rather than
+the package revisions listed in BUILDING.txt; the fonts are the same packages
+at older revisions. The checks below were re-run on this build's main.log.
+In this rebuild the title page, the abstract, Sections 1.2-1.7 and
+Remark 10.1 were re-rendered and inspected; the remaining text of the
+pages was unchanged by the revision.
+
+Final main.log checks:
+  0 LaTeX errors
+  0 overfull boxes
+  0 undefined references or citations
+  0 missing-character warnings
+
+The original acmsmall format and standard ACM fonts are retained. The final
+title page and every verification-appendix page were rendered with Poppler
+and visually inspected. Contact sheets for the entire main text were also
+rendered and checked. Source identifiers use monospace; spaces in displayed
+Lean expressions and shell commands are preserved. Long identifiers wrap;
+executable verbatim snippets are unchanged by the layout fixes. Table spacing
+was adjusted so the final bibliography does not leave one isolated entry on
+an otherwise empty page.
+
+Four pre-existing hyperref warnings remove math-shift delimiters from PDF
+bookmarks; they do not indicate missing mathematical glyphs in the document.
+There are also nonfatal underfull-box notices. The rendered pages were checked
+for clipping, overlap, tables, page numbering, mathematical symbols, and the
+inspection commands.
+
+The original manuscript before the title/report changes was separately
+compiled and confirmed to have exactly 37 pages.
+
+This is a typesetting and reproduction check, not an independent mathematical
+review. The Lean build and semantic audit are documented separately.

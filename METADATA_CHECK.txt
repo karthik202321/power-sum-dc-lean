@@ -1,0 +1,1 @@
+Local release metadata is consistent. DOI/repository may still be pending.

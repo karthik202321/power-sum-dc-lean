@@ -1,0 +1,200 @@
+END-TO-END HYPOTHESES AND STATEMENT AUDIT
+Date: 2026-10-10
+
+Purpose and limits
+------------------
+This is a semantic audit of the elaborated declarations and their mathematical
+inputs, independent of the foundation-axiom audit. A clean axiom report alone
+does not discharge theorem hypotheses. Compiler and foundation results are
+recorded separately in the package build and axiom logs.
+
+Compiler confirmation: an independent scratch Lean file imported the built
+Sheshadri.ConormalBorderMultiplicity module and checked the fully explicit
+types with both pp.explicit and pp.universes enabled. Lean exited with code 0.
+The eight declarations checked were ordinary_border_quadratic,
+symmetric_border_quadratic, ordinary_borderAtSize_quadratic,
+symmetric_borderAtSize_quadratic, ordinary_border_count,
+symmetric_border_count, ordinary_zariski_count, and symmetric_zariski_count.
+Their only quantified parameters are the natural numbers n and m; their
+only hypotheses are 3 <= n and the displayed literal border predicate.
+There are no hidden implicit typeclass, family, or geometric parameters.
+
+The audited end-to-end target is the ordinary and symmetric Fermat border
+lower bound for n >= 3. The implementation specializes actual local Gauss
+sections over a constructed DVR and compares their full scheme lengths.
+It is not a claim that every global cycle identity, every general theorem,
+or every line of the manuscript has been formalized verbatim.
+
+Final endpoint statements
+-------------------------
+In Sheshadri.ConormalBorderMultiplicity, n and m are natural numbers.
+
+ordinary_border_quadratic:
+  3 <= n -> OrdinaryFiniteSupportBorder n m ->
+  ((n : Real) - 1)^2 / (4 * Real.exp 1) <= (m : Real)
+
+symmetric_border_quadratic:
+  3 <= n -> SymmetricFiniteSupportBorder n m ->
+  ((n : Real) - 1)^2 / (2 * Real.exp 1) <= (m : Real)
+
+The corresponding ordinary_borderAtSize_quadratic and
+symmetric_borderAtSize_quadratic endpoints use the canonical coefficient
+space containing the target and every size-m determinant. Count endpoints
+also prove fermatCount n <= ordinaryBezout m n or symmetricBezout m n.
+The Zariski count endpoints assume literal Zariski-border membership.
+
+These elaborated statements have no family, GaussDegreeTheory, finite-section,
+cycle, transversality, Bezout, preservation, or closure-comparison argument.
+The family-level helper does accept an actual determinant DVR family, but
+the border endpoint constructs that family from its border hypothesis.
+
+Meaning of border membership
+----------------------------
+BorderRepresentation.OrdinaryFiniteSupportBorder is an existential finite
+coefficient space in which the actual Fermat coefficient vector lies in the
+Euclidean closure of the locus of actual affine-linear size-m determinants.
+Symmetric membership restricts the actual matrices to symmetric pencils.
+The target polynomial is literally sum_i X_i^n.
+
+The canonical AtSize predicates use coefficientSupport n m. The development
+proves that this support contains every size-m determinant and the target,
+and identifies the exact locus with the coefficient image of all pencils.
+Thus these predicates do not impose an unproved support restriction.
+
+BorderDvrFamily uses only the proved inclusion from Euclidean closure into
+the common zero set of all vanishing polynomials. It does not assume equality
+of Euclidean and Zariski closures, or that those closures agree for arbitrary
+sets. The actual curve/normalization construction supplies the DVR, its
+residue map, its fraction-field embedding, and the determinant family.
+
+Special section and the lower degree
+-----------------------------------
+ordinary_family_count and symmetric_family_count both invoke
+ConormalGaussSection.exists_section. They do not accept a Section record from
+the caller. The hypotheses of that constructor are discharged for the
+literal Fermat form by homogeneity, nonzero degree, and its nonvanishing
+gradient away from the vertex.
+
+The intermediate Section record contains actual flags, distinct actual
+roots, finite actual quotient algebras, Artinian localized intersection
+rings, smoothness at the selected points, and a length-sum identity. This
+record is proved to exist. Its count identity is not a numerical premise of
+the final border theorem.
+
+Generic section finiteness is constructed
+----------------------------------------
+ActualGenericGaussSection.exists_actual_section is applied to the actual
+family and the already constructed special Section. It constructs base-ring
+flag coefficients with precisely the requested residues. Associated-prime
+avoidance provides regular generic cuts on the successive saturated ideals.
+The primal flag is normalized by a proved unit of the base ring whose
+residue is -1; normalization preserves the prescribed special coefficients.
+
+The homogeneous family polynomial is an actual homogenization of the DVR
+polynomial. Dehomogenization and derivatives recover the actual generic
+determinant and its derivatives. Its initial Hilbert degree is bounded by
+n-1 using a proved hypersurface Hilbert calculation. The n-2 polar cuts and
+one primal cut reduce the eventual Hilbert function to a constant. The
+actual affine quotient is then proved finite-dimensional.
+
+The constructed generic ideal J satisfies
+  Igen <= J <= saturation(Igen, gradient(det A)),
+and the construction also proves equality with that saturation. Igen is the
+literal ideal of det A, the n-2 chosen polar equations, and the primal chart
+equation. No finite-dimensionality hypothesis about the full unsaturated
+generic polar quotient is needed. That full quotient may have excess
+components.
+
+The saturation is defined by power membership for each displayed open
+condition. It is an ideal contraction from those opens, not radicalization.
+The code proves equality with the original ideal after localizing where any
+one displayed condition is a unit. Nilpotent structure is retained.
+
+Smoothness is proved, including geometric support
+------------------------------------------------
+SaturatedChartSmoothness constructs a homogeneous regular combination of
+the derivative system. It remains regular on the homogeneous affine chart
+and becomes a unit because that chart algebra is finite-dimensional.
+ActualGenericGaussSection transfers this to a unit derivative combination
+in the actual quotient by J.
+
+ArbitraryFieldFinitePolarBound extends scalars to an algebraic closure of
+the actual generic field. Tensor/quotient equivalences prove finiteness and
+preserve the quotient dimension. The unit derivative combination stays a
+unit, so every support point over the algebraic closure has a nonzero
+derivative. The proof uses the proved inclusion for mapped saturations;
+it does not assume saturation commutes with base change.
+
+Full singular special multiplicities persist
+-------------------------------------------
+DVRRootPersistence starts with the literal square special equation system
+and an actual isolated Artinian local intersection ring. It derives the
+special regular sequence and regularity of the actual uniformizer in the
+total local equation quotient. It then cancels generic denominators.
+
+DVRSaturatedPersistence extends this to the saturated generic ideal. At a
+chosen smooth special point, one actual derivative is a unit in the full
+special local ring. Power membership followed by unit cancellation shows
+that every contracted generic equation annihilates this full local ring.
+The applied Gauss theorem proves localized ideal equality, not merely
+equality of zero sets or preservation of residue fields.
+
+DVRSectionLength uses simultaneous interpolation onto the actual local
+algebras to bound their length sum by the actual special quotient dimension.
+The contracted generic ideal gives a torsion-free DVR quotient.
+DVRFibreDimension then bounds its residue dimension by its finite generic
+dimension. It does not infer finite generic fibre from finite special fibre,
+and does not assert finite generation of the total module over the DVR.
+
+Bezout has the appropriate hypotheses and is proved
+--------------------------------------------------
+FieldSingularBezoutWithExcess.isolated_multiplicity_bound assumes actual
+multihomogeneous equations, the square ambient-dimension equality, valid
+projective charts, actual zero equations, Artinian actual local intersection
+rings, and projective distinctness of the selected points. Its conclusion
+bounds the sum of their full local lengths by the multihomogeneous
+coefficient. It allows excess components away from the selected isolated
+points. It assumes no simplicity, flatness, global finiteness, genericity,
+or geometric counting theorem.
+
+The proof constructs a split comparison system, proves its multigraded
+Hilbert bound, and proves local persistence in the interpolating family.
+The generic coefficient field need only have characteristic zero; it is
+not silently identified with the complex numbers.
+
+FieldPolarMultiplicityBound constructs determinant kernel lifts, a common
+ordinary reduction, and actual local incidence-ring equivalences at smooth
+isolated polar roots. It applies the proved singular Bezout theorem.
+FieldFinitePolarBound recovers all support points of the actual finite
+quotient and sums their complete local lengths. At each support point,
+the saturation sandwich identifies the local J algebra with the original
+polar algebra. Hence the upper bound counts full multiplicities, rather
+than counting reduced points while discarding nilpotents.
+
+Legacy conditional interfaces
+-----------------------------
+Older modules retain definitions and theorems parameterized by
+GaussDegreeTheory, FamilyCertificate, or UniversalPolynomialImageClosure.
+Their presence as reusable conditional interfaces is not a proof that their
+inputs have been discharged. Conversely, their import does not make them
+assumptions of every declaration in an importing module.
+
+The new ConormalBorderMultiplicity endpoint proof terms instead use the
+constructed local-section route described above. They do not apply those
+legacy geometric principles. Claims about the older global-cycle interfaces
+must be distinguished from the now assembled bound endpoints.
+
+Method and provenance
+---------------------
+The inspected endpoint dependency route chooses Gauss-polar flags by
+associated-prime avoidance and specializes their local intersection
+algebras. It does not use a fixed Fermat coordinate slice x_(n-1) = 1 to
+obtain the target count. Setting the homogenizing coordinate x_0 = 1 is
+the ordinary affine chart for the represented polynomial; the primal flag
+coefficients themselves are constructed with prescribed residues.
+
+This audit establishes which mathematical constructions occur in the code.
+It does not establish historical provenance, originality, or independence
+from another author's ideas. The accurate method description is a local
+Gauss-section implementation of conormal/Gauss specialization, rather than
+a verbatim formalization of the manuscript's global cycle presentation.

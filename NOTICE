@@ -1,0 +1,31 @@
+Lean verification of quadratic determinantal complexity lower bounds
+Copyright 2026 Karthik Sheshadri
+
+The Lean source files, project scripts and reproduction documentation in this
+release are licensed under the Apache License, Version 2.0; see LICENSE.
+Any pre-existing notices in individual files remain in force.
+
+The research manuscript, its author-written TeX source and its rendered PDF
+under paper/ remain Copyright 2026 Karthik Sheshadri. This software release does not change
+the paper's existing arXiv license or independently grant a new paper license.
+The root software license and software citation metadata apply to the software
+and its reproduction materials; see this notice for the manuscript exception.
+
+The third-party ACM document class paper/acmart.cls and its upstream materials
+in paper/vendor/acmart/ retain their original copyright notices and the LaTeX
+Project Public License; see paper/vendor/acmart/LICENSE and PROVENANCE.txt.
+They are exceptions to both the manuscript attribution and the software license.
+
+Lean and Mathlib dependencies are not vendored in this source release. Mathlib is developed by
+the mathlib community and is distributed under Apache-2.0. Lean and the other
+dependencies retain their respective copyright notices and licenses. The
+exact dependency revisions are recorded in lake-manifest.json. Installing or
+redistributing dependencies does not transfer their authorship to this project.
+
+Development and documentation were assisted by OpenAI's Codex. Attribution in
+this release identifies Karthik Sheshadri as the research author and release
+author; it is not a legal determination about copyright in generated content.
+
+For the associated research paper, see https://arxiv.org/abs/2606.13628.
+The archive DOI and repository URL, once assigned, are recorded in
+release-metadata.json and CITATION.cff. Pending fields are not identifiers.

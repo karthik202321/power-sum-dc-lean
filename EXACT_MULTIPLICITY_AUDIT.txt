@@ -1,0 +1,231 @@
+SEMANTIC AUDIT: CONSTRUCTED EXACT CONORMAL MULTIPLICITY PIPELINE
+Date: 2026-10-10
+
+Scope and verdict
+
+I reviewed the actual definitions, theorem statements, and applications in
+SmoothGaussPointFamily, ConormalGaussSection, OrdinaryIncidenceLocalMultiplicity,
+SymmetricIncidenceLocalMultiplicity, and ConormalExactMultiplicity. I also
+followed their section-length, kernel-lift, chart, and singular Bezout inputs.
+This is a semantic source audit, separate from the final whole-project build
+and axiom audit. The final endpoint must compile before its verification is
+claimed.
+
+No remaining paper-specific geometric hypothesis is present in the NEW exact
+endpoints as written. In particular, ordinary_smooth_degree_bound and
+symmetric_smooth_degree_bound construct the section, its length, its incidence
+lifts, and the required local-ring identifications. Their inputs are a literal
+affine determinant representation, positive-degree nonzero homogeneity, and
+the ordinary smoothness condition away from the origin; the symmetric theorem
+also assumes literal transpose symmetry of every coefficient matrix.
+
+The Fermat endpoints ordinary_exact_count, symmetric_exact_count,
+ordinary_exact_quadratic, and symmetric_exact_quadratic take only n >= 3 and
+the corresponding literal representation predicate. They do not accept
+GaussDegreeTheory, a count budget, a numerical multiplicity certificate,
+transversality, a supplied section, or a supplied local-ring isomorphism.
+
+This verdict concerns the exact theorem. It does not establish the border
+theorem, curve selection, or every cycle/specialization statement in the paper.
+
+1. What is actually represented
+
+PolynomialModel.affinePencil is A_0 + sum_i A_(i+1) X_i, and determinant is its
+literal polynomial determinant. ExactRepresentation asserts the existence of
+such matrices with determinant equal to sum_i X_i^n as a polynomial, rather
+than equality of zero sets. SymmetricExactRepresentation additionally asserts
+A_i.transpose = A_i. This is complex symmetric, not Hermitian, symmetry.
+
+The smooth-form endpoint assumes f is homogeneous of degree d, f != 0, d > 0,
+and every nonzero zero of f has some nonzero formal partial derivative. That
+is the standard smoothness condition for the projective hypersurface in
+characteristic zero. No claim is made for arbitrary singular hypersurfaces.
+Singular isolated SECTION intersections are allowed throughout.
+
+2. The Gauss section and its number are constructed
+
+The actual section ideal is
+
+  (f, ell_1 . grad(f), ..., ell_(n-2) . grad(f), a . x - 1).
+
+SmoothGaussPolars derives the needed basepoint-free gradient ideal statement
+from Euler's identity, smoothness, and Nullstellensatz. GenericGaussPolars and
+GenericGaussPolarSequence select actual coefficient vectors by associated-
+prime avoidance on the irrelevant saturation. They produce filter-regular
+sections of the literal original ideals. SmoothGaussDegree then computes the
+eventual Hilbert dimension as d(d-1)^(n-2); it does not assume this number.
+
+SmoothGaussSection constructs a linear form a avoiding the entire projective
+support of that finite polar section. SmoothGaussSectionLength proves that
+the literal affine quotient with a . x = 1 is finite and has that dimension.
+SmoothGaussPointFamily obtains a complete finite list from its maximal
+spectrum and proves the sum of the actual local-ring lengths equals that
+dimension. The list's completeness, finiteness, and multiplicity sum are
+conclusions, not hidden assumptions on a chosen list of roots.
+
+Section is a data structure containing a length_sum field, so the helper
+ordinary_section_bound is deliberately conditional on such data and on local
+isomorphisms. That would not alone close the theorem. The final smooth-form
+endpoints explicitly call exists_section, construct the lift families, and
+construct the local isomorphisms. The final exact endpoints therefore do not
+merely repackage the desired geometric count as an argument.
+
+3. Incidence and local multiplicities are literal
+
+For each selected base point, GenericKernelLifts derives a nonzero adjugate
+entry from its nonzero determinant derivative, then constructs normalized
+left and right kernel vectors. The ordinary construction chooses ONE common
+reduction matrix Lambda for the finite family, with proved injectivity on
+each hyperplane u . z = 0. A different Lambda is not silently used at every
+point in the global Bezout system.
+
+The orientation is consistent. If i is rightIndex and j is leftIndex, then
+alpha = adj(A)_(i,j), v_i = 1, u_j = 1, and adj(A) = alpha v u. Thus
+
+  trace(adj(A) H) = alpha (u H v).
+
+The local graph argument uses precisely that unit alpha. Note that an
+adjugate entry is the transposed classical cofactor; the code consistently
+uses adjugate entries, so no extra transposition is needed.
+
+KernelIncidenceAlgebra constructs an actual quotient-ring isomorphism between
+the normalized full kernel incidence and R/(det A), over arbitrary
+commutative rings. Its cut versions identify the bilinear polar cuts with
+the trace-adjugate cuts as ideals. They retain nilpotents. The nonzero
+cofactor is turned into a unit by localization at the actual base point.
+
+For the ordinary reduced system, the matrix with first row u and remaining
+rows Lambda is invertible at every selected point. This follows from the
+constructed reduction injectivity. KernelReducedIncidenceAlgebra proves
+equality of the full and reduced localized equation ideals. It does not
+merely prove equality of their reduced zero sets or tangent spaces.
+
+AffineIncidenceLocalCharts transports the actual evaluation prime through
+dehomogenization. NestedPolynomialLocalPoint and
+KernelIncidenceLocalMultiplicity then identify the actual full-point local
+ring, not just a coefficient-localized surrogate, with the actual base
+polar LocalIntersectionRing. The symmetric route constructs the analogous
+one-vector graph using a proved nonzero diagonal adjugate entry.
+
+ConormalPolarIdeal proves equality of the base trace-polar ideal with the
+original derivative-polar section ideal using Jacobi's identity. Accordingly,
+isolatedness and the FULL singular multiplicity transfer by ring isomorphism.
+No simplicity, reducedness, Jacobian rank, or tangent-kernel premise remains.
+
+4. Bezout is not stated too strongly
+
+SingularBezoutWithExcess.isolated_multiplicity_bound takes a square collection
+of actual multihomogeneous equations, valid nonzero projective chart
+coordinates, a finite list of actual roots, Artinian local rings at those
+selected roots, and projective distinctness. It bounds the sum of their
+actual module lengths by the multihomogeneous coefficient budget.
+
+It does NOT require the global common zero scheme to be finite, reduced,
+equidimensional, or a proper intersection everywhere. It does NOT assume the
+selected list contains every global incidence root. Positive-dimensional
+excess elsewhere is permitted. Thus there is no illicit use of the stronger
+and generally false assertion that an arbitrary excess intersection has
+total scheme length equal to the Bezout coefficient.
+
+The theorem's comparison uses a constructed interpolation/contraction and a
+proved local persistence result at the isolated roots. The final statement
+does not carry flatness, conservation, or a closure hypothesis as an input.
+The exact endpoint itself has no closure hypothesis to audit. Separate
+border-family closure statements are outside this audit.
+
+5. Dimension, degree, and normalization checks
+
+Write m for matrix size and n for the number of original variables.
+
+Ordinary ambient space: P^n x P^(m-1) x P^(m-1), dimension n+2m-2.
+Equations: m left-kernel, m-1 reduced right-kernel, n-2 dual flags, one primal
+flag, totaling n+2m-2. Their multidegrees are respectively (1,1,0), (1,0,1),
+(0,1,1), and (1,0,0). The proved class product is
+
+  X (X+U)^m (X+V)^(m-1) (U+V)^(n-2).
+
+Its coefficient of X^n U^(m-1) V^(m-1) is exactly ordinaryBezout m n.
+
+Symmetric ambient space: P^n x P^(m-1), dimension n+m-1.
+Equations: m kernel, n-2 dual, one primal, totaling n+m-1; their bidegrees
+are (1,1), (0,2), and (1,0). The coefficient is
+2^(n-2) choose(m,n-1). The three-factor Bezout backend adds only a P^0 factor.
+BiProjectiveLocalMultiplicity proves that removing its coordinate via z=1
+preserves the actual local ring, so no multiplicity factor is lost or gained.
+
+Each projective chart fixes one nonzero coordinate per block to its actual
+value. In the constructed charts these values are all 1. The three ordinary
+or two symmetric chart equations remove exactly the scaling dimensions; they
+are not extra geometric cuts of the projective intersection.
+
+Projective distinctness follows from injectivity of the base point list and
+the common first coordinate 1. The argument does not count the same
+projective point repeatedly through different kernel normalizations.
+
+6. Edge cases and constants
+
+The general smooth-form results require n >= 2 and d > 0. The case n=2 uses
+no polar cuts and has section length d. For d=1 and n>2 the target is zero;
+an empty polar section is allowed. For n=2,d=1 the empty-product convention
+gives 0^0=1, as required. No unintended n-2 truncation is used below n=2.
+
+Matrix size zero is ruled out from the actual root at the origin: the empty
+matrix determinant is 1, whereas a positive-degree homogeneous f vanishes
+there. For m=1 the reduction has zero rows, and the normalized left row alone
+gives the required one-by-one invertible augmented matrix. The formal
+successor-size chart lemmas cover this case as their m=0 index parameter.
+
+The Fermat corollaries require n>=3 and degree d=n. Their proved section
+length is n(n-1)^(n-2). The existing numerical estimates then yield exactly
+
+  ordinary:  (n-1)^2 / (4 exp(1)) <= m,
+  symmetric: (n-1)^2 / (2 exp(1)) <= m.
+
+The constants are consequences of the newly constructed exact count bounds;
+they are not hypotheses fed into those bounds.
+
+7. Original route, coordinate charts, and provenance
+
+This is a Gauss-polar/conormal-incidence proof of the exact theorem. Its
+generic section is built for EVERY smooth homogeneous form before Fermat is
+specialized. The additional projective cone coordinate is fixed to 1 to
+describe an affine chart. The primal equation a . x = 1 is chosen after the
+polar section so that it covers the section's entire projective support.
+
+No endpoint calls a fixed-coordinate Fermat slice theorem, enumerates a
+special root-of-unity slice, or sets one distinguished ORIGINAL Fermat
+variable x_(n-1) to 1 to obtain the lower count. A projective coordinate
+normalization and a constructed generic linear form should not be confused
+with that special explicit-slice argument.
+
+This code inspection establishes which route the proof uses; it cannot
+establish historical priority or rule out overlapping standard ideas in
+other authors' work. It would be too strong to infer historical independence
+merely from a clean import or axiom audit.
+
+8. Remaining scope limits and reporting recommendation
+
+Once the new exact endpoints compile and pass their final axiom audit, the
+exact ordinary and symmetric statements have no remaining geometric
+certificate or textbook-theorem hypothesis. The old conditional theorems in
+ConormalExact and its GaussDegreeTheory interface may remain in the repository,
+but they are not the source of the new exact bounds. The new module imports
+ConormalExact for proved elementary Fermat properties, not an inhabitant of
+that interface. Refer to ConormalExactMultiplicity by name when reporting
+the unconditional result.
+
+Do not expand this into a claim that every sentence of the paper's original
+proof has been formalized verbatim. The exact route now uses explicit
+scheme-level Gauss sections, Hilbert dimensions, and local-ring equivalences
+in place of the older abstract conormal intersection-degree interface. It
+preserves the conormal-incidence argument and handles singular section
+multiplicities. Border/specialization endpoints, their actual family
+construction, and their remaining hypotheses require a separate review.
+
+INTEGRATION VALIDATION (2026-10-10)
+
+The final OriginalConormal Lake build completed successfully. The expanded
+289-declaration audit completed with exit 0; all reported dependencies are
+propext, Classical.choice and Quot.sound. Its printed exact endpoint types
+confirm the certificate-free statements reviewed above. The source/import
+audit passed on the entire delivered 172-module dependency graph.

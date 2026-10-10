@@ -1,0 +1,196 @@
+HISTORICAL SNAPSHOT: this audit predates the October 10 Hilbert-polynomial,
+chart, complete-intersection and curve additions. For current scope read
+REMAINDER_HYPOTHESES_AUDIT.txt and ORIGINAL_CONORMAL_SCOPE.txt. In particular,
+the polynomial-existence and graded-base-change gaps described below have
+since been discharged; the intersection-theoretic gap remains.
+
+INDEPENDENT SCOPE AUDIT — ORIGINAL CONORMAL ROUTE
+2026-10-09
+
+Integration addendum: after this independent review, ActualGaussBaseChange
+was added and compiled. It proves the affine-line tensor fibre ring equals
+the specialized-ideal quotient, with the residue ring explicitly isomorphic
+to C. The ring-identification portion mentioned below is therefore discharged;
+graded compatibility and the projective/general-curve bridges remain.
+
+Verdict
+-------
+The new modules discharge substantive geometric obligations, not merely
+repackage all of them as certificates. They do NOT complete the original
+exact or border theorem from its stated representation hypotheses. The
+remaining gap is formal infrastructure connecting the constructed algebraic
+objects to a genuine projective cycle/intersection theory over the selected
+smooth algebraic curve.
+
+The current conditional end theorems are honest about that gap. Compilation
+and absence of custom axioms do not discharge their explicit arguments
+UniversalSimpleBezout, GaussDegreeTheory, or FamilyCertificate.
+
+This audit concerns the current source statements, definitions and proof
+chain. It is not a claim to have developed an independent complete
+intersection theory. No explicit Fermat polar slice has been introduced.
+
+1. Newly constructed and proved objects
+--------------------------------------
+
+ActualGaussFamily constructs the literal smooth Gauss representative graph,
+its polynomial Zariski closure, the radical vanishing ideal, and its reduced
+coordinate quotient. It proves algebraic/Euclidean closedness and the special
+fibre containment using smooth-root persistence. The specialized fibre ideal
+is NOT radicalized, so potential multiplicities are retained.
+
+The former arbitrary-total-family, graph-inclusion and algebraic-fibre
+certificate fields have genuinely been removed. The family now used in
+ActualConormalSpecialization is the concrete polynomial closure.
+
+FermatIrreducible and FermatConormalIrreducible prove irreducibility of the
+literal Fermat polynomial and of the actual rescaled Gauss closure at any
+specialization equal to Fermat. The conormal argument uses an irreducible
+open subset in a combined affine coordinate space and a literal polynomial
+map. It does not incorrectly replace that algebraic topology by the product
+of separate Zariski topologies. The target irreducibility certificate field
+is now discharged for n >= 3.
+
+ProjectiveConormal uses mathlib Projectivization for both coordinate blocks.
+It proves independent-scaling invariance of algebraic closure, quotient
+closedness, and the exact equality between projectivization of the affine
+closure and closure of the projective affine Gauss graph. For power sums of
+degree at least two, conormal_eq_homogeneousGaussClosure identifies this with
+the closure of the literal homogeneous-gradient graph, including the points
+at infinity. These are genuine projective points and an explicitly defined
+quotient Zariski topology, not abstract conormal labels.
+
+ConormalOffVertex propagates actual polynomial cone/dual/minor equations
+through algebraic closure. Nonvanishing of the gradient then recovers the
+actual Gauss covector off the primal vertex. Theorems
+conormal_off_vertex_eq_gauss and conormal_hyperplaneSection_eq_gauss prove
+that closing the graph adds no off-vertex points and that a primal
+hyperplane avoiding the vertex cuts precisely the smooth Gauss graph.
+ProjectiveConormal.projectiveHyperplaneSectionEquiv is a genuine projective
+section equivalence. None of these theorems asserts an intersection number
+or a global bundle projection across the vertex.
+
+ActualGaussFlatness and ActualGaussFlatScheme prove saturation, absence of
+base torsion and flatness of the ACTUAL total coordinate ring and spectrum
+over C[t], for an OPEN good-parameter subset of the complex affine line.
+The openness assumption is used in the persistence argument. This result
+has real content and is not a flatness certificate.
+
+ActualGaussCoefficientRing puts the base variable in the coefficient ring.
+HomogeneousVanishing / ActualGaussHomogeneous /
+ActualGaussCoefficientHomogeneous prove the required homogeneity of actual
+vanishing ideals, including bihomogeneity over C[t]. FlatGradedHilbert proves
+finite generation of each coordinate piece, its split projection when the
+ideal is bihomogeneous, and constancy of finite-dimensional field base
+changes of finite torsion-free modules over a PID.
+
+ActualGaussHilbert proves constant tensor dimensions of the actual
+coordinate modules over the affine line. Its eventual Hilbert-polynomial
+and multidegree statements still explicitly assume existence of polynomials
+representing those dimensions and the leading-coefficient identifications.
+That distinction is essential.
+
+AffineFundamentalCycle constructs the finite cycle of actual minimal primes
+of an arbitrary Noetherian ring, weighted by actual generic local-ring
+lengths. It proves positivity, whole-spectrum support and coefficient one
+when the ring is reduced. ActualGaussCycles applies this to the actual total
+and specialized fibre quotient rings and constructs actual closed fibre
+points from complex representatives. Fibre multiplicities are retained.
+
+AlgebraicCurveSelection proves polynomial-image coordinate-ring and
+constructibility results and constructs Noether normalization. Its current
+source explicitly stops short of cutting out and normalizing the required
+curve through the specified boundary point.
+
+2. Scope separations that must be preserved
+------------------------------------------
+
+AFFINE LINE IS NOT AN ARBITRARY CURVE.
+The original proof selects and normalizes an algebraic curve. A polynomial
+map from the affine line through every relevant boundary point has not been
+proved and must not be assumed. Local DVR flatness along a normalized curve
+is mathematically a different application from the implemented C[t] case.
+The actual family may be defined over an embedded curve using the general
+parameter construction, but its flatness/purity over that curve has not yet
+been established in Lean.
+
+PROJECTIVE POINTS/TOPOLOGY ARE NOT A PROJECTIVE SCHEME.
+ProjectiveConormal does establish the set/topological projectivization
+bridge. It does not construct relative biprojective Proj, a structure sheaf,
+properness, local scheme rings, or the scheme-theoretic fibre cycle. Those
+cannot be claimed merely because the projective points are now literal
+mathlib Projectivization values.
+
+AFFINE GENERIC LENGTHS ARE NOT YET PROJECTIVE CYCLE WEIGHTS.
+The new cycle weights genuinely are local-ring lengths of actual affine
+rings. The source does not yet glue them across projective charts, remove
+irrelevant zero-block components, or identify their lengths with those of
+the corresponding projective fibre scheme. Reducedness of the TOTAL ring
+proves its own generic weights are one; it does NOT prove every special
+fibre reduced or the generic fibre-cycle identification with Gamma_c.
+
+FINITE MODULE DIMENSIONS ARE NOT YET MULTIDEGREES.
+The constant tensor dimensions are proved. Homogeneous splitting is also
+available as a proved theorem. Constructing the Hilbert polynomial, proving
+its eventual equality with the actual fibre Hilbert function, and identifying
+its top coefficients with intersection degrees remain necessary. In
+particular a polynomial given as an argument together with these identities
+is not a constructed Hilbert polynomial. Identifying the tensor fibre ring
+with the specialized-ideal presentation and matching its graded pieces must
+also be made explicit in a completed geometric assembly.
+
+SUPPORT CONTAINMENT IS NOT YET POSITIVE COMPONENT MULTIPLICITY.
+Target irreducibility and containment are now proved for the actual target.
+To apply the finite-component comparison to the actual cycle, its component
+supports must be identified and the dimension/purity premises discharged.
+An irreducible closed subset can be properly contained in a larger
+irreducible component; containment by itself is insufficient.
+
+3. Exact remaining obligations of the end theorem
+------------------------------------------------
+
+A. Construct an inhabitant of GaussDegreeTheory from actual projective
+   conormal geometry. This requires the generic transverse section theorem
+   and the smooth homogeneous hypersurface degree formula. The current
+   interface is still uninhabited by a proved construction. The projective
+   cone section and off-vertex statements do not themselves prove the
+   numerical formula d*(d-1)^(n-2).
+
+B. Supply/prove the universal isolated-point multihomogeneous Bezout input.
+   It remains a visible hypothesis, not a new custom axiom. Prior source
+   audits support the statement's mathematical validity, but that is not a
+   Lean proof of it.
+
+C. Construct the required normalized smooth curve and good open subset from
+   actual border membership, together with the coefficient family and the
+   approach to its special point. Constructibility/Noether normalization are
+   genuine progress toward this, not completion of it.
+
+D. Construct the projective family over that curve, prove flatness/purity,
+   identify the generic fibre cycle with multiplicity-one Gamma_c after a
+   finite shrink, and connect the actual special affine/projective cycles to
+   FamilyCycleData. This includes the actual dimension and strict-dimension
+   drop facts used by the component comparison.
+
+E. Complete actual Hilbert/intersection theory and its family conservation,
+   and identify both target and generic degrees with the constructed
+   GaussDegreeTheory. FamilyCertificate's remaining cycle, dimension, Euler
+   and degree-identification fields are still real obligations.
+
+4. Appropriate completion claim
+-------------------------------
+
+Safe: a significantly enlarged verification of the original conormal route,
+with concrete family ideals/rings, actual affine local multiplicities, target
+irreducibility, projective conormal identification, off-vertex cone-section
+geometry and affine-line flat/Hilbert-module results proved without custom
+axioms or the alternate explicit polar slice.
+
+Unsafe: the original exact theorem is fully verified; the border theorem
+follows from bare border membership; the arbitrary smooth-curve projective
+family is constructed and flat; all cycle and intersection identifications
+are completed; the remaining interfaces are mere bookkeeping.
+
+No contradiction or false closed theorem was found in the newly audited
+source statements. The principal remaining risk is overstating the scope of
+those correct theorems when presenting the overall result.
